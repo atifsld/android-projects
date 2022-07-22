@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HelloJohn</string>
+    <string name="landing_error_message">Error! You shouldn\'t be here.</string>
+    <string name="enter_name_hint">Enter your name here</string>
+    <string name="submit">Submit</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

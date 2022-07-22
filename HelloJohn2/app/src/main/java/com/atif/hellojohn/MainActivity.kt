@@ -35,7 +35,9 @@ class MainActivity : AppCompatActivity() {
 
         singupButton.setOnClickListener {
             val personName = personNameEditText.text
-            Intent intent = new Intent(this, )
+            val intent = Intent(this, LandingActivity::class.java)
+            intent.putExtra("username", personName)
+            startActivity(intent)
         }
     }
 }
