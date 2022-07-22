@@ -9,8 +9,8 @@ Components uncovered:
 	Fragments
 	LiveData
 	Coroutines
+	Using REST APIs using Retrofit
 	
 Components covered:
 	Basic first project
-	
 	
