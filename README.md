@@ -1,7 +1,6 @@
 # android-projects
 
 Components uncovered:
-	Basic first project
 	ListView
 	RecyclerView
 	MVVM architecture
@@ -12,5 +11,6 @@ Components uncovered:
 	Coroutines
 	
 Components covered:
+	Basic first project
 	
 	
