@@ -14,7 +14,7 @@
         android:theme="@style/Theme.HelloJohn"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity"
+            android:name=".activity.SecondActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

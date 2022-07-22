@@ -1,8 +1,9 @@
-package com.atif.hellojohn
+package com.atif.hellojohn.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.atif.hellojohn.R
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

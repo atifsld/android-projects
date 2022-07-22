@@ -1,4 +1,4 @@
-package com.atif.hellojohn
+package com.atif.hellojohn.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.atif.hellojohn.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             personName = inputText.text.toString()
             val helloTextView = findViewById<TextView>(R.id.helloText)
             if(personName == "") {
-                helloTextView.text = "Hello world!"
+                helloTextView.text = "Hello World!"
                 signupButton.visibility = INVISIBLE
                 Toast.makeText(
                     this@MainActivity,
