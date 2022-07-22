@@ -14,30 +14,39 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val submitButton = findViewById<Button>(R.id.submit_button)
-        val personNameEditText = findViewById<TextView>(R.id.personName)
-        val singupButton = findViewById<Button>(R.id.singup_button)
+        val inputText = findViewById<TextView>(R.id.input_name)
+        val signupButton = findViewById<Button>(R.id.singup_button)
+        var personName = ""
         submitButton.setOnClickListener {
-            val personName = personNameEditText.text
+            personName = inputText.text.toString()
             val helloTextView = findViewById<TextView>(R.id.helloText)
             if(personName == "") {
-                singupButton.visibility = INVISIBLE
+                helloTextView.text = "Hello world!"
+                signupButton.visibility = INVISIBLE
                 Toast.makeText(
-                    this,
+                    this@MainActivity,
                     "Please enter your name!",
                     Toast.LENGTH_SHORT
                 ).show()
             } else {
-                singupButton.visibility = VISIBLE
-                val newHelloMessage = "Hello $personName"
+                signupButton.visibility = VISIBLE
+                val newHelloMessage = "Hello $personName!"
                 helloTextView.text = newHelloMessage
             }
         }
 
-        singupButton.setOnClickListener {
-            val personName = personNameEditText.text
-            val intent = Intent(this, LandingActivity::class.java)
-            intent.putExtra("username", personName)
-            startActivity(intent)
+        signupButton.setOnClickListener {
+            if(personName == "") {
+                Toast.makeText(
+                    this@MainActivity,
+                    "Please enter your name!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                var intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("name", personName)
+                startActivity(intent)
+            }
         }
     }
 }
