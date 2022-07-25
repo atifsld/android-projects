@@ -9,7 +9,7 @@ data class Album (
     @SerializedName("album_artists") val albumArtists: List<String>,
     @SerializedName("album_credits") val albumCredits: List<AlbumCredit>,
     @SerializedName("album_songs") val albumSongs: List<Song>,
-    @SerializedName("album_label") val albumLabel: List<String>,
+    @SerializedName("album_label") val albumLabel: String,
     @SerializedName("album_tags") val albumTags: List<String>,
     @SerializedName("album_year") val albumYear: Int
 ) {
