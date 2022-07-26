@@ -12,21 +12,21 @@ import com.atif.spatify.data.Song
 import com.squareup.picasso.Picasso
 
 
-class SongViewAdapter(recyclerDataArrayList: ArrayList<Song>, mcontext: Context) :
+class SongViewAdapter(var recyclerDataArrayList: List<Song>) :
     RecyclerView.Adapter<SongViewAdapter.RecyclerViewHolder>() {
-    private val courseDataArrayList: ArrayList<Song>
-    private val mcontext: Context
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout
         val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.album_card_layout, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.song_card_layout, parent, false)
         return RecyclerViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: SongViewAdapter.RecyclerViewHolder, position: Int) {
         // Set the data to textview and imageview.
-        val song: Song = courseDataArrayList[position]
+        val song: Song = recyclerDataArrayList[position]
         holder.song_title.setText(song.songName)
+        holder.song_artist.setText(song.getCommaSeparatedArtists())
+        holder.song_duration.setText(song.songDuration)
         Picasso
             .get()
             .load(song.songAlbumArtUrl)
@@ -34,27 +34,14 @@ class SongViewAdapter(recyclerDataArrayList: ArrayList<Song>, mcontext: Context)
     }
 
     override fun getItemCount(): Int {
-        // this method returns the size of recyclerview
-        return courseDataArrayList.size
+        return recyclerDataArrayList.size
     }
 
     // View Holder Class to handle Recycler View.
     inner class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val song_title: TextView
-        val song_artist: TextView
-        val song_art: ImageView
-        val song_duration: TextView
-
-        init {
-            song_title = itemView.findViewById(R.id.song_title)
-            song_artist = itemView.findViewById(R.id.song_artist)
-            song_art = itemView.findViewById(R.id.song_art_iv)
-            song_duration = itemView.findViewById(R.id.song_duration)
-        }
-    }
-
-    init {
-        courseDataArrayList = recyclerDataArrayList
-        this.mcontext = mcontext
+        val song_title: TextView = itemView.findViewById(R.id.song_title)
+        val song_artist: TextView = itemView.findViewById(R.id.song_artist)
+        val song_art: ImageView = itemView.findViewById(R.id.song_art_iv)
+        val song_duration: TextView= itemView.findViewById(R.id.song_duration)
     }
 }

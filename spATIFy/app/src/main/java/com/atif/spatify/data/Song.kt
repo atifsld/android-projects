@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 data class Song (
     @SerializedName("song_uuid") val songUuid: String,
     @SerializedName("song_name") val songName: String,
-    @SerializedName("song_duration") val songDuration: Int,
+    @SerializedName("song_duration") val songDuration: String,
     @SerializedName("song_track_number") val songTrackNumber: Int,
     @SerializedName("song_artists") val songArtists: List<String>,
     @SerializedName("song_album_art_url") val songAlbumArtUrl: String
@@ -17,4 +17,9 @@ data class Song (
                 "Song album art URL: $songAlbumArtUrl" + "\n" +
                 "Song artists: $songArtists"
     }
+
+    fun getCommaSeparatedArtists(): String {
+        return songArtists.joinToString ( separator = ", " )
+    }
+
 }

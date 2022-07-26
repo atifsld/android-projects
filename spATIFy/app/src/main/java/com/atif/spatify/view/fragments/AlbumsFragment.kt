@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
+import com.atif.spatify.service.SpatifyService
+import com.atif.spatify.view.AlbumViewAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,7 +40,12 @@ class AlbumsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_albums, container, false)
-
+        val spatifyService = SpatifyService()
+        val albumList = spatifyService.getAlbums()
+        val adapter = AlbumViewAdapter(albumList)
+        val albumRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_albums)
+        albumRecyclerView.adapter = adapter
+        albumRecyclerView.layoutManager = GridLayoutManager(activity, 2)
         return view
     }
 

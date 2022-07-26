@@ -65,7 +65,7 @@ class SpatifyService {
                         songUuid = "667df405-d8b6-484b-b084-9910fefbea5e",
                         songArtists = listOf("The Velvet Underground"),
                         songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                        songDuration = 164,
+                        songDuration = "2:44",
                         songName = "White Light/White Heat",
                         songTrackNumber = 1
                     ),
@@ -73,7 +73,7 @@ class SpatifyService {
                         songUuid = "cfef36fd-9750-4a6b-a052-c0e3496b9041",
                         songArtists = listOf("The Velvet Underground"),
                         songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                        songDuration = 494,
+                        songDuration = "8:14",
                         songName = "The Gift",
                         songTrackNumber = 2
                     ),
@@ -81,7 +81,7 @@ class SpatifyService {
                         songUuid = "1b5b722d-56c0-4e3d-9136-fb7da944eec5",
                         songArtists = listOf("The Velvet Underground"),
                         songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                        songDuration = 292,
+                        songDuration = "4:52",
                         songName = "Lady Godiva's Operation",
                         songTrackNumber = 3
                     ),
@@ -89,7 +89,7 @@ class SpatifyService {
                         songUuid = "089b2d86-e32d-4ebd-8ceb-1acc5c4f322f",
                         songArtists = listOf("The Velvet Underground"),
                         songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                        songDuration = 120,
+                        songDuration = "2:00",
                         songName = "Here She Comes Now",
                         songTrackNumber = 4
                     ),
@@ -97,7 +97,7 @@ class SpatifyService {
                         songUuid = "ebb8356e-fd88-4e8d-a3db-180d0de547e5",
                         songArtists = listOf("The Velvet Underground"),
                         songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                        songDuration = 245,
+                        songDuration = "4:05",
                         songName = "I Heard Her Call My Name",
                         songTrackNumber = 5
                     ),
@@ -105,7 +105,7 @@ class SpatifyService {
                         songUuid = "bb2c6582-bcf1-47a0-9bbc-b97dcbbecab1",
                         songArtists = listOf("The Velvet Underground"),
                         songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                        songDuration = 1020,
+                        songDuration = "17:00",
                         songName = "Sister Ray",
                         songTrackNumber = 6
                     )
@@ -162,7 +162,7 @@ class SpatifyService {
                         songUuid = "b165dfab-68e3-4cca-babb-ddf875687afb",
                         songArtists = listOf("Miles Davis"),
                         songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                        songDuration = 562,
+                        songDuration = "9:22",
                         songName = "So What",
                         songTrackNumber = 1
                     ),
@@ -170,7 +170,7 @@ class SpatifyService {
                         songUuid = "8f6f58e2-ac95-4c8b-ad03-76ce0ad06412",
                         songArtists = listOf("Miles Davis"),
                         songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                        songDuration = 586,
+                        songDuration = "9:46",
                         songName = "Freddie Freeloader",
                         songTrackNumber = 2
                     ),
@@ -178,7 +178,7 @@ class SpatifyService {
                         songUuid = "aa58a275-cd40-4986-8d1a-593d40b7a934",
                         songArtists = listOf("Miles Davis"),
                         songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                        songDuration = 337,
+                        songDuration = "5:37",
                         songName = "Blue In Green",
                         songTrackNumber = 3
                     ),
@@ -186,7 +186,7 @@ class SpatifyService {
                         songUuid = "d3d6ca38-cf1b-4151-9937-dd35cff2a336",
                         songArtists = listOf("Miles Davis"),
                         songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                        songDuration = 1693,
+                        songDuration = "11:33",
                         songName = "All Blues",
                         songTrackNumber = 4
                     ),
@@ -194,13 +194,13 @@ class SpatifyService {
                         songUuid = "4a6dfd30-ed2f-4cc3-9809-c2918f11e928",
                         songArtists = listOf("Miles Davis"),
                         songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                        songDuration = 566,
+                        songDuration = "9:26",
                         songName = "Flamenco Sketches",
                         songTrackNumber = 5
                     )
                 ),
-                albumTags = listOf("Avantgarde", "Experimental", "Noise", "Art Rock"),
-                albumYear = 1968
+                albumTags = listOf("Modal"),
+                albumYear = 1959
             )
         )
     }
@@ -211,7 +211,7 @@ class SpatifyService {
                 songUuid = "667df405-d8b6-484b-b084-9910fefbea5e",
                 songArtists = listOf("The Velvet Underground"),
                 songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = 164,
+                songDuration = "2:44",
                 songName = "White Light/White Heat",
                 songTrackNumber = 1
             ),
@@ -219,7 +219,7 @@ class SpatifyService {
                 songUuid = "cfef36fd-9750-4a6b-a052-c0e3496b9041",
                 songArtists = listOf("The Velvet Underground"),
                 songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = 494,
+                songDuration = "8:14",
                 songName = "The Gift",
                 songTrackNumber = 2
             ),
@@ -227,7 +227,7 @@ class SpatifyService {
                 songUuid = "1b5b722d-56c0-4e3d-9136-fb7da944eec5",
                 songArtists = listOf("The Velvet Underground"),
                 songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = 292,
+                songDuration = "4:52",
                 songName = "Lady Godiva's Operation",
                 songTrackNumber = 3
             ),
@@ -235,7 +235,7 @@ class SpatifyService {
                 songUuid = "089b2d86-e32d-4ebd-8ceb-1acc5c4f322f",
                 songArtists = listOf("The Velvet Underground"),
                 songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = 120,
+                songDuration = "2:00",
                 songName = "Here She Comes Now",
                 songTrackNumber = 4
             ),
@@ -243,7 +243,7 @@ class SpatifyService {
                 songUuid = "ebb8356e-fd88-4e8d-a3db-180d0de547e5",
                 songArtists = listOf("The Velvet Underground"),
                 songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = 245,
+                songDuration = "4:05",
                 songName = "I Heard Her Call My Name",
                 songTrackNumber = 5
             ),
@@ -251,7 +251,7 @@ class SpatifyService {
                 songUuid = "bb2c6582-bcf1-47a0-9bbc-b97dcbbecab1",
                 songArtists = listOf("The Velvet Underground"),
                 songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = 1020,
+                songDuration = "17:00",
                 songName = "Sister Ray",
                 songTrackNumber = 6
             ),
@@ -259,7 +259,7 @@ class SpatifyService {
                 songUuid = "b165dfab-68e3-4cca-babb-ddf875687afb",
                 songArtists = listOf("Miles Davis"),
                 songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = 562,
+                songDuration = "9:22",
                 songName = "So What",
                 songTrackNumber = 1
             ),
@@ -267,7 +267,7 @@ class SpatifyService {
                 songUuid = "8f6f58e2-ac95-4c8b-ad03-76ce0ad06412",
                 songArtists = listOf("Miles Davis"),
                 songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = 586,
+                songDuration = "9:46",
                 songName = "Freddie Freeloader",
                 songTrackNumber = 2
             ),
@@ -275,7 +275,7 @@ class SpatifyService {
                 songUuid = "aa58a275-cd40-4986-8d1a-593d40b7a934",
                 songArtists = listOf("Miles Davis"),
                 songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = 337,
+                songDuration = "5:37",
                 songName = "Blue In Green",
                 songTrackNumber = 3
             ),
@@ -283,7 +283,7 @@ class SpatifyService {
                 songUuid = "d3d6ca38-cf1b-4151-9937-dd35cff2a336",
                 songArtists = listOf("Miles Davis"),
                 songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = 1693,
+                songDuration = "11:33",
                 songName = "All Blues",
                 songTrackNumber = 4
             ),
@@ -291,7 +291,7 @@ class SpatifyService {
                 songUuid = "4a6dfd30-ed2f-4cc3-9809-c2918f11e928",
                 songArtists = listOf("Miles Davis"),
                 songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = 566,
+                songDuration = "9:26",
                 songName = "Flamenco Sketches",
                 songTrackNumber = 5
             )

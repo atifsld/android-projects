@@ -14,7 +14,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         GlobalScope.launch(){
-            delay(3000)
+            delay(1000)
             val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
             startActivity(intent)
         }

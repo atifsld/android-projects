@@ -24,4 +24,8 @@ data class Album (
                 "Album tags: $albumTags" + "\n" +
                 "Album year: $albumYear"
     }
+
+    fun getCommaSeparatedArtists(): String {
+        return albumArtists.joinToString (separator = ", ")
+    }
 }

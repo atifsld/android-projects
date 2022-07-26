@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         val albumButton = findViewById<Button>(R.id.albumButton)
         val songButton = findViewById<Button>(R.id.songButton)
 
+        loadAlbumFragment()
+
         albumButton.setOnClickListener {
             val albumsFragment = AlbumsFragment()
             val transaction = supportFragmentManager.beginTransaction()
@@ -34,5 +36,12 @@ class MainActivity : AppCompatActivity() {
             println("songButton clicked.")
         }
 
+    }
+
+    private fun loadAlbumFragment() {
+        val albumsFragment = AlbumsFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.contentLayout, albumsFragment)
+        transaction.commit()
     }
 }
