@@ -1,4 +1,8 @@
-package com.atif.spatify
+package com.atif.spatify.service
+
+import com.atif.spatify.data.Album
+import com.atif.spatify.data.AlbumCredit
+import com.atif.spatify.data.Song
 
 
 class SpatifyService {

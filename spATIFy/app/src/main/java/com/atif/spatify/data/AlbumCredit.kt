@@ -1,4 +1,4 @@
-package com.atif.spatify
+package com.atif.spatify.data
 
 data class AlbumCredit (
     val creditName: String,

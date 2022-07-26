@@ -1,4 +1,4 @@
-package com.atif.spatify
+package com.atif.spatify.data
 import com.google.gson.annotations.SerializedName
 
 data class Song (

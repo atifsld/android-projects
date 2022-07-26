@@ -1,8 +1,11 @@
-package com.atif.spatify
+package com.atif.spatify.view.activity
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.atif.spatify.R
+import com.atif.spatify.view.fragments.AlbumsFragment
+import com.atif.spatify.view.fragments.SongsFragment
 
 
 class MainActivity : AppCompatActivity() {
