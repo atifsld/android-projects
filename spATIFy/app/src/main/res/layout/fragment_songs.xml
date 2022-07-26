@@ -6,142 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".view.fragments.SongsFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_songs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="5dp"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="90dp">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/song_art_whitelightwhiteheat"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/whitelightwhiteheat" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#8C8C8C">
-
-                    <TextView
-                        android:id="@+id/song_name_text_view_whitelightwhiteheat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="White Light/White Heat"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/song_artist_text_view_whitelightwhiteheat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="The Velvet Underground"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/song_name_text_view_whitelightwhiteheat" />
-
-                    <TextView
-                        android:id="@+id/song_duration_text_view_whitelightwhiteheat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="2:00"
-                        android:textColor="#DCDCDC"
-                        android:textSize="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/song_artist_text_view_whitelightwhiteheat" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="5dp"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="5dp"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="90dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/song_art_kindofblue"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@drawable/kindofblue" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#8C8C8C">
-
-                    <TextView
-                        android:id="@+id/song_name_text_view_kindofblue"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="So What"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/song_artist_text_view_kindofblue"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="The Velvet Underground"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/song_name_text_view_kindofblue" />
-
-                    <TextView
-                        android:id="@+id/song_duration_text_view_kindofblue"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="9:24"
-                        android:textColor="#DCDCDC"
-                        android:textSize="20dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/song_artist_text_view_kindofblue" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-
+        </androidx.recyclerview.widget.RecyclerView>
+    </ScrollView>
 </FrameLayout>

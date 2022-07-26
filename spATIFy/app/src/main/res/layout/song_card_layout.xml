@@ -16,7 +16,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/song_art_iv"
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:srcCompat="@drawable/whitelightwhiteheat" />
@@ -27,7 +27,7 @@
             android:background="#8C8C8C">
 
             <TextView
-                android:id="@+id/song_name_text_view"
+                android:id="@+id/song_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="White Light/White Heat"
@@ -39,7 +39,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/song_artist_text_view"
+                android:id="@+id/song_artist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="The Velvet Underground"
@@ -47,10 +47,10 @@
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/song_name_text_view" />
+                app:layout_constraintTop_toBottomOf="@+id/song_title" />
 
             <TextView
-                android:id="@+id/song_duration_text_view"
+                android:id="@+id/song_duration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="2:00"
@@ -58,7 +58,7 @@
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/song_artist_text_view" />
+                app:layout_constraintTop_toBottomOf="@+id/song_artist" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
