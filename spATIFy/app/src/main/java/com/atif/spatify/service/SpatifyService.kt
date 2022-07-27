@@ -22,6 +22,14 @@ object SpatifyService {
         return albums[albumUuid]
     }
 
+    fun getSongsInAlbum(albumUuid: String): List<Song> {
+        val songList: MutableList<Song> = mutableListOf()
+        if(albums.size == 0) {
+            populateAlbums()
+        }
+        return albums[albumUuid]!!.albumSongs
+    }
+
     fun getSongs(): List<Song> {
         val songList: MutableList<Song> = mutableListOf()
         if(albums.size == 0) {

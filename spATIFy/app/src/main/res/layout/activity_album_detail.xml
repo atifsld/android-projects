@@ -14,50 +14,74 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/album_art_iv"
-                android:layout_width="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_height="300dp"
-                android:src="@drawable/kindofblue" />
-
-            <TextView
-                android:id="@+id/album_title"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:textSize="30dp"
-                android:textStyle="bold"
-                android:text="Kind of Blue" />
+                android:background="#555555"
+                android:orientation="horizontal"
+                android:paddingTop="15sp"
+                android:paddingBottom="30sp">
 
-            <TextView
-                android:id="@+id/album_artist"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:text="Miles Davis" />
+                <ImageView
+                    android:id="@+id/album_art_iv"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:src="@drawable/kindofblue" />
 
-            <TextView
-                android:id="@+id/album_year"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:textSize="16dp"
-                android:text="1959" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/album_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="55sp"
+                        android:background="#555555"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Kind of Blue"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/album_artist"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:background="#555555"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Miles Davis"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/album_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="25sp"
+                        android:background="#555555"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="1959"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/songs_in_album_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
 

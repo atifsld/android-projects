@@ -12,7 +12,7 @@ import com.atif.spatify.data.Song
 import com.squareup.picasso.Picasso
 
 
-class SongsInAlbumViewAdapterViewAdapter(var recyclerDataArrayList: List<Song>) :
+class SongsInAlbumViewAdapterViewAdapter(var recyclerDataArrayList: List<Song>, var context: Context) :
     RecyclerView.Adapter<SongsInAlbumViewAdapterViewAdapter.RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout
@@ -24,12 +24,9 @@ class SongsInAlbumViewAdapterViewAdapter(var recyclerDataArrayList: List<Song>) 
     override fun onBindViewHolder(holder: SongsInAlbumViewAdapterViewAdapter.RecyclerViewHolder, position: Int) {
         // Set the data to textview and imageview.
         val song: Song = recyclerDataArrayList[position]
-        holder.song_title.setText(song.songName)
-        holder.song_artist.setText(song.getCommaSeparatedArtists())
-        Picasso
-            .get()
-            .load(song.songAlbumArtUrl)
-            .into(holder.song_art)
+        holder.song_title.text = song.songName
+        holder.song_artist.text = song.getCommaSeparatedArtists()
+        holder.song_track_number.text = song.songTrackNumber.toString()
     }
 
     override fun getItemCount(): Int {
@@ -40,6 +37,6 @@ class SongsInAlbumViewAdapterViewAdapter(var recyclerDataArrayList: List<Song>) 
     inner class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val song_title: TextView = itemView.findViewById(R.id.song_title)
         val song_artist: TextView = itemView.findViewById(R.id.song_artist)
-        val song_art: ImageView = itemView.findViewById(R.id.song_track_number)
+        val song_track_number: TextView = itemView.findViewById(R.id.song_track_number)
     }
 }
