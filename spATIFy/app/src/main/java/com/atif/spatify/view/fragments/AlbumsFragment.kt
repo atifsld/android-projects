@@ -42,7 +42,7 @@ class AlbumsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_albums, container, false)
         val spatifyService = SpatifyService()
         val albumList = spatifyService.getAlbums()
-        val adapter = AlbumViewAdapter(albumList)
+        val adapter = AlbumViewAdapter(albumList, context)
         val albumRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_albums)
         albumRecyclerView.adapter = adapter
         albumRecyclerView.layoutManager = GridLayoutManager(activity, 2)
