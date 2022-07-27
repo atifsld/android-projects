@@ -15,7 +15,7 @@ object SpatifyService {
         for(album in albums) {
             albumList.add(album.value)
         }
-        return albumList
+        return albumList.sortedWith(compareBy { it.albumName })
     }
 
     fun getAlbum(albumUuid: String): Album? {
@@ -40,7 +40,7 @@ object SpatifyService {
                 songList.add(song)
             }
         }
-        return songList
+        return songList.sortedWith(compareBy { it.songName })
     }
 
     fun getSong(songUuid: String): Song? {
