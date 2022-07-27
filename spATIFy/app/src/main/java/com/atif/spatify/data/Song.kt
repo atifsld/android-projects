@@ -22,4 +22,9 @@ data class Song (
         return songArtists.joinToString ( separator = ", " )
     }
 
+    fun createShareString(): String {
+        return if (songArtists.size == 1) "Check out $songName by ${songArtists[0]} on Spatify."
+        else "Check out $songName by ${songArtists[0]} and others on Spatify."
+    }
+
 }
