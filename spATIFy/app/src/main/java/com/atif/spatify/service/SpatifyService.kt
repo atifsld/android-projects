@@ -5,8 +5,50 @@ import com.atif.spatify.data.AlbumCredit
 import com.atif.spatify.data.Song
 
 object SpatifyService {
+    private val albums = mutableMapOf<String, Album>()
+
     fun getAlbums(): List<Album> {
-        return listOf(
+        val albumList: MutableList<Album> = mutableListOf()
+        if(albums.size == 0) {
+            populateAlbums()
+        }
+        for(album in albums) {
+            albumList.add(album.value)
+        }
+        return albumList
+    }
+
+    fun getAlbum(albumUuid: String): Album? {
+        return albums[albumUuid]
+    }
+
+    fun getSongs(): List<Song> {
+        val songList: MutableList<Song> = mutableListOf()
+        if(albums.size == 0) {
+            populateAlbums()
+        }
+        for(album in albums) {
+            for(song in album.value.albumSongs) {
+                songList.add(song)
+            }
+        }
+        return songList
+    }
+
+    fun getSong(songUuid: String): Song? {
+        for(album in albums) {
+            for(song in album.value.albumSongs) {
+                if(song.songUuid == songUuid) {
+                    return song;
+                }
+            }
+        }
+        return null;
+    }
+
+    fun populateAlbums() {
+        albums.put(
+            "5583e514-cf7b-4214-8397-dfd7e10dfb33",
             Album(
                 albumUuid = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                 albumArtists = listOf("The Velvet Underground"),
@@ -111,7 +153,10 @@ object SpatifyService {
                 ),
                 albumTags = listOf("Avantgarde", "Experimental", "Noise", "Art Rock"),
                 albumYear = 1968
-            ),
+            )
+        )
+        albums.put(
+            "2080f161-c553-408d-9724-9c1e2f1b8c87",
             Album(
                 albumUuid = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 albumArtists = listOf("Miles Davis"),
@@ -203,98 +248,4 @@ object SpatifyService {
             )
         )
     }
-
-    fun getSongs(): List<Song> {
-        return listOf(
-            Song(
-                songUuid = "667df405-d8b6-484b-b084-9910fefbea5e",
-                songArtists = listOf("The Velvet Underground"),
-                songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = "2:44",
-                songName = "White Light/White Heat",
-                songTrackNumber = 1
-            ),
-            Song(
-                songUuid = "cfef36fd-9750-4a6b-a052-c0e3496b9041",
-                songArtists = listOf("The Velvet Underground"),
-                songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = "8:14",
-                songName = "The Gift",
-                songTrackNumber = 2
-            ),
-            Song(
-                songUuid = "1b5b722d-56c0-4e3d-9136-fb7da944eec5",
-                songArtists = listOf("The Velvet Underground"),
-                songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = "4:52",
-                songName = "Lady Godiva's Operation",
-                songTrackNumber = 3
-            ),
-            Song(
-                songUuid = "089b2d86-e32d-4ebd-8ceb-1acc5c4f322f",
-                songArtists = listOf("The Velvet Underground"),
-                songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = "2:00",
-                songName = "Here She Comes Now",
-                songTrackNumber = 4
-            ),
-            Song(
-                songUuid = "ebb8356e-fd88-4e8d-a3db-180d0de547e5",
-                songArtists = listOf("The Velvet Underground"),
-                songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = "4:05",
-                songName = "I Heard Her Call My Name",
-                songTrackNumber = 5
-            ),
-            Song(
-                songUuid = "bb2c6582-bcf1-47a0-9bbc-b97dcbbecab1",
-                songArtists = listOf("The Velvet Underground"),
-                songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
-                songDuration = "17:00",
-                songName = "Sister Ray",
-                songTrackNumber = 6
-            ),
-            Song(
-                songUuid = "b165dfab-68e3-4cca-babb-ddf875687afb",
-                songArtists = listOf("Miles Davis"),
-                songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = "9:22",
-                songName = "So What",
-                songTrackNumber = 1
-            ),
-            Song(
-                songUuid = "8f6f58e2-ac95-4c8b-ad03-76ce0ad06412",
-                songArtists = listOf("Miles Davis"),
-                songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = "9:46",
-                songName = "Freddie Freeloader",
-                songTrackNumber = 2
-            ),
-            Song(
-                songUuid = "aa58a275-cd40-4986-8d1a-593d40b7a934",
-                songArtists = listOf("Miles Davis"),
-                songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = "5:37",
-                songName = "Blue In Green",
-                songTrackNumber = 3
-            ),
-            Song(
-                songUuid = "d3d6ca38-cf1b-4151-9937-dd35cff2a336",
-                songArtists = listOf("Miles Davis"),
-                songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = "11:33",
-                songName = "All Blues",
-                songTrackNumber = 4
-            ),
-            Song(
-                songUuid = "4a6dfd30-ed2f-4cc3-9809-c2918f11e928",
-                songArtists = listOf("Miles Davis"),
-                songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
-                songDuration = "9:26",
-                songName = "Flamenco Sketches",
-                songTrackNumber = 5
-            )
-        )
-    }
-
 }
