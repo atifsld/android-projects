@@ -2,6 +2,7 @@ package com.atif.spatify.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.atif.spatify.R
 
 class AlbumDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
