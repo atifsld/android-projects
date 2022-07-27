@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.service.SpatifyService
-import com.atif.spatify.view.AlbumViewAdapter
-import com.atif.spatify.view.SongsInAlbumViewAdapterViewAdapter
+import com.atif.spatify.view.SongsInAlbumViewAdapter
 import com.squareup.picasso.Picasso
 
 class AlbumDetailActivity : AppCompatActivity() {
@@ -33,9 +31,12 @@ class AlbumDetailActivity : AppCompatActivity() {
             .load(album.albumArtUrl)
             .into(albumArtImageView)
 
+        populateSongsInRecyclerView(albumUuid)
+    }
 
-        val songsInAlbumList = SpatifyService.getSongsInAlbum(albumUuid)
-        val adapter = SongsInAlbumViewAdapterViewAdapter(songsInAlbumList, this)
+    private fun populateSongsInRecyclerView(albumUuid: String?) {
+        val songsInAlbumList = SpatifyService.getSongsInAlbum(albumUuid!!)
+        val adapter = SongsInAlbumViewAdapter(songsInAlbumList, this)
         val albumRecyclerView = findViewById<RecyclerView>(R.id.songs_in_album_recycler_view)
         albumRecyclerView.adapter = adapter
         albumRecyclerView.layoutManager = LinearLayoutManager(this)

@@ -4,16 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.data.Song
-import com.squareup.picasso.Picasso
 
-
-class SongsInAlbumViewAdapterViewAdapter(var recyclerDataArrayList: List<Song>, var context: Context) :
-    RecyclerView.Adapter<SongsInAlbumViewAdapterViewAdapter.RecyclerViewHolder>() {
+class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context: Context) :
+    RecyclerView.Adapter<SongsInAlbumViewAdapter.RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout
         val view: View =
@@ -21,7 +18,7 @@ class SongsInAlbumViewAdapterViewAdapter(var recyclerDataArrayList: List<Song>, 
         return RecyclerViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: SongsInAlbumViewAdapterViewAdapter.RecyclerViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SongsInAlbumViewAdapter.RecyclerViewHolder, position: Int) {
         // Set the data to textview and imageview.
         val song: Song = recyclerDataArrayList[position]
         holder.song_title.text = song.songName
