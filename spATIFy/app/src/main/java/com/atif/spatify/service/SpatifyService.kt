@@ -4,8 +4,7 @@ import com.atif.spatify.data.Album
 import com.atif.spatify.data.AlbumCredit
 import com.atif.spatify.data.Song
 
-
-class SpatifyService {
+object SpatifyService {
     fun getAlbums(): List<Album> {
         return listOf(
             Album(

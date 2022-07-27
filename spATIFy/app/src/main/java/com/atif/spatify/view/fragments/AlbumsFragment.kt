@@ -40,8 +40,7 @@ class AlbumsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_albums, container, false)
-        val spatifyService = SpatifyService()
-        val albumList = spatifyService.getAlbums()
+        val albumList = SpatifyService.getAlbums()
         val adapter = AlbumViewAdapter(albumList, context)
         val albumRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_albums)
         albumRecyclerView.adapter = adapter
