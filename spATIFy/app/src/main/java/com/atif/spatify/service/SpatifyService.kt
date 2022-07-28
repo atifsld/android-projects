@@ -54,7 +54,7 @@ object SpatifyService {
         return null;
     }
 
-    fun populateAlbums() {
+    private fun populateAlbums() {
         albums.put(
             "5583e514-cf7b-4214-8397-dfd7e10dfb33",
             Album(
