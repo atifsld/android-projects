@@ -1,6 +1,7 @@
 package com.atif.spatify.view
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +13,7 @@ import com.atif.spatify.data.Song
 import com.squareup.picasso.Picasso
 
 
-class SongViewAdapter(var recyclerDataArrayList: List<Song>) :
+class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Context?) :
     RecyclerView.Adapter<SongViewAdapter.RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout
@@ -27,6 +28,12 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>) :
         holder.song_title.setText(song.songName)
         holder.song_artist.setText(song.getCommaSeparatedArtists())
         holder.song_duration.setText(song.songDuration)
+        holder.song_title.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.setType("text/plain")
+            intent.putExtra(Intent.EXTRA_TEXT, song.createShareString())
+            context!!.startActivity(intent)
+        }
         Picasso
             .get()
             .load(song.songAlbumArtUrl)

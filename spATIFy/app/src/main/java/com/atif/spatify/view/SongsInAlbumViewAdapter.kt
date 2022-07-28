@@ -1,10 +1,13 @@
 package com.atif.spatify.view
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.data.Song
@@ -22,6 +25,12 @@ class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context
         // Set the data to textview and imageview.
         val song: Song = recyclerDataArrayList[position]
         holder.song_title.text = song.songName
+        holder.song_title.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.setType("text/plain")
+            intent.putExtra(Intent.EXTRA_TEXT, song.createShareString())
+            context.startActivity(intent)
+        }
         holder.song_artist.text = song.getCommaSeparatedArtists()
         holder.song_track_number.text = song.songTrackNumber.toString()
     }
