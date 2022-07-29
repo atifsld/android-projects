@@ -25,15 +25,17 @@
             android:textSize="40sp" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="220sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/song_title"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:maxLines="1"
                 android:text="White Light/White Heat"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -41,11 +43,26 @@
 
             <TextView
                 android:id="@+id/song_artist"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:maxLines="1"
                 android:text="The Velvet Underground"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/share_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#555555"
+                app:srcCompat="@android:drawable/ic_menu_share" />
         </LinearLayout>
 
     </LinearLayout>
