@@ -28,4 +28,9 @@ data class Album (
     fun getCommaSeparatedArtists(): String {
         return albumArtists.joinToString (separator = ", ")
     }
+
+    fun createShareString(): String? {
+        return if (albumArtists.size == 1) "Check out $albumName by ${albumArtists[0]} on Spatify."
+        else "Check out $albumName by ${albumArtists[0]} and others on Spatify."
+    }
 }

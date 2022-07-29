@@ -38,6 +38,12 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
             }
             context!!.startActivity(intent)
         }
+        holder.album_title.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.setType("text/plain")
+            intent.putExtra(Intent.EXTRA_TEXT, album.createShareString())
+            context!!.startActivity(intent)
+        }
         Picasso
             .get()
             .load(album.albumArtUrl)
