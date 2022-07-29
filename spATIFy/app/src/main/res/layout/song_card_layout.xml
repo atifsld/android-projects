@@ -21,19 +21,22 @@
             android:layout_height="100dp"
             app:srcCompat="@drawable/whitelightwhiteheat" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="220sp"
             android:layout_height="match_parent"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            android:background="#8C8C8C"
+            android:orientation="vertical"
             android:paddingLeft="10dp"
+            android:paddingTop="5dp"
             android:paddingRight="10dp"
-            android:background="#8C8C8C">
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/song_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:maxLines="1"
                 android:text="White Light/White Heat"
                 android:textColor="@color/white"
                 android:textSize="20dp"
@@ -46,6 +49,8 @@
                 android:id="@+id/song_artist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autoSizeTextType="uniform"
+                android:maxLines="1"
                 android:text="The Velvet Underground"
                 android:textColor="@color/white"
                 android:textSize="20dp"
@@ -63,7 +68,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/song_artist" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8C8C8C"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/share_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8C8C8C"
+                app:srcCompat="@android:drawable/ic_menu_share" />
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

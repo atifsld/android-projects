@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -28,7 +29,7 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Contex
         holder.song_title.setText(song.songName)
         holder.song_artist.setText(song.getCommaSeparatedArtists())
         holder.song_duration.setText(song.songDuration)
-        holder.song_title.setOnClickListener {
+        holder.share_button.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             intent.setType("text/plain")
             intent.putExtra(Intent.EXTRA_TEXT, song.createShareString())
@@ -50,5 +51,6 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Contex
         val song_artist: TextView = itemView.findViewById(R.id.song_artist)
         val song_art: ImageView = itemView.findViewById(R.id.song_art_iv)
         val song_duration: TextView= itemView.findViewById(R.id.song_duration)
+        val share_button: ImageButton = itemView.findViewById(R.id.share_button)
     }
 }
