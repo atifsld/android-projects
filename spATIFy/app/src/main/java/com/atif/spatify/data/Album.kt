@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName
 data class Album (
     @SerializedName("album_uuid") val albumUuid: String,
     @SerializedName("album_name") val albumName: String,
+    @SerializedName("album_description") val albumDescription: String,
     @SerializedName("album_art_url") val albumArtUrl: String,
     @SerializedName("album_artists") val albumArtists: List<String>,
     @SerializedName("album_credits") val albumCredits: List<AlbumCredit>,
@@ -16,6 +17,7 @@ data class Album (
     override fun toString(): String {
         return "Album UUID: $albumUuid" + "\n" +
                 "Album name: $albumName" + "\n" +
+                "Album description: $albumDescription" + "\n" +
                 "Album art URL: $albumArtUrl" + "\n" +
                 "Album artist: $albumArtists" + "\n" +
                 "Album credits: $albumCredits" + "\n" +
