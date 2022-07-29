@@ -13,12 +13,22 @@ import com.atif.spatify.view.SongsInAlbumViewAdapter
 import com.squareup.picasso.Picasso
 
 class AlbumDetailActivity : AppCompatActivity() {
+    var albumUuid: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_album_detail)
-        val albumUuid = intent.getStringExtra("albumUuid")
+
+        if(intent.data != null) {
+            val uri = intent.data.toString()
+            albumUuid = uri.toString()
+            Toast.makeText(this, "Path=$albumUuid", Toast.LENGTH_SHORT).show()
+        } else {
+            albumUuid = intent.getStringExtra("albumUuid")
+            Toast.makeText(this, "UUID in intent=$albumUuid", Toast.LENGTH_SHORT).show()
+        }
+
         val album = albumUuid?.let { SpatifyService.getAlbum(it) }!!
-        Toast.makeText(this, albumUuid, Toast.LENGTH_SHORT).show()
         val albumTitleTextView = findViewById<TextView>(R.id.album_title)
         val albumArtistTextView = findViewById<TextView>(R.id.album_artist)
         val albumYearTextView = findViewById<TextView>(R.id.album_year)
