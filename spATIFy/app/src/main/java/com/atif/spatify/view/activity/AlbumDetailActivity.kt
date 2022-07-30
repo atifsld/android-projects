@@ -14,6 +14,9 @@ import com.squareup.picasso.Picasso
 
 class AlbumDetailActivity : AppCompatActivity() {
     var albumUuid: String? = null
+    var spotifyButton: ImageView? = null
+    var geniusButton: ImageView? = null
+    var wikipediaButton: ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +37,19 @@ class AlbumDetailActivity : AppCompatActivity() {
         val albumArtistTextView = findViewById<TextView>(R.id.album_artist)
         val albumYearTextView = findViewById<TextView>(R.id.album_year)
         val albumArtImageView = findViewById<ImageView>(R.id.album_art_iv)
+        spotifyButton = findViewById(R.id.album_spotify_button)
+        wikipediaButton = findViewById(R.id.album_wikipedia_button)
+        geniusButton = findViewById(R.id.album_genius_button)
+
+        spotifyButton!!.setOnClickListener{
+            Toast.makeText(this, "Spotify button clicked.", Toast.LENGTH_SHORT).show()
+        }
+        wikipediaButton!!.setOnClickListener{
+            Toast.makeText(this, "Wikipedia button clicked.", Toast.LENGTH_SHORT).show()
+        }
+        geniusButton!!.setOnClickListener{
+            Toast.makeText(this, "Genius button clicked.", Toast.LENGTH_SHORT).show()
+        }
         albumTitleTextView.text = album.albumName
         albumArtistTextView.text = album.getCommaSeparatedArtists()
         albumYearTextView.text = album.albumYear.toString()
