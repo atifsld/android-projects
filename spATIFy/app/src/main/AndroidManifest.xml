@@ -30,7 +30,7 @@
 
                 <data
                     android:host="www.spatify.com"
-                    android:scheme="spatify" />
+                    android:scheme="https" />
             </intent-filter>
         </activity>
         <activity

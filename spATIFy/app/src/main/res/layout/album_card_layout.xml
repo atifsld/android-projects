@@ -77,7 +77,7 @@
             </LinearLayout>
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/share_button"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="#8c8c8c"

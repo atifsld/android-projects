@@ -21,8 +21,9 @@ class AlbumDetailActivity : AppCompatActivity() {
 
         if(intent.data != null) {
             val uri = intent.data.toString()
-            albumUuid = uri.toString()
-            Toast.makeText(this, "Path=$albumUuid", Toast.LENGTH_SHORT).show()
+            val uriPath = uri.toString()
+            albumUuid = uriPath.replace("https://www.spatify.com/", "")
+            Toast.makeText(this, "UUID in path=$uriPath", Toast.LENGTH_SHORT).show()
         } else {
             albumUuid = intent.getStringExtra("albumUuid")
             Toast.makeText(this, "UUID in intent=$albumUuid", Toast.LENGTH_SHORT).show()

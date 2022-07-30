@@ -32,7 +32,7 @@ data class Album (
     }
 
     fun createShareString(): String? {
-        return if (albumArtists.size == 1) "Check out $albumName by ${albumArtists[0]} on Spatify."
-        else "Check out $albumName by ${albumArtists[0]} and others on Spatify."
+        return if (albumArtists.size == 1) "Check out $albumName by ${albumArtists[0]} on Spatify. Link: https://www.spatify.com/$albumUuid"
+        else "Check out $albumName by ${albumArtists[0]} and others on Spatify. Link: https://www.spatify.com/$albumUuid"
     }
 }
