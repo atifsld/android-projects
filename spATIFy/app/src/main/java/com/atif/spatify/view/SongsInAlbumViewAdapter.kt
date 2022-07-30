@@ -2,6 +2,7 @@ package com.atif.spatify.view
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +27,11 @@ class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context
         // Set the data to textview and imageview.
         val song: Song = recyclerDataArrayList[position]
         holder.song_title.text = song.songName
+        holder.song_title.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW)
+                .setData(Uri.parse(song.songSpotifyUrl))
+            context.startActivity(intent)
+        }
         holder.song_artist.text = song.getCommaSeparatedArtists()
         holder.song_track_number.text = song.songTrackNumber.toString()
         holder.share_button.setOnClickListener {
