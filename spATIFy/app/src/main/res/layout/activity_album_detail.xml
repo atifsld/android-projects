@@ -79,10 +79,55 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="15dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Album's Genius button"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/genius" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="15dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/spotify"
+                    android:contentDescription="Album's Spotify button" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="15dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/wikipedia"
+                    android:contentDescription="Album's Wikipedia button"/>
+            </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/songs_in_album_recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY">
+
+            </androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
     </ScrollView>
 
