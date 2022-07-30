@@ -39,12 +39,6 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
             }
             context!!.startActivity(intent)
         }
-        holder.share_button.setOnClickListener {
-            val intent = Intent(Intent.ACTION_SEND)
-            intent.setType("text/plain")
-            intent.putExtra(Intent.EXTRA_TEXT, album.createShareString())
-            context!!.startActivity(intent)
-        }
         Picasso
             .get()
             .load(album.albumArtUrl)
@@ -62,6 +56,5 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
         val album_art_iv: ImageView = itemView.findViewById(R.id.album_art_iv)
         val album_artists: TextView = itemView.findViewById(R.id.album_artist)
         val album_year: TextView = itemView.findViewById(R.id.album_year)
-        val share_button: ImageButton = itemView.findViewById(R.id.share_button)
     }
 }
