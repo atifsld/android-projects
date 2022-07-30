@@ -12,6 +12,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.atif.spatify.AboutPageActivity
 import com.atif.spatify.R
 import com.atif.spatify.view.fragments.AlbumsFragment
 import com.atif.spatify.view.fragments.SongsFragment
@@ -42,7 +43,8 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.about -> {
-                    Toast.makeText(this, "My Profile", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this, AboutPageActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.contactus -> {
