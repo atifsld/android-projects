@@ -60,6 +60,7 @@ object SpatifyService {
             Album(
                 albumUuid = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                 albumArtists = listOf("The Velvet Underground"),
+                albumDescription = "White Light/White Heat description",
                 albumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                 albumCredits = listOf(
                     AlbumCredit(
@@ -168,6 +169,7 @@ object SpatifyService {
             Album(
                 albumUuid = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 albumArtists = listOf("Miles Davis"),
+                albumDescription = "Kind of Blue description",
                 albumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
                 albumCredits = listOf(
                     AlbumCredit(
