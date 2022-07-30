@@ -1,5 +1,7 @@
 package com.atif.spatify.view.activity
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -42,7 +44,9 @@ class AlbumDetailActivity : AppCompatActivity() {
         geniusButton = findViewById(R.id.album_genius_button)
 
         spotifyButton!!.setOnClickListener{
-            Toast.makeText(this, "Spotify button clicked.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(Intent.ACTION_VIEW)
+                .setData(Uri.parse(album.albumSpotifyUrl))
+            startActivity(intent)
         }
         wikipediaButton!!.setOnClickListener{
             Toast.makeText(this, "Wikipedia button clicked.", Toast.LENGTH_SHORT).show()
