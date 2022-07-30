@@ -7,7 +7,8 @@ data class Song (
     @SerializedName("song_duration") val songDuration: String,
     @SerializedName("song_track_number") val songTrackNumber: Int,
     @SerializedName("song_artists") val songArtists: List<String>,
-    @SerializedName("song_album_art_url") val songAlbumArtUrl: String
+    @SerializedName("song_album_art_url") val songAlbumArtUrl: String,
+    @SerializedName("song_spotify_url") val songSpotifyUrl: String?
 ) {
     override fun toString(): String {
         return "Song UUID, $songUuid" + "\n" +
