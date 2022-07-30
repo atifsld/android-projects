@@ -17,16 +17,20 @@
         android:theme="@style/Theme.SpATIFy"
         tools:targetApi="31">
         <activity
+            android:name=".AboutPageActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.AlbumDetailActivity"
-            android:exported="true" >
-
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"></action>
-                <category android:name="android.intent.category.DEFAULT"></category>
-                <category android:name="android.intent.category.BROWSABLE"></category>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
-                    android:scheme="spatify"
-                    android:host="www.spatify.com"/>
+                    android:host="www.spatify.com"
+                    android:scheme="spatify" />
             </intent-filter>
         </activity>
         <activity
@@ -34,13 +38,12 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".view.activity.MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
