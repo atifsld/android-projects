@@ -49,10 +49,14 @@ class AlbumDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
         wikipediaButton!!.setOnClickListener{
-            Toast.makeText(this, "Wikipedia button clicked.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(Intent.ACTION_VIEW)
+                .setData(Uri.parse(album.albumWikipediaUrl))
+            startActivity(intent)
         }
         geniusButton!!.setOnClickListener{
-            Toast.makeText(this, "Genius button clicked.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(Intent.ACTION_VIEW)
+                .setData(Uri.parse(album.albumGeniusUrl))
+            startActivity(intent)
         }
         albumTitleTextView.text = album.albumName
         albumArtistTextView.text = album.getCommaSeparatedArtists()
