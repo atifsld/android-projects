@@ -62,6 +62,9 @@ object SpatifyService {
                 albumArtists = listOf("The Velvet Underground"),
                 albumDescription = "White Light/White Heat description",
                 albumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
+                albumSpotifyUrl = "https://open.spotify.com/album/0HHmJpwOXXRJu9HI9iQiEO?si=Z8BDHkGyRdWEN3LHyyz_ZQ",
+                albumGeniusUrl = "https://genius.com/albums/The-velvet-underground/White-light-white-heat",
+                albumWikipediaUrl = "https://en.wikipedia.org/wiki/White_Light/White_Heat",
                 albumCredits = listOf(
                     AlbumCredit(
                         creditName = "Andy Warhol",
@@ -171,6 +174,9 @@ object SpatifyService {
                 albumArtists = listOf("Miles Davis"),
                 albumDescription = "Kind of Blue description",
                 albumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
+                albumSpotifyUrl = "https://open.spotify.com/album/1weenld61qoidwYuZ1GESA?si=CsrQI5dKSi6-9StJndQYKw",
+                albumGeniusUrl = null,
+                albumWikipediaUrl = "https://en.wikipedia.org/wiki/Kind_of_Blue",
                 albumCredits = listOf(
                     AlbumCredit(
                         creditName = "Julian Adderly",
