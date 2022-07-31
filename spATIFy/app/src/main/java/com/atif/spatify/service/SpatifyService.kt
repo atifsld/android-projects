@@ -215,7 +215,7 @@ object SpatifyService {
                     creditContribution = "M. Davis"
                 )
             ),
-            albumLabel = "Columnia",
+            albumLabel = "Columbia",
             albumName = "Kind Of Blue",
             albumSongs = listOf(
                 Song(
