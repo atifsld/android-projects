@@ -37,11 +37,13 @@ class AlbumDetailActivity : AppCompatActivity() {
 
         val album = albumUuid?.let { SpatifyService.getAlbum(it) }!!
         val albumTitleTextView = findViewById<TextView>(R.id.album_title)
+        val albumLabel = findViewById<TextView>(R.id.album_label_name)
         val albumArtistTextView = findViewById<TextView>(R.id.album_artist)
         val albumYearTextView = findViewById<TextView>(R.id.album_year)
         val albumArtImageView = findViewById<ImageView>(R.id.album_art_iv)
         val albumDescription = findViewById<TextView>(R.id.album_description)
         val shareButton = findViewById<ImageButton>(R.id.album_share_button)
+
         spotifyButton = findViewById(R.id.album_spotify_button)
         wikipediaButton = findViewById(R.id.album_wikipedia_button)
         geniusButton = findViewById(R.id.album_genius_button)
@@ -71,6 +73,7 @@ class AlbumDetailActivity : AppCompatActivity() {
         albumArtistTextView.text = album.getCommaSeparatedArtists()
         albumYearTextView.text = album.albumYear.toString()
         albumDescription.text = album.albumDescription
+        albumLabel.text = album.albumLabel
         Picasso
             .get()
             .load(album.albumArtUrl)
