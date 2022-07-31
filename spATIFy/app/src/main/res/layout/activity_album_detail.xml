@@ -118,6 +118,18 @@
                     android:contentDescription="Album's Wikipedia button"
                     android:scaleType="fitXY"
                     app:srcCompat="@drawable/wikipedia" />
+
+                <ImageButton
+                    android:id="@+id/album_share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Album share button"
+                    android:minHeight="48dp"
+                    app:srcCompat="@android:drawable/ic_menu_share" />
             </LinearLayout>
 
             <TextView
@@ -162,6 +174,26 @@
                 android:scaleType="fitXY">
 
             </androidx.recyclerview.widget.RecyclerView>
+            <TextView
+                android:id="@+id/album_label_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Label: "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/album_label_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Columbia Records"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 
