@@ -1,4 +1,4 @@
-package com.atif.spatify
+package com.atif.spatify.view.activity
 
 import android.os.Bundle
 import android.view.View
