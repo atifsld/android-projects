@@ -23,7 +23,6 @@ object SpatifyService {
     }
 
     fun getSongsInAlbum(albumUuid: String): List<Song> {
-        val songList: MutableList<Song> = mutableListOf()
         if(albums.size == 0) {
             populateAlbums()
         }
@@ -60,7 +59,7 @@ object SpatifyService {
             Album(
                 albumUuid = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                 albumArtists = listOf("The Velvet Underground"),
-                albumDescription = "White Light/White Heat description",
+                albumDescription = "White Light/White Heat contains a distorted, feedback-driven, and roughly recorded sound, which is regarded as influential; it foreshadowed the start of punk rock and the no wave genre. The Social Distortion album White Light, White Heat, White Trash would be named after White Light/White Heat.",
                 albumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                 albumSpotifyUrl = "https://open.spotify.com/album/0HHmJpwOXXRJu9HI9iQiEO?si=Z8BDHkGyRdWEN3LHyyz_ZQ",
                 albumGeniusUrl = "https://genius.com/albums/The-velvet-underground/White-light-white-heat",
@@ -178,7 +177,7 @@ object SpatifyService {
             Album(
                 albumUuid = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 albumArtists = listOf("Miles Davis"),
-                albumDescription = "Kind of Blue description",
+                albumDescription = "Kind of Blue is a studio album by American jazz trumpeter, composer, and bandleader Miles Davis. It was recorded on March 2 and April 22, 1959, at Columbia's 30th Street Studio in New York City, and released on August 17 of that year by Columbia Records.",
                 albumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
                 albumSpotifyUrl = "https://open.spotify.com/album/1weenld61qoidwYuZ1GESA?si=CsrQI5dKSi6-9StJndQYKw",
                 albumGeniusUrl = null,
