@@ -34,7 +34,7 @@
                 android:id="@+id/song_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoSizeTextType="uniform"
+                android:ellipsize="end"
                 android:maxLines="1"
                 android:text="White Light/White Heat"
                 android:textColor="@color/white"
