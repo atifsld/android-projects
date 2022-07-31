@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -35,9 +36,9 @@ android {
 }
 
 dependencies {
-    implementation "androidx.room:room-ktx:$rootProject.roomVersion"
-    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
-    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+    implementation "androidx.room:room-ktx:2.4.1"
+    kapt "androidx.room:room-compiler:2.4.1"
+    androidTestImplementation "androidx.room:room-testing:2.4.1"
     implementation "com.squareup.picasso:picasso:2.71828"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'io.github.medyo:android-about-page:2.0.0'
