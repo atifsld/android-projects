@@ -22,8 +22,7 @@
                 android:layout_height="wrap_content"
                 android:background="#555555"
                 android:orientation="horizontal"
-                android:paddingTop="15sp"
-                android:paddingBottom="30sp">
+                android:paddingTop="15sp">
 
                 <ImageView
                     android:id="@+id/album_art_iv"
@@ -81,14 +80,14 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="60dp"
                 android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/album_genius_button"
                     android:layout_width="15dp"
                     android:layout_height="48dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
@@ -104,9 +103,9 @@
                     android:layout_marginRight="15dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
+                    android:contentDescription="Album's Spotify button"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/spotify"
-                    android:contentDescription="Album's Spotify button" />
+                    app:srcCompat="@drawable/spotify" />
 
                 <ImageButton
                     android:id="@+id/album_wikipedia_button"
@@ -116,10 +115,45 @@
                     android:layout_marginRight="30dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
+                    android:contentDescription="Album's Wikipedia button"
                     android:scaleType="fitXY"
-                    app:srcCompat="@drawable/wikipedia"
-                    android:contentDescription="Album's Wikipedia button"/>
+                    app:srcCompat="@drawable/wikipedia" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Description"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/album_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="start|top"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Kind of Blue is a studio album by American jazz trumpeter, composer, and bandleader Miles Davis. It was recorded on March 2 and April 22, 1959, at Columbia's 30th Street Studio in New York City, and released on August 17 of that year by Columbia Records."/>
+
+            <TextView
+                android:id="@+id/track_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Tracklist"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/songs_in_album_recycler_view"
