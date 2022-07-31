@@ -1,4 +1,4 @@
-package com.atif.spatify.view
+package com.atif.spatify.view.viewmodel
 
 //import androidx.lifecycle.ViewModel
 //import androidx.lifecycle.ViewModelProvider

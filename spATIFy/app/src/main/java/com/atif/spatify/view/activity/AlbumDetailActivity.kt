@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.service.SpatifyService
-import com.atif.spatify.view.SongsInAlbumViewAdapter
+import com.atif.spatify.view.adapter.SongsInAlbumViewAdapter
 import com.squareup.picasso.Picasso
 
 class AlbumDetailActivity : AppCompatActivity() {

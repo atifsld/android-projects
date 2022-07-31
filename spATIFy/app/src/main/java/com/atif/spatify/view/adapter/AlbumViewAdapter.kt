@@ -1,15 +1,12 @@
-package com.atif.spatify.view
+package com.atif.spatify.view.adapter
 
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.data.Album
@@ -27,7 +24,7 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
         return RecyclerViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: AlbumViewAdapter.RecyclerViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         // Set the data to textview and imageview.
         val album: Album = recyclerDataArrayList[position]
         holder.album_title.text = album.albumName
