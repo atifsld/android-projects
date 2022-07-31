@@ -39,6 +39,7 @@ class AlbumDetailActivity : AppCompatActivity() {
         val albumArtistTextView = findViewById<TextView>(R.id.album_artist)
         val albumYearTextView = findViewById<TextView>(R.id.album_year)
         val albumArtImageView = findViewById<ImageView>(R.id.album_art_iv)
+        val albumDescription = findViewById<TextView>(R.id.album_description)
         spotifyButton = findViewById(R.id.album_spotify_button)
         wikipediaButton = findViewById(R.id.album_wikipedia_button)
         geniusButton = findViewById(R.id.album_genius_button)
@@ -61,6 +62,7 @@ class AlbumDetailActivity : AppCompatActivity() {
         albumTitleTextView.text = album.albumName
         albumArtistTextView.text = album.getCommaSeparatedArtists()
         albumYearTextView.text = album.albumYear.toString()
+        albumDescription.text = album.albumDescription
         Picasso
             .get()
             .load(album.albumArtUrl)
