@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -40,6 +41,7 @@ class AlbumDetailActivity : AppCompatActivity() {
         val albumYearTextView = findViewById<TextView>(R.id.album_year)
         val albumArtImageView = findViewById<ImageView>(R.id.album_art_iv)
         val albumDescription = findViewById<TextView>(R.id.album_description)
+        val shareButton = findViewById<ImageButton>(R.id.album_share_button)
         spotifyButton = findViewById(R.id.album_spotify_button)
         wikipediaButton = findViewById(R.id.album_wikipedia_button)
         geniusButton = findViewById(R.id.album_genius_button)
@@ -57,6 +59,12 @@ class AlbumDetailActivity : AppCompatActivity() {
         geniusButton!!.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
                 .setData(Uri.parse(album.albumGeniusUrl))
+            startActivity(intent)
+        }
+        shareButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.setType("text/plain")
+            intent.putExtra(Intent.EXTRA_TEXT, album.createShareString())
             startActivity(intent)
         }
         albumTitleTextView.text = album.albumName
