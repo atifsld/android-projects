@@ -9,7 +9,7 @@ object SpatifyService {
 
     fun getAlbums(): List<Album> {
         val albumList: MutableList<Album> = mutableListOf()
-        if (albums.size == 0) {
+        if (albums.isEmpty()) {
             populateAlbums()
         }
         for (album in albums) {
@@ -19,14 +19,14 @@ object SpatifyService {
     }
 
     fun getAlbum(albumUuid: String): Album? {
-        if (albums.size == 0) {
+        if (albums.isEmpty()) {
             populateAlbums()
         }
         return albums[albumUuid]
     }
 
     fun getCreditListForAlbum(albumUuid: String): List<AlbumCredit> {
-        if (albums.size == 0) {
+        if (albums.isEmpty()) {
             populateAlbums()
         }
         return albums[albumUuid]!!.albumCredits
