@@ -17,10 +17,10 @@ import com.atif.spatify.view.adapter.SongsInAlbumViewAdapter
 import com.squareup.picasso.Picasso
 
 class AlbumDetailActivity : AppCompatActivity() {
-    var albumUuid: String? = null
-    var spotifyButton: ImageView? = null
-    var geniusButton: ImageView? = null
-    var wikipediaButton: ImageView? = null
+    private var albumUuid: String? = null
+    private var spotifyButton: ImageView? = null
+    private var geniusButton: ImageView? = null
+    private var wikipediaButton: ImageView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class AlbumDetailActivity : AppCompatActivity() {
 
         if(intent.data != null) {
             val uri = intent.data.toString()
-            val uriPath = uri.toString()
+            val uriPath = uri
             albumUuid = uriPath.replace("https://www.spatify.com/", "")
             Toast.makeText(this, "UUID in path=$uriPath", Toast.LENGTH_SHORT).show()
         } else {
@@ -86,7 +86,7 @@ class AlbumDetailActivity : AppCompatActivity() {
     }
 
     private fun populateCreditsInRecyclerView(albumUuid: String) {
-        val creditsInAlbumList = SpatifyService.getCreditListForAlbum(albumUuid!!)
+        val creditsInAlbumList = SpatifyService.getCreditListForAlbum(albumUuid)
         val adapter = AlbumCreditViewAdapter(creditsInAlbumList, this)
         val albumCreditRecyclerView = findViewById<RecyclerView>(R.id.album_credits_recycler_view)
         albumCreditRecyclerView.adapter = adapter
