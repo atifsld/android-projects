@@ -188,7 +188,7 @@ object SpatifyService {
                     songTrackNumber = 6
                 )
             ),
-            albumTags = listOf("Avantgarde", "Experimental", "Noise", "Art Rock"),
+            albumTags = "Avantgarde, Experimental, Noise, Art Rock",
             albumYear = 1968
         )
         albums["2080f161-c553-408d-9724-9c1e2f1b8c87"] = Album(
@@ -295,7 +295,7 @@ object SpatifyService {
                     songTrackNumber = 5
                 )
             ),
-            albumTags = listOf("Modal"),
+            albumTags = "Modal",
             albumYear = 1959
         )
 
@@ -395,7 +395,7 @@ object SpatifyService {
                     songTrackNumber = 4
                 )
             ),
-            albumTags = listOf("Jazz", "Jazz-Funk"),
+            albumTags = "Jazz, Jazz-Funk",
             albumYear = 1973
         )
     }
