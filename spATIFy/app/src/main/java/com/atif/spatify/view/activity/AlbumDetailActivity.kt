@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.service.SpatifyService
+import com.atif.spatify.view.adapter.AlbumCreditViewAdapter
 import com.atif.spatify.view.adapter.SongsInAlbumViewAdapter
 import com.squareup.picasso.Picasso
 
@@ -80,6 +81,16 @@ class AlbumDetailActivity : AppCompatActivity() {
             .into(albumArtImageView)
 
         populateSongsInRecyclerView(albumUuid)
+
+        populateCreditsInRecyclerView(albumUuid!!)
+    }
+
+    private fun populateCreditsInRecyclerView(albumUuid: String) {
+        val creditsInAlbumList = SpatifyService.getCreditListForAlbum(albumUuid!!)
+        val adapter = AlbumCreditViewAdapter(creditsInAlbumList, this)
+        val albumCreditRecyclerView = findViewById<RecyclerView>(R.id.album_credits_recycler_view)
+        albumCreditRecyclerView.adapter = adapter
+        albumCreditRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
     }
 
     private fun populateSongsInRecyclerView(albumUuid: String?) {

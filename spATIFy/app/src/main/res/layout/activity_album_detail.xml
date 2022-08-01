@@ -178,8 +178,25 @@
                 android:scaleType="fitXY">
 
             </androidx.recyclerview.widget.RecyclerView>
+
             <TextView
-                android:id="@+id/album_label_title"
+                android:id="@+id/album_credits_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Credits:"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/album_credits_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/album_label_title2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -188,6 +205,7 @@
                 android:text="Label: "
                 android:textColor="#FFFFFF"
                 android:textSize="24sp" />
+
             <TextView
                 android:id="@+id/album_label_name"
                 android:layout_width="match_parent"
