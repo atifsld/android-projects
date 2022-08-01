@@ -19,7 +19,18 @@ object SpatifyService {
     }
 
     fun getAlbum(albumUuid: String): Album? {
+        if (albums.size == 0) {
+            populateAlbums()
+        }
         return albums[albumUuid]
+    }
+
+    fun getCreditListForAlbum(albumUuid: String): List<AlbumCredit> {
+        if (albums.size == 0) {
+            populateAlbums()
+        }
+        return albums[albumUuid]!!.albumCredits
+
     }
 
     fun getSongsInAlbum(albumUuid: String): List<Song> {
