@@ -27,7 +27,7 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Contex
         // Set the data to textview and imageview.
         val song: Song = recyclerDataArrayList[position]
         holder.songTitle.text = song.songName
-        holder.songArtist.text = song.getCommaSeparatedArtists()
+        holder.songArtist.text = song.songArtists
         holder.songDuration.text = song.songDuration
         holder.shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)

@@ -28,7 +28,7 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
         // Set the data to textview and imageview.
         val album: Album = recyclerDataArrayList[position]
         holder.albumTitle.text = album.albumName
-        holder.albumArtists.text = album.getCommaSeparatedArtists()
+        holder.albumArtists.text = album.albumArtists
         holder.albumYear.text = album.albumYear.toString()
         holder.albumArtIv.setOnClickListener{
             val intent = Intent(context, AlbumDetailActivity::class.java).apply {

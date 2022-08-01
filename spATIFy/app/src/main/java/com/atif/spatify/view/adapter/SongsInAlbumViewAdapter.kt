@@ -30,7 +30,7 @@ class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context
                 .setData(Uri.parse(song.songSpotifyUrl))
             context.startActivity(intent)
         }
-        holder.songArtist.text = song.getCommaSeparatedArtists()
+        holder.songArtist.text = song.songArtists
         holder.songTrackNumber.text = song.songTrackNumber.toString()
         holder.shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)

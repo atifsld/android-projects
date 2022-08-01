@@ -10,7 +10,7 @@ data class Album(
     @SerializedName("album_spotify_url") val albumSpotifyUrl: String?,
     @SerializedName("album_wikipedia_url") val albumWikipediaUrl: String?,
     @SerializedName("album_genius_url") val albumGeniusUrl: String?,
-    @SerializedName("album_artists") val albumArtists: List<String>,
+    @SerializedName("album_artists") val albumArtists: String,
     @SerializedName("album_credits") val albumCredits: List<AlbumCredit>,
     @SerializedName("album_songs") val albumSongs: List<Song>,
     @SerializedName("album_label") val albumLabel: String,
@@ -33,12 +33,7 @@ data class Album(
                 "Album year: $albumYear"
     }
 
-    fun getCommaSeparatedArtists(): String {
-        return albumArtists.joinToString (separator = ", ")
-    }
-
     fun createShareString(): String {
-        return if (albumArtists.size == 1) "Check out $albumName by ${albumArtists[0]} on Spatify. Link: https://www.spatify.com/$albumUuid"
-        else "Check out $albumName by ${albumArtists[0]} and others on Spatify. Link: https://www.spatify.com/$albumUuid"
+        return "Check out $albumName by $albumArtists on Spatify. Link: https://www.spatify.com/$albumUuid"
     }
 }
