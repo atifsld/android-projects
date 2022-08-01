@@ -26,19 +26,19 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Contex
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         // Set the data to textview and imageview.
         val song: Song = recyclerDataArrayList[position]
-        holder.song_title.setText(song.songName)
-        holder.song_artist.setText(song.getCommaSeparatedArtists())
-        holder.song_duration.setText(song.songDuration)
-        holder.share_button.setOnClickListener {
+        holder.songTitle.text = song.songName
+        holder.songArtist.text = song.getCommaSeparatedArtists()
+        holder.songDuration.text = song.songDuration
+        holder.shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
-            intent.setType("text/plain")
+            intent.type = "text/plain"
             intent.putExtra(Intent.EXTRA_TEXT, song.createShareString())
             context!!.startActivity(intent)
         }
         Picasso
             .get()
             .load(song.songAlbumArtUrl)
-            .into(holder.song_art)
+            .into(holder.songArt)
     }
 
     override fun getItemCount(): Int {
@@ -47,10 +47,10 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Contex
 
     // View Holder Class to handle Recycler View.
     inner class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val song_title: TextView = itemView.findViewById(R.id.song_title)
-        val song_artist: TextView = itemView.findViewById(R.id.song_artist)
-        val song_art: ImageView = itemView.findViewById(R.id.song_art_iv)
-        val song_duration: TextView= itemView.findViewById(R.id.song_duration)
-        val share_button: ImageButton = itemView.findViewById(R.id.share_button)
+        val songTitle: TextView = itemView.findViewById(R.id.song_title)
+        val songArtist: TextView = itemView.findViewById(R.id.song_artist)
+        val songArt: ImageView = itemView.findViewById(R.id.song_art_iv)
+        val songDuration: TextView= itemView.findViewById(R.id.song_duration)
+        val shareButton: ImageButton = itemView.findViewById(R.id.share_button)
     }
 }

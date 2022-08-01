@@ -37,7 +37,7 @@ data class Album(
         return albumArtists.joinToString (separator = ", ")
     }
 
-    fun createShareString(): String? {
+    fun createShareString(): String {
         return if (albumArtists.size == 1) "Check out $albumName by ${albumArtists[0]} on Spatify. Link: https://www.spatify.com/$albumUuid"
         else "Check out $albumName by ${albumArtists[0]} and others on Spatify. Link: https://www.spatify.com/$albumUuid"
     }

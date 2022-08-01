@@ -27,10 +27,10 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         // Set the data to textview and imageview.
         val album: Album = recyclerDataArrayList[position]
-        holder.album_title.text = album.albumName
-        holder.album_artists.text = album.getCommaSeparatedArtists()
-        holder.album_year.text = album.albumYear.toString()
-        holder.album_art_iv.setOnClickListener{
+        holder.albumTitle.text = album.albumName
+        holder.albumArtists.text = album.getCommaSeparatedArtists()
+        holder.albumYear.text = album.albumYear.toString()
+        holder.albumArtIv.setOnClickListener{
             val intent = Intent(context, AlbumDetailActivity::class.java).apply {
                 putExtra("albumUuid", album.albumUuid)
             }
@@ -39,7 +39,7 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
         Picasso
             .get()
             .load(album.albumArtUrl)
-            .into(holder.album_art_iv)
+            .into(holder.albumArtIv)
     }
 
     override fun getItemCount(): Int {
@@ -49,9 +49,9 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
 
     // View Holder Class to handle Recycler View.
     inner class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val album_title: TextView = itemView.findViewById(R.id.album_title)
-        val album_art_iv: ImageView = itemView.findViewById(R.id.album_art_iv)
-        val album_artists: TextView = itemView.findViewById(R.id.album_artist)
-        val album_year: TextView = itemView.findViewById(R.id.album_year)
+        val albumTitle: TextView = itemView.findViewById(R.id.album_title)
+        val albumArtIv: ImageView = itemView.findViewById(R.id.album_art_iv)
+        val albumArtists: TextView = itemView.findViewById(R.id.album_artist)
+        val albumYear: TextView = itemView.findViewById(R.id.album_year)
     }
 }

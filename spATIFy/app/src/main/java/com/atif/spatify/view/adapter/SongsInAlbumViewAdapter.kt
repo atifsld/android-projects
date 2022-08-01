@@ -24,17 +24,17 @@ class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         // Set the data to textview and imageview.
         val song: Song = recyclerDataArrayList[position]
-        holder.song_title.text = song.songName
-        holder.song_title.setOnClickListener{
+        holder.songTitle.text = song.songName
+        holder.songTitle.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
                 .setData(Uri.parse(song.songSpotifyUrl))
             context.startActivity(intent)
         }
-        holder.song_artist.text = song.getCommaSeparatedArtists()
-        holder.song_track_number.text = song.songTrackNumber.toString()
-        holder.share_button.setOnClickListener {
+        holder.songArtist.text = song.getCommaSeparatedArtists()
+        holder.songTrackNumber.text = song.songTrackNumber.toString()
+        holder.shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
-            intent.setType("text/plain")
+            intent.type = "text/plain"
             intent.putExtra(Intent.EXTRA_TEXT, song.createShareString())
             context.startActivity(intent)
         }
@@ -46,9 +46,9 @@ class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context
 
     // View Holder Class to handle Recycler View.
     inner class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val song_title: TextView = itemView.findViewById(R.id.song_title)
-        val song_artist: TextView = itemView.findViewById(R.id.song_artist)
-        val song_track_number: TextView = itemView.findViewById(R.id.song_track_number)
-        val share_button: ImageButton = itemView.findViewById(R.id.share_button)
+        val songTitle: TextView = itemView.findViewById(R.id.song_title)
+        val songArtist: TextView = itemView.findViewById(R.id.song_artist)
+        val songTrackNumber: TextView = itemView.findViewById(R.id.song_track_number)
+        val shareButton: ImageButton = itemView.findViewById(R.id.share_button)
     }
 }

@@ -39,7 +39,7 @@ class SongsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view = inflater.inflate(R.layout.fragment_songs, container, false)
+        val view = inflater.inflate(R.layout.fragment_songs, container, false)
         val songList = SpatifyService.getSongs()
         val adapter = SongViewAdapter(songList, context)
         val songRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_songs)
