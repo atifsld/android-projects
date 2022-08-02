@@ -16,5 +16,5 @@ interface SongDao {
     abstract fun getSong(id: String) : Song
 
     @Query("SELECT * FROM song WHERE song_album_id= :id")
-    abstract fun getSongsFromAlbum(id: String) : Song
+    abstract fun getSongsFromAlbum(id: String) : LiveData<List<Song>>
 }
