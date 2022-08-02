@@ -71,7 +71,7 @@ class AlbumDetailActivity : AppCompatActivity() {
             startActivity(intent)
         }
         albumTitleTextView.text = album.albumName
-        albumArtistTextView.text = album.getCommaSeparatedArtists()
+        albumArtistTextView.text = album.albumArtists
         albumYearTextView.text = album.albumYear.toString()
         albumDescription.text = album.albumDescription
         albumLabel.text = album.albumLabel
