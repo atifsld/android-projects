@@ -12,6 +12,6 @@ interface AlbumDao {
     fun getAlphabetizedAlbums(): LiveData<List<Album>>
 
     @Query("SELECT * FROM album WHERE id= :id")
-    abstract fun getAlbum(id: Long) : Album
+    abstract fun getAlbum(id: String) : Album
 
 }

@@ -11,8 +11,8 @@ interface AlbumCreditDao {
     fun getAlphabetizedCredits(): LiveData<List<Song>>
 
     @Query("SELECT * FROM albumcredit WHERE id= :id")
-    abstract fun getCredit(id: Long) : Song
+    abstract fun getCredit(id: String) : Song
 
     @Query("SELECT * FROM albumcredit WHERE credit_album_id= :id")
-    abstract fun getCreditsForAlbum(id: Long) : Song
+    abstract fun getCreditsForAlbum(id: String) : Song
 }
