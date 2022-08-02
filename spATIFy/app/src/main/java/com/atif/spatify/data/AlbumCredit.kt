@@ -1,12 +1,19 @@
 package com.atif.spatify.data
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "albumcredit")
 data class AlbumCredit (
-    val creditName: String,
-    val creditContribution: String,
-    val creditImageUrl: String){
+    @PrimaryKey val id: String,
+    @ColumnInfo(name = "credit_name") val creditName: String,
+    @ColumnInfo(name = "credit_contribution") val creditContribution: String,
+    @ColumnInfo(name = "credit_image_url") val creditImageUrl: String){
 
     override fun toString(): String {
-        return "Credit name: $creditName" + "\n" +
+        return "Credit id: $id" + "\n" +
+                "Credit name: $creditName" + "\n" +
                 "Credit contribution: $creditContribution" + "\n" +
                 "Credit image URL: $creditImageUrl"
     }
