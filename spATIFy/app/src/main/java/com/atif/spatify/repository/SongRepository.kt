@@ -1,7 +1,9 @@
 package com.atif.spatify.repository
 
+import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import com.atif.spatify.dao.SongDao
+import com.atif.spatify.data.AlbumCredit
 import com.atif.spatify.data.Song
 
 class SongRepository (private val songDao: SongDao){
@@ -10,6 +12,12 @@ class SongRepository (private val songDao: SongDao){
 
     fun getSong(id: String): Song {
         return songDao.getSong(id)
+    }
+
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun insert(song: Song) {
+        songDao.insert(song)
     }
 
     fun getSongsFromAlbum(id: String): LiveData<List<Song>> {
