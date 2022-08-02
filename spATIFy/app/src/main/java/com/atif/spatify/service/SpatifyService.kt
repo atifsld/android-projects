@@ -146,6 +146,7 @@ object SpatifyService {
             albumSongs = listOf(
                 Song(
                     id = "667df405-d8b6-484b-b084-9910fefbea5e",
+                    songAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     songArtists = "The Velvet Underground",
                     songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/0Evhu0dKCkIuEn88Pmb9mj?si=15d43ff31b3d4f70",
@@ -155,6 +156,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "cfef36fd-9750-4a6b-a052-c0e3496b9041",
+                    songAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     songArtists = "The Velvet Underground",
                     songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/6xst1yRHJ2IkMQE0ebeU11?si=fd9394ec484c4077",
@@ -164,6 +166,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "1b5b722d-56c0-4e3d-9136-fb7da944eec5",
+                    songAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     songArtists = "The Velvet Underground",
                     songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/00bScuvzFpyRMGWlgfu5sp?si=bfebbef11d71466c",
@@ -173,6 +176,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "089b2d86-e32d-4ebd-8ceb-1acc5c4f322f",
+                    songAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     songArtists = "The Velvet Underground",
                     songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/23LNLIpFwrcHAVpN3fx9cT?si=9f4015cba1cd4f0f",
@@ -182,6 +186,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "ebb8356e-fd88-4e8d-a3db-180d0de547e5",
+                    songAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     songArtists = "The Velvet Underground",
                     songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/2Kvh9rYfJ7oczyCJZdzVPm?si=c302c35ba25d4385",
@@ -191,6 +196,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "bb2c6582-bcf1-47a0-9bbc-b97dcbbecab1",
+                    songAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     songArtists = "The Velvet Underground",
                     songAlbumArtUrl = "https://ia903403.us.archive.org/27/items/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e/mbid-3603f98f-0dce-3cbd-8bde-2f294225aa2e-8015457006_thumb500.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/3lwKNjchZuU5ZCVZVXwj5Y?si=b2b98edb3d0342da",
@@ -271,6 +277,7 @@ object SpatifyService {
             albumSongs = listOf(
                 Song(
                     id = "b165dfab-68e3-4cca-babb-ddf875687afb",
+                    songAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     songArtists = "Miles Davis",
                     songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/7q3kkfAVpmcZ8g6JUThi3o?si=00879984be2a48ce",
@@ -280,6 +287,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "8f6f58e2-ac95-4c8b-ad03-76ce0ad06412",
+                    songAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     songArtists = "Miles Davis",
                     songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/3NvYPUNu6nwQgN31UnoDbn?si=9a415adfcd4f43e3",
@@ -289,6 +297,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "aa58a275-cd40-4986-8d1a-593d40b7a934",
+                    songAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     songArtists = "Miles Davis",
                     songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/6bP4GyrKNbcKPMDqWJqpxI?si=2219ad5973fc4cab",
@@ -298,6 +307,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "d3d6ca38-cf1b-4151-9937-dd35cff2a336",
+                    songAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     songArtists = "Miles Davis",
                     songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/0TUa7gBg7LJH6B8dkNVioU?si=d23c31e6e9e24c5c",
@@ -307,6 +317,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "4a6dfd30-ed2f-4cc3-9809-c2918f11e928",
+                    songAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     songArtists = "Miles Davis",
                     songAlbumArtUrl = "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
                     songSpotifyUrl = "https://open.spotify.com/track/3R3fcrKaeBr3U6s9R2belr?si=c7688a94b60e49f3",
@@ -388,6 +399,7 @@ object SpatifyService {
             albumSongs = listOf(
                 Song(
                     id = "2a53544d-18cd-4737-a0a1-c0c38b19d1eb",
+                    songAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     songArtists = "Herbie Hancock",
                     songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/5/54/Herbie-Hancock-Head-Hunters.png",
                     songSpotifyUrl = "https://open.spotify.com/track/4Ce66JznW8QbeyTdSzdGwR?si=46bd038005e2438e",
@@ -397,6 +409,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "baa36752-1c21-4d34-9062-4da237b10cbc",
+                    songAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     songArtists = "Herbie Hancock",
                     songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/5/54/Herbie-Hancock-Head-Hunters.png",
                     songSpotifyUrl = "https://open.spotify.com/track/2zQl59dZMzwhrmeSBEgiXY?si=6a4afcdd21204ba5",
@@ -406,6 +419,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "76bdb16a-0906-47fd-aae2-10720ccd2f93",
+                    songAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     songArtists = "Herbie Hancock",
                     songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/5/54/Herbie-Hancock-Head-Hunters.png",
                     songSpotifyUrl = "https://open.spotify.com/track/4WyVRn3L2uXnSUkY762gqN?si=c387e41f38204a3e",
@@ -415,6 +429,7 @@ object SpatifyService {
                 ),
                 Song(
                     id = "76bdb16a-0906-47fd-aae2-10720ccd2f93",
+                    songAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     songArtists = "Herbie Hancock",
                     songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/5/54/Herbie-Hancock-Head-Hunters.png",
                     songSpotifyUrl = "https://open.spotify.com/track/6c0ziyel6ZMTQ37vKRooGZ?si=9502b7ddd6b84d9a",

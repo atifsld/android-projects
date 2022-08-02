@@ -11,6 +11,7 @@ data class Song (
     @ColumnInfo(name = "song_duration") val songDuration: String,
     @ColumnInfo(name = "song_track_number") val songTrackNumber: Int,
     @ColumnInfo(name = "song_artists") val songArtists: String,
+    @ColumnInfo(name = "song_album_id") val songAlbumId: String,
     @ColumnInfo(name = "song_album_art_url") val songAlbumArtUrl: String,
     @ColumnInfo(name = "song_spotify_url") val songSpotifyUrl: String?
 ) {
@@ -18,6 +19,7 @@ data class Song (
         return "Song UUID, $id" + "\n" +
                 "Song name: $songName" + "\n" +
                 "Song duration: $songDuration" + "\n" +
+                "Song album ID: $songAlbumId" + "\n" +
                 "Song track number: $songTrackNumber" + "\n" +
                 "Song album art URL: $songAlbumArtUrl" + "\n" +
                 "Song artists: $songArtists"
