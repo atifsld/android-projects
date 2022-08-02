@@ -3,9 +3,7 @@ package com.atif.spatify.dao
 import com.atif.spatify.data.Song
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
-import androidx.room.Insert
 import androidx.room.Query
-import com.atif.spatify.data.Album
 
 @Dao
 interface SongDao {

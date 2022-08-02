@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Query
 import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
 
 @Dao
 interface AlbumCreditDao {
