@@ -76,66 +76,77 @@ object SpatifyService {
             albumCredits = listOf(
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Andy Warhol",
                     creditContribution = "Cover [Cover Concept]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Acy R. Lehman",
                     creditContribution = "Design [Cover]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Val Valentin",
                     creditContribution = "Engineer [Director Of]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Gary Kellgren",
                     creditContribution = "Engineer [Recording]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Maureen Tucker",
                     creditContribution = "Percussion",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Billy Name",
                     creditContribution = "Photography By [Cover]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Mario Annibali",
                     creditContribution = "Photography By [Liner]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Tom Wilson",
                     creditContribution = "Producer",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Sterling Morrison",
                     creditContribution = "Vocals, Guitar, Bass Guitar",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "John Cale",
                     creditContribution = "Vocals, Viola [Electric], Organ, Bass Guitar",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Tom Wilson",
                     creditContribution = "Producer",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
@@ -219,54 +230,63 @@ object SpatifyService {
             albumCredits = listOf(
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Julian Adderly",
                     creditContribution = "Alto Saxophone",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Paul Chambers",
                     creditContribution = "Bass",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Drums",
                     creditContribution = "James Cobb",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Liner Notes",
                     creditContribution = "Bill Evans",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Piano",
                     creditContribution = "Bill Evans",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Tenor Saxophone",
                     creditContribution = "John Coltrane",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Wyn Kelly",
                     creditContribution = "Piano",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Trumpet",
                     creditContribution = "Miles Davis",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                     creditName = "Written-By",
                     creditContribution = "M. Davis",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
@@ -341,54 +361,63 @@ object SpatifyService {
             albumCredits = listOf(
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Victor Moscoco",
                     creditContribution = "Design [Cover]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Fred Catero",
                     creditContribution = "Engineer [Recording]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Bennie Maupin",
                     creditContribution = "Soprano Saxophone/Tenor Saxophone",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "David Rubinson",
                     creditContribution = "Producer",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Herbie Hancock",
                     creditContribution = "Synthesizer, Electric Piano, Clavinet",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Paul Jackson",
                     creditContribution = "Electric Bass",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Harvey Mason",
                     creditContribution = "Drums [Yamaha]",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Bill Summers",
                     creditContribution = "Conga, Shekere, Tambourine",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
                 ),
                 AlbumCredit(
                     id = "",
+                    creditAlbumId = "06e00675-980b-4435-be2e-5ec17d942865",
                     creditName = "Waldo Bascom",
                     creditContribution = "Photography By",
                     creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
