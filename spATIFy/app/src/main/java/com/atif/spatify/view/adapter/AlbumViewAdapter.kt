@@ -32,7 +32,7 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
         holder.albumYear.text = album.albumYear.toString()
         holder.albumArtIv.setOnClickListener{
             val intent = Intent(context, AlbumDetailActivity::class.java).apply {
-                putExtra("albumUuid", album.albumUuid)
+                putExtra("albumUuid", album.id)
             }
             context!!.startActivity(intent)
         }
