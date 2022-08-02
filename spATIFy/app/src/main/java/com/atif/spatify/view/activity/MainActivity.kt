@@ -4,12 +4,14 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.atif.spatify.R
 import com.atif.spatify.view.fragments.AlbumsFragment
+import com.atif.spatify.view.fragments.FavoritesFragment
 import com.atif.spatify.view.fragments.SongsFragment
 import com.google.android.material.navigation.NavigationView
 
@@ -24,8 +26,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val albumButton = findViewById<Button>(R.id.albumButton)
-        val songButton = findViewById<Button>(R.id.songButton)
+        val albumButton = findViewById<ImageView>(R.id.albumButton)
+        val songButton = findViewById<ImageView>(R.id.songButton)
+        val favoriteButton = findViewById<ImageView>(R.id.favoritesButton)
 
         drawerLayout = findViewById(R.id.drawerLayout)
         actionBarToggle = ActionBarDrawerToggle(this, drawerLayout, 0, 0)
@@ -67,6 +70,14 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.contentLayout, songsFragment)
             transaction.commit()
             println("songButton clicked.")
+        }
+
+        favoriteButton.setOnClickListener {
+            val favoritesFragment = FavoritesFragment()
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.contentLayout, favoritesFragment)
+            transaction.commit()
+            println("favoritesButton clicked.")
         }
 
         loadAlbumFragment()

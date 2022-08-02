@@ -14,10 +14,10 @@
             android:id="@+id/albums_fragment_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
             android:paddingLeft="5dp"
+            android:paddingBottom="10dp"
             android:text="Albums"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="30dp" />
 
         <ScrollView

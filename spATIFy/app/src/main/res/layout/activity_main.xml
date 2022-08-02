@@ -39,6 +39,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="60sp"
+                android:background="#6A9E99"
                 android:orientation="horizontal"
                 android:paddingTop="10sp"
                 android:paddingBottom="10sp">
@@ -49,7 +50,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:contentDescription="Albums View"
-                    app:srcCompat="@drawable/albumnote" />
+                    app:srcCompat="@drawable/albumicon" />
 
                 <ImageView
                     android:id="@+id/songButton"
@@ -57,13 +58,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:contentDescription="Songs View"
-                    app:srcCompat="@drawable/musicnote" />
+                    app:srcCompat="@drawable/songicon" />
 
                 <ImageView
                     android:id="@+id/favoritesButton"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:contentDescription="Favorites View"
                     app:srcCompat="@drawable/favoritenote" />
 
             </LinearLayout>
