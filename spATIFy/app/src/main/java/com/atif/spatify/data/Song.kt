@@ -1,17 +1,21 @@
 package com.atif.spatify.data
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Entity(tableName = "song")
 data class Song (
-    @SerializedName("song_uuid") val songUuid: String,
-    @SerializedName("song_name") val songName: String,
-    @SerializedName("song_duration") val songDuration: String,
-    @SerializedName("song_track_number") val songTrackNumber: Int,
-    @SerializedName("song_artists") val songArtists: String,
-    @SerializedName("song_album_art_url") val songAlbumArtUrl: String,
-    @SerializedName("song_spotify_url") val songSpotifyUrl: String?
+    @PrimaryKey val id: String,
+    @ColumnInfo(name = "song_name") val songName: String,
+    @ColumnInfo(name = "song_duration") val songDuration: String,
+    @ColumnInfo(name = "song_track_number") val songTrackNumber: Int,
+    @ColumnInfo(name = "song_artists") val songArtists: String,
+    @ColumnInfo(name = "song_album_art_url") val songAlbumArtUrl: String,
+    @ColumnInfo(name = "song_spotify_url") val songSpotifyUrl: String?
 ) {
     override fun toString(): String {
-        return "Song UUID, $songUuid" + "\n" +
+        return "Song UUID, $id" + "\n" +
                 "Song name: $songName" + "\n" +
                 "Song duration: $songDuration" + "\n" +
                 "Song track number: $songTrackNumber" + "\n" +
