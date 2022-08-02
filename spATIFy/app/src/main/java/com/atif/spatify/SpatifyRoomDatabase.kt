@@ -27,7 +27,7 @@ abstract class SpatifyRoomDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: SpatifyRoomDatabase? = null
 
-        fun getAlbumDatabase(
+        fun getSpatifyDatabase(
             context: Context,
             scope: CoroutineScope
         ): SpatifyRoomDatabase {
@@ -43,5 +43,7 @@ abstract class SpatifyRoomDatabase : RoomDatabase() {
                 instance
             }
         }
+
+
     }
 }
