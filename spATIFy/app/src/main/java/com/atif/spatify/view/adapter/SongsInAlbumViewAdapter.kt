@@ -3,17 +3,36 @@ package com.atif.spatify.view.adapter
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
+import com.atif.spatify.SpatifyApplication
+import com.atif.spatify.data.AlbumCredit
 import com.atif.spatify.data.Song
+import com.atif.spatify.view.viewmodel.SpatifyViewModel
+import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 
-class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context: Context) :
+class SongsInAlbumViewAdapter(var context: Context, val spatifyViewModel: SpatifyViewModel) :
     RecyclerView.Adapter<SongsInAlbumViewAdapter.RecyclerViewHolder>() {
+
+    private var recyclerDataArrayList = ArrayList<Song>()
+
+    fun updateList(newList:List<Song>)
+    {
+        Log.i("List Changed", "updateList: $newList")
+        recyclerDataArrayList.clear()
+
+        recyclerDataArrayList.addAll(newList)
+        //notify data change
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout
         val view: View =
@@ -38,6 +57,20 @@ class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context
             intent.putExtra(Intent.EXTRA_TEXT, song.createShareString())
             context.startActivity(intent)
         }
+        if(song.songIsFavorite) {
+            holder.favoritesButton.setImageResource(R.drawable.stargrey)
+        } else {
+            holder.favoritesButton.setImageResource(R.drawable.starwhite)
+        }
+        holder.favoritesButton.setOnClickListener {
+            if(song.songIsFavorite) {
+                spatifyViewModel.removeSongFromFavorites(song.id)
+                holder.favoritesButton.setImageResource(R.drawable.starwhite)
+            } else {
+                spatifyViewModel.addSongToFavorites(song.id)
+                holder.favoritesButton.setImageResource(R.drawable.stargrey)
+            }
+        }
     }
 
     override fun getItemCount(): Int {
@@ -50,5 +83,6 @@ class SongsInAlbumViewAdapter(var recyclerDataArrayList: List<Song>, var context
         val songArtist: TextView = itemView.findViewById(R.id.song_artist)
         val songTrackNumber: TextView = itemView.findViewById(R.id.song_track_number)
         val shareButton: ImageButton = itemView.findViewById(R.id.share_button)
+        val favoritesButton: ImageButton = itemView.findViewById(R.id.song_in_album_favorite)
     }
 }

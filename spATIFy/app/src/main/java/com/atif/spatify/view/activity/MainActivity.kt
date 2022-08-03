@@ -5,14 +5,18 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.atif.spatify.R
+import com.atif.spatify.SpatifyApplication
 import com.atif.spatify.view.fragments.AlbumsFragment
 import com.atif.spatify.view.fragments.FavoritesFragment
 import com.atif.spatify.view.fragments.SongsFragment
+import com.atif.spatify.view.viewmodel.SpatifyViewModel
+import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 import com.google.android.material.navigation.NavigationView
 
 
@@ -21,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

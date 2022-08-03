@@ -13,7 +13,7 @@ import com.atif.spatify.data.Song
 import kotlinx.coroutines.CoroutineScope
 
 @Database(
-    entities = [Album::class, Song::class, AlbumCredit::class],
+    entities = arrayOf(Album::class, Song::class, AlbumCredit::class),
     version = 1,
     exportSchema = false
 )
@@ -27,9 +27,8 @@ abstract class SpatifyRoomDatabase : RoomDatabase() {
         @Volatile
         private var INSTANCE: SpatifyRoomDatabase? = null
 
-        fun getSpatifyDatabase(
-            context: Context,
-            scope: CoroutineScope
+        fun getDatabase(
+            context: Context
         ): SpatifyRoomDatabase {
             return INSTANCE ?: synchronized(this) {
 

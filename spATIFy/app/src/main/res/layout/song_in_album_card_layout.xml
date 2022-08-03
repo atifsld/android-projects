@@ -54,17 +54,30 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="60sp"
+            android:layout_width="100sp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/share_button"
-                android:layout_width="match_parent"
+                android:layout_width="50sp"
                 android:layout_height="match_parent"
                 android:background="#555555"
                 android:contentDescription="Button to share song in album"
                 app:srcCompat="@android:drawable/ic_menu_share" />
+
+            <ImageButton
+                android:id="@+id/song_in_album_favorite"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:background="#555555"
+                android:contentDescription="Button to favorite song in album"
+                android:paddingLeft="10sp"
+                android:paddingTop="10sp"
+                android:paddingRight="10sp"
+                android:paddingBottom="10sp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/staricon" />
         </LinearLayout>
 
     </LinearLayout>

@@ -79,9 +79,21 @@
             <ImageButton
                 android:id="@+id/share_button"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50sp"
                 android:background="#8C8C8C"
                 app:srcCompat="@android:drawable/ic_menu_share" />
+
+            <ImageButton
+                android:id="@+id/favorite_button"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="#8C8C8C"
+                android:paddingTop="15sp"
+                android:paddingEnd="15sp"
+                android:paddingRight="15sp"
+                android:paddingBottom="15sp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/stargrey" />
         </LinearLayout>
 
     </LinearLayout>

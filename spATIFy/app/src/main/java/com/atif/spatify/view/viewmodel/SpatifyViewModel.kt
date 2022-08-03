@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import androidx.room.Query
 import com.atif.spatify.data.Album
 import com.atif.spatify.data.AlbumCredit
 import com.atif.spatify.data.Song
@@ -33,23 +34,35 @@ class SpatifyViewModel(
     fun insertAlbumCredit(albumCredit: AlbumCredit) = viewModelScope.launch{
         albumCreditRepository.insert(albumCredit)
     }
-    fun getSong(id: String) {
-        songRepository.getSong(id)
+
+    fun getSong(id: String): Song {
+        return songRepository.getSong(id)
     }
 
-    fun getSongsFromAlbum(id: String) {
-        songRepository.getSongsFromAlbum(id)
+    fun getFavoriteAlphabetizedSongs(): LiveData<List<Song>> {
+        return songRepository.getFavoriteAlphabetizedSongs()
     }
 
-    fun getCreditsForAlbum(id: String) {
-        albumCreditRepository.getCreditsForAlbum(id)
+    fun getSongsFromAlbum(id: String): LiveData<List<Song>>{
+        return songRepository.getSongsFromAlbum(id)
     }
 
-    fun getAlbum(id: String) {
-        albumRepository.getAlbum(id)
+    fun getCreditsForAlbum(id: String): LiveData<List<AlbumCredit>> {
+        return albumCreditRepository.getCreditsForAlbum(id)
+    }
+
+    fun getAlbum(id: String): Album {
+        return albumRepository.getAlbum(id)
     }
 
 
+    fun addSongToFavorites(id: String) {
+        songRepository.addSongToFavorites(id)
+    }
+
+    fun removeSongFromFavorites(id: String) {
+        songRepository.addSongToFavorites(id)
+    }
 }
 
 class SpatifyViewModelFactory(

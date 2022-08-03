@@ -8,12 +8,16 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
-import com.atif.spatify.service.SpatifyService
+import com.atif.spatify.SpatifyApplication
+import com.atif.spatify.data.Album
 import com.atif.spatify.view.adapter.AlbumCreditViewAdapter
 import com.atif.spatify.view.adapter.SongsInAlbumViewAdapter
+import com.atif.spatify.view.viewmodel.SpatifyViewModel
+import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 import com.squareup.picasso.Picasso
 
 class AlbumDetailActivity : AppCompatActivity() {
@@ -21,6 +25,14 @@ class AlbumDetailActivity : AppCompatActivity() {
     private var spotifyButton: ImageView? = null
     private var geniusButton: ImageView? = null
     private var wikipediaButton: ImageView? = null
+
+    private val spatifyViewModel: SpatifyViewModel by viewModels {
+        SpatifyViewModelFactory(
+            (application as SpatifyApplication).albumRepository,
+            (application as SpatifyApplication).songRepository,
+            (application as SpatifyApplication).albumCreditRepository
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +48,7 @@ class AlbumDetailActivity : AppCompatActivity() {
             Toast.makeText(this, "UUID in intent=$albumUuid", Toast.LENGTH_SHORT).show()
         }
 
-        val album = albumUuid?.let { SpatifyService.getAlbum(it) }!!
+        val album: Album? = albumUuid?.let { spatifyViewModel.getAlbum(it) }
         val albumTitleTextView = findViewById<TextView>(R.id.album_title)
         val albumLabel = findViewById<TextView>(R.id.album_label_name)
         val albumArtistTextView = findViewById<TextView>(R.id.album_artist)
@@ -51,26 +63,26 @@ class AlbumDetailActivity : AppCompatActivity() {
 
         spotifyButton!!.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
-                .setData(Uri.parse(album.albumSpotifyUrl))
+                .setData(Uri.parse(album!!.albumSpotifyUrl))
             startActivity(intent)
         }
         wikipediaButton!!.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
-                .setData(Uri.parse(album.albumWikipediaUrl))
+                .setData(Uri.parse(album!!.albumWikipediaUrl))
             startActivity(intent)
         }
         geniusButton!!.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
-                .setData(Uri.parse(album.albumGeniusUrl))
+                .setData(Uri.parse(album!!.albumGeniusUrl))
             startActivity(intent)
         }
         shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             intent.setType("text/plain")
-            intent.putExtra(Intent.EXTRA_TEXT, album.createShareString())
+            intent.putExtra(Intent.EXTRA_TEXT, album!!.createShareString())
             startActivity(intent)
         }
-        albumTitleTextView.text = album.albumName
+        albumTitleTextView.text = album!!.albumName
         albumArtistTextView.text = album.albumArtists
         albumYearTextView.text = album.albumYear.toString()
         albumDescription.text = album.albumDescription
@@ -80,24 +92,25 @@ class AlbumDetailActivity : AppCompatActivity() {
             .load(album.albumArtUrl)
             .into(albumArtImageView)
 
-        populateSongsInRecyclerView(albumUuid)
 
-        populateCreditsInRecyclerView(albumUuid!!)
-    }
+        val songsInAlbumRecyclerView = findViewById<RecyclerView>(R.id.songs_in_album_recycler_view)
+        songsInAlbumRecyclerView.layoutManager = LinearLayoutManager(this)
+        val songsAdapter = SongsInAlbumViewAdapter(this, spatifyViewModel)
+        songsInAlbumRecyclerView.adapter = songsAdapter
+        spatifyViewModel.getSongsFromAlbum(albumUuid!!).observe(this@AlbumDetailActivity) { songs ->
+            songs?.let {
+                songsAdapter.updateList(it)
+            }
+        }
 
-    private fun populateCreditsInRecyclerView(albumUuid: String) {
-        val creditsInAlbumList = SpatifyService.getCreditListForAlbum(albumUuid)
-        val adapter = AlbumCreditViewAdapter(creditsInAlbumList, this)
         val albumCreditRecyclerView = findViewById<RecyclerView>(R.id.album_credits_recycler_view)
-        albumCreditRecyclerView.adapter = adapter
         albumCreditRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-    }
-
-    private fun populateSongsInRecyclerView(albumUuid: String?) {
-        val songsInAlbumList = SpatifyService.getSongsInAlbum(albumUuid!!)
-        val adapter = SongsInAlbumViewAdapter(songsInAlbumList, this)
-        val albumRecyclerView = findViewById<RecyclerView>(R.id.songs_in_album_recycler_view)
-        albumRecyclerView.adapter = adapter
-        albumRecyclerView.layoutManager = LinearLayoutManager(this)
+        val adapter = AlbumCreditViewAdapter(this)
+        albumCreditRecyclerView.adapter = adapter
+        spatifyViewModel.getCreditsForAlbum(albumUuid!!).observe(this@AlbumDetailActivity) { songs ->
+            songs?.let {
+                adapter.updateList(it)
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@ package com.atif.spatify.view.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +11,27 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
+import com.atif.spatify.data.Album
 import com.atif.spatify.data.Song
+import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.squareup.picasso.Picasso
 
 
-class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Context?) :
+class SongViewAdapter(var context: Context?, val spatifyViewModel: SpatifyViewModel) :
     RecyclerView.Adapter<SongViewAdapter.RecyclerViewHolder>() {
+
+    private var recyclerDataArrayList = ArrayList<Song>()
+
+    fun updateList(newList:List<Song>)
+    {
+        Log.i("List Changed", "updateList: $newList")
+        recyclerDataArrayList.clear()
+
+        recyclerDataArrayList.addAll(newList)
+        //notify data change
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout
         val view: View =
@@ -39,6 +55,13 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Contex
             .get()
             .load(song.songAlbumArtUrl)
             .into(holder.songArt)
+        holder.favoritesButton.setOnClickListener {
+            if(song.songIsFavorite) {
+                spatifyViewModel.removeSongFromFavorites(song.id)
+            } else {
+                spatifyViewModel.addSongToFavorites(song.id)
+            }
+        }
     }
 
     override fun getItemCount(): Int {
@@ -52,5 +75,6 @@ class SongViewAdapter(var recyclerDataArrayList: List<Song>, var context: Contex
         val songArt: ImageView = itemView.findViewById(R.id.song_art_iv)
         val songDuration: TextView= itemView.findViewById(R.id.song_duration)
         val shareButton: ImageButton = itemView.findViewById(R.id.share_button)
+        val favoritesButton: ImageButton = itemView.findViewById(R.id.favoritesButton)
     }
 }

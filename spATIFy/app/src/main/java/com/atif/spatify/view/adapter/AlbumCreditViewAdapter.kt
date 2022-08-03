@@ -1,6 +1,7 @@
 package com.atif.spatify.view.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,11 +10,24 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.data.AlbumCredit
+import com.atif.spatify.data.Song
 import com.squareup.picasso.Picasso
 
 
-class AlbumCreditViewAdapter(var recyclerDataArrayList: List<AlbumCredit>, var context: Context?) :
+class AlbumCreditViewAdapter(var context: Context?) :
     RecyclerView.Adapter<AlbumCreditViewAdapter.RecyclerViewHolder>() {
+
+    private var recyclerDataArrayList = ArrayList<AlbumCredit>()
+
+    fun updateList(newList:List<AlbumCredit>)
+    {
+        Log.i("List Changed", "updateList: $newList")
+        recyclerDataArrayList.clear()
+
+        recyclerDataArrayList.addAll(newList)
+        //notify data change
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout

@@ -2,6 +2,7 @@ package com.atif.spatify.view.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +15,20 @@ import com.atif.spatify.view.activity.AlbumDetailActivity
 import com.squareup.picasso.Picasso
 
 
-class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Context?) :
+class AlbumViewAdapter(var context: Context?, val albumClickInterface: AlbumClickInterface) :
     RecyclerView.Adapter<AlbumViewAdapter.RecyclerViewHolder>() {
+
+    private var recyclerDataArrayList = ArrayList<Album>()
+
+    fun updateList(newList:List<Album>)
+    {
+        Log.i("List Changed", "updateList: $newList")
+        recyclerDataArrayList.clear()
+
+        recyclerDataArrayList.addAll(newList)
+        //notify data change
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         // Inflate Layout
@@ -31,10 +44,12 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
         holder.albumArtists.text = album.albumArtists
         holder.albumYear.text = album.albumYear.toString()
         holder.albumArtIv.setOnClickListener{
-            val intent = Intent(context, AlbumDetailActivity::class.java).apply {
-                putExtra("albumUuid", album.id)
-            }
-            context!!.startActivity(intent)
+            albumClickInterface.onAlbumClick(album)
+//            Log.d("ONCLICKALBUM", "ONCLICKALBUM")
+//            val intent = Intent(context, AlbumDetailActivity::class.java).apply {
+//                putExtra("albumUuid", album.id)
+//            }
+//            context!!.startActivity(intent)
         }
         Picasso
             .get()
@@ -54,4 +69,8 @@ class AlbumViewAdapter(var recyclerDataArrayList: List<Album>, var context: Cont
         val albumArtists: TextView = itemView.findViewById(R.id.album_artist)
         val albumYear: TextView = itemView.findViewById(R.id.album_year)
     }
+}
+
+interface  AlbumClickInterface {
+    fun onAlbumClick(album: Album)
 }
