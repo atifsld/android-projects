@@ -9,8 +9,6 @@ b
 2app/src/main/java/com/atif/spatify/dao/AlbumDao.kt,5\9\599c3b6b76470eaeca92713d95a6b5401f3a3236
 h
 8app/src/main/java/com/atif/spatify/dao/AlbumCreditDao.kt,6\a\6a9bf36396a361a2d3d695c93ec69592b1d0f515
-y
-Iapp/src/main/java/com/atif/spatify/view/adapter/AlbumCreditViewAdapter.kt,4\5\45d7b785401e587f99a29056503b7919eed4f34e
 _
 /app/src/main/java/com/atif/spatify/data/Song.kt,f\e\fe8e248e94c3b26283d8476d4b0a3bcc9668932c
 a

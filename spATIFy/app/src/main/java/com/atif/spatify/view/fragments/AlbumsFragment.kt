@@ -61,6 +61,7 @@ class AlbumsFragment : Fragment() {
         }
 
         if((context?.applicationContext as SpatifyApplication).dataPopulated == false) {
+            Log.i("Tag", "Data not populated, calling SpatifyService.")
             SpatifyService.addAlbums(spatifyViewModel)
             SpatifyService.addSongs(spatifyViewModel)
             SpatifyService.addAlbumCredits(spatifyViewModel)
