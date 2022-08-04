@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
@@ -58,17 +59,23 @@ class SongsInAlbumViewAdapter(var context: Context, val spatifyViewModel: Spatif
             context.startActivity(intent)
         }
         if(song.songIsFavorite) {
-            holder.favoritesButton.setImageResource(R.drawable.stargrey)
+            holder.favoritesButton.setImageResource(R.drawable.starred)
         } else {
             holder.favoritesButton.setImageResource(R.drawable.starwhite)
         }
         holder.favoritesButton.setOnClickListener {
             if(song.songIsFavorite) {
                 spatifyViewModel.removeSongFromFavorites(song.id)
+                Log.i("TAG", "${song.songName} removed from favorites.")
+                Toast.makeText(context, "${song.songName} removed from favorites.", Toast.LENGTH_SHORT).show()
                 holder.favoritesButton.setImageResource(R.drawable.starwhite)
+                notifyDataSetChanged()
             } else {
                 spatifyViewModel.addSongToFavorites(song.id)
-                holder.favoritesButton.setImageResource(R.drawable.stargrey)
+                Log.i("TAG", "${song.songName} added to favorites.")
+                Toast.makeText(context, "${song.songName} added to favorites.", Toast.LENGTH_SHORT).show()
+                holder.favoritesButton.setImageResource(R.drawable.starred)
+                notifyDataSetChanged()
             }
         }
     }

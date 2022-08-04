@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.data.Album
@@ -51,6 +52,11 @@ class SongViewAdapter(var context: Context?, val spatifyViewModel: SpatifyViewMo
             intent.putExtra(Intent.EXTRA_TEXT, song.createShareString())
             context!!.startActivity(intent)
         }
+        if(song.songIsFavorite) {
+            holder.favoritesButton.setImageResource(R.drawable.starred)
+        } else {
+            holder.favoritesButton.setImageResource(R.drawable.starwhite)
+        }
         Picasso
             .get()
             .load(song.songAlbumArtUrl)
@@ -58,8 +64,16 @@ class SongViewAdapter(var context: Context?, val spatifyViewModel: SpatifyViewMo
         holder.favoritesButton.setOnClickListener {
             if(song.songIsFavorite) {
                 spatifyViewModel.removeSongFromFavorites(song.id)
+                Log.i("TAG", "${song.songName} removed from favorites.")
+                Toast.makeText(context, "${song.songName} removed from favorites.", Toast.LENGTH_SHORT).show()
+                holder.favoritesButton.setImageResource(R.drawable.starred)
+                notifyDataSetChanged()
             } else {
                 spatifyViewModel.addSongToFavorites(song.id)
+                Log.i("TAG", "${song.songName} added to favorites.")
+                Toast.makeText(context, "${song.songName} added to from favorites.", Toast.LENGTH_SHORT).show()
+                holder.favoritesButton.setImageResource(R.drawable.starwhite)
+                notifyDataSetChanged()
             }
         }
     }
@@ -75,6 +89,6 @@ class SongViewAdapter(var context: Context?, val spatifyViewModel: SpatifyViewMo
         val songArt: ImageView = itemView.findViewById(R.id.song_art_iv)
         val songDuration: TextView= itemView.findViewById(R.id.song_duration)
         val shareButton: ImageButton = itemView.findViewById(R.id.share_button)
-        val favoritesButton: ImageButton = itemView.findViewById(R.id.favoritesButton)
+        val favoritesButton: ImageButton = itemView.findViewById(R.id.song_favorite_button)
     }
 }
