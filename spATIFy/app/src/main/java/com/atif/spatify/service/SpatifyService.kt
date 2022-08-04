@@ -453,7 +453,7 @@ object SpatifyService {
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 creditName = "Paul Chambers",
                 creditContribution = "Bass",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/G3V3okWAe3oiwSXQA1ijuWLONqHXDhlmGg7hWN8V6jw/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc3/OC0xNjEwMTc1MDgz/LTE1NzYuanBlZw.jpeg"
             )
         )
 
@@ -463,7 +463,7 @@ object SpatifyService {
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 creditName = "Drums",
                 creditContribution = "James Cobb",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/B-azWw9MEvd_2ZOVbpBXc4TH3pilr_wIndWlDh5jDMY/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MjMx/MS0xNjQzODMxNzcx/LTQ0MzUuanBlZw.jpeg"
             )
         )
 
@@ -473,7 +473,7 @@ object SpatifyService {
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 creditName = "Liner Notes",
                 creditContribution = "Bill Evans",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/lIuzUoUyZbmwdVfCLOiMVpja8Qtfni4yJkv2PmasCIA/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MjMx/MC0xNjM3NTQ5NDM4/LTk1NTMuanBlZw.jpeg"
             )
         )
 
@@ -483,7 +483,7 @@ object SpatifyService {
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 creditName = "Piano",
                 creditContribution = "Bill Evans",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/lIuzUoUyZbmwdVfCLOiMVpja8Qtfni4yJkv2PmasCIA/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MjMx/MC0xNjM3NTQ5NDM4/LTk1NTMuanBlZw.jpeg"
             )
         )
 
@@ -493,7 +493,7 @@ object SpatifyService {
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 creditName = "Tenor Saxophone",
                 creditContribution = "John Coltrane",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/MIlw5bt2eU0KOgO2LDKlpoL-YWz7onKm-XNyHiqfrkQ/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk3NTQ1/LTE0NTE0ODkwOTQt/Nzk1Mi5qcGVn.jpeg"
             )
         )
 
@@ -501,9 +501,9 @@ object SpatifyService {
             AlbumCredit(
                 id = "a269c4ec-fb4e-4428-beb7-68569136a7da",
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
-                creditName = "Wyn Kelly",
+                creditName = "Wynton Kelly",
                 creditContribution = "Piano",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/3-kjprBhwYcvzz8vkviPN0YXy5N5TDQ3uj_fZdyprJk/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MjMw/OC0xMTA3NzY2Mzg2/LmpwZw.jpeg"
             )
         )
 
@@ -513,7 +513,7 @@ object SpatifyService {
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 creditName = "Trumpet",
                 creditContribution = "Miles Davis",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/yltaZJsmNzRCpXqtq3dekVIuHjnu_BTh35d5tH1McgU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzNzU1/LTEzOTQzODczNDMt/NDUwMC5qcGVn.jpeg"
             )
         )
 
@@ -523,7 +523,7 @@ object SpatifyService {
                 creditAlbumId = "2080f161-c553-408d-9724-9c1e2f1b8c87",
                 creditName = "Written-By",
                 creditContribution = "M. Davis",
-                creditImageUrl = "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
+                creditImageUrl = "https://i.discogs.com/yltaZJsmNzRCpXqtq3dekVIuHjnu_BTh35d5tH1McgU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzNzU1/LTEzOTQzODczNDMt/NDUwMC5qcGVn.jpeg"
             )
         )
 
