@@ -19,14 +19,13 @@ import androidx.fragment.app.viewModels
 import com.atif.spatify.data.Album
 import com.atif.spatify.data.AlbumCredit
 import com.atif.spatify.view.activity.AlbumDetailActivity
-import com.atif.spatify.view.adapter.AlbumClickInterface
 
 /**
  * A simple [Fragment] subclass.
  * Use the [AlbumsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class AlbumsFragment : Fragment(), AlbumClickInterface {
+class AlbumsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +50,7 @@ class AlbumsFragment : Fragment(), AlbumClickInterface {
 
         albumRecyclerView.layoutManager = GridLayoutManager(activity, 2)
 
-        val adapter = AlbumViewAdapter(context, this)
+        val adapter = AlbumViewAdapter(context)
 
         albumRecyclerView.adapter = adapter
 
@@ -61,19 +60,15 @@ class AlbumsFragment : Fragment(), AlbumClickInterface {
             }
         }
 
-        SpatifyService.addAlbums(spatifyViewModel)
-        SpatifyService.addSongs(spatifyViewModel)
-        SpatifyService.addAlbumCredits(spatifyViewModel)
+        if((context?.applicationContext as SpatifyApplication).dataPopulated == false) {
+            SpatifyService.addAlbums(spatifyViewModel)
+            SpatifyService.addSongs(spatifyViewModel)
+            SpatifyService.addAlbumCredits(spatifyViewModel)
+            (context?.applicationContext as SpatifyApplication).dataPopulated = true
+
+        }
 
 
         return view
-    }
-
-    override fun onAlbumClick(album: Album) {
-        Log.d("ONCLICKALBUM", "ONCLICKALBUM")
-        val intent = Intent(context, AlbumDetailActivity::class.java).apply {
-            putExtra("albumUuid", album.id)
-        }
-        context?.startActivity(intent)
     }
 }
