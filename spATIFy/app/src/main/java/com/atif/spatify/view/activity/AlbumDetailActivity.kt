@@ -74,10 +74,10 @@ class AlbumDetailActivity : AppCompatActivity() {
         geniusButton!!.setOnClickListener{
             if(album!!.albumGeniusUrl == null) {
                 Toast.makeText(this, "This album does not have a Genius lyrics page.", Toast.LENGTH_SHORT);
+            } else {
+                val intent = Intent(Intent.ACTION_VIEW).setData(Uri.parse(album!!.albumGeniusUrl))
+                startActivity(intent)
             }
-            val intent = Intent(Intent.ACTION_VIEW)
-                .setData(Uri.parse(album!!.albumGeniusUrl))
-            startActivity(intent)
         }
         shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
