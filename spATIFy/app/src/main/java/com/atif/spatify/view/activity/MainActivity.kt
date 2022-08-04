@@ -3,8 +3,10 @@ package com.atif.spatify.view.activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -46,12 +48,14 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.about -> {
+                    Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, AboutPageActivity::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.contactus -> {
-                    val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:7356015305"))
+                    Toast.makeText(this, "Contact Us", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:+917356015305"))
                     startActivity(intent)
                     true
                 }
@@ -62,40 +66,58 @@ class MainActivity : AppCompatActivity() {
         }
 
         albumButton.setOnClickListener {
-            val albumsFragment = AlbumsFragment()
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.contentLayout, albumsFragment)
-            transaction.commit()
+           loadAlbumFragment()
             println("albumButton clicked.")
         }
 
         songButton.setOnClickListener {
-            val songsFragment = SongsFragment()
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.contentLayout, songsFragment)
-            transaction.commit()
+            loadSongFragment()
             println("songButton clicked.")
         }
 
         favoriteButton.setOnClickListener {
-            val favoritesFragment = FavoritesFragment()
-            val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.contentLayout, favoritesFragment)
-            transaction.commit()
+            loadFavoriteFragment()
             println("favoritesButton clicked.")
         }
 
         loadAlbumFragment()
     }
 
+    private fun loadFavoriteFragment() {
+        val favoritesFragment = FavoritesFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.contentLayout, favoritesFragment)
+        transaction.commit()
+    }
+
+    private fun loadSongFragment() {
+        val songsFragment = SongsFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.contentLayout, songsFragment)
+        transaction.commit()
+    }
+
     override fun onSupportNavigateUp(): Boolean {
+
+        Toast.makeText(this, "Hamburger clicked. Launching drawer", Toast.LENGTH_SHORT).show()
         drawerLayout.openDrawer(navView)
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(actionBarToggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     override fun onBackPressed() {
+
+        Toast.makeText(this, "Back pressed.", Toast.LENGTH_SHORT).show()
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             this.drawerLayout.closeDrawer(GravityCompat.START)
+            Toast.makeText(this, "Closing drawer.", Toast.LENGTH_SHORT).show()
+
         } else {
             super.onBackPressed()
         }
