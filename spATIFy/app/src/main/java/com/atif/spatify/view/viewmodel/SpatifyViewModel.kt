@@ -61,7 +61,7 @@ class SpatifyViewModel(
     }
 
     fun removeSongFromFavorites(id: String) {
-        songRepository.addSongToFavorites(id)
+        songRepository.removeSongFromFavorites(id)
     }
 }
 
