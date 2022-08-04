@@ -15,7 +15,7 @@ import com.atif.spatify.view.activity.AlbumDetailActivity
 import com.squareup.picasso.Picasso
 
 
-class AlbumViewAdapter(var context: Context?, val albumClickInterface: AlbumClickInterface) :
+class AlbumViewAdapter(var context: Context?) :
     RecyclerView.Adapter<AlbumViewAdapter.RecyclerViewHolder>() {
 
     private var recyclerDataArrayList = ArrayList<Album>()
@@ -44,12 +44,11 @@ class AlbumViewAdapter(var context: Context?, val albumClickInterface: AlbumClic
         holder.albumArtists.text = album.albumArtists
         holder.albumYear.text = album.albumYear.toString()
         holder.albumArtIv.setOnClickListener{
-            albumClickInterface.onAlbumClick(album)
-//            Log.d("ONCLICKALBUM", "ONCLICKALBUM")
-//            val intent = Intent(context, AlbumDetailActivity::class.java).apply {
-//                putExtra("albumUuid", album.id)
-//            }
-//            context!!.startActivity(intent)
+            Log.d("ONCLICKALBUM", "ONCLICKALBUM")
+            val intent = Intent(context, AlbumDetailActivity::class.java).apply {
+                putExtra("albumUuid", album.id)
+            }
+            context!!.startActivity(intent)
         }
         Picasso
             .get()
@@ -69,8 +68,4 @@ class AlbumViewAdapter(var context: Context?, val albumClickInterface: AlbumClic
         val albumArtists: TextView = itemView.findViewById(R.id.album_artist)
         val albumYear: TextView = itemView.findViewById(R.id.album_year)
     }
-}
-
-interface  AlbumClickInterface {
-    fun onAlbumClick(album: Album)
 }
