@@ -15,6 +15,7 @@
             android:id="@+id/songs_fragment_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
             android:paddingLeft="5dp"
             android:paddingBottom="10dp"
             android:text="Songs"
