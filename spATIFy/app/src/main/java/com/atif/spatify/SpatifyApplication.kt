@@ -9,10 +9,11 @@ import kotlinx.coroutines.SupervisorJob
 
 class SpatifyApplication : Application() {
 
-    var dataPopulated = true
+    var dataPopulated = false
+
         get() = field
         set(value) {
-            dataPopulated = value
+            field = value
         }
 
     val applicationScope = CoroutineScope(SupervisorJob())
