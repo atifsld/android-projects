@@ -8,6 +8,13 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
 class SpatifyApplication : Application() {
+
+    var dataPopulated = true
+        get() = field
+        set(value) {
+            dataPopulated = value
+        }
+
     val applicationScope = CoroutineScope(SupervisorJob())
 
     val spatifyDatabase by lazy { SpatifyRoomDatabase.getDatabase(this) }
