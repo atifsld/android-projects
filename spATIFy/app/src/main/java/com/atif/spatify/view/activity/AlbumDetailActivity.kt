@@ -38,16 +38,6 @@ class AlbumDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_album_detail)
 
-        if(intent.data != null) {
-            val uri = intent.data.toString()
-            val uriPath = uri
-            albumUuid = uriPath.replace("https://www.spatify.com/", "")
-            Toast.makeText(this, "UUID in path=$uriPath", Toast.LENGTH_SHORT).show()
-        } else {
-            albumUuid = intent.getStringExtra("albumUuid")
-            Toast.makeText(this, "UUID in intent=$albumUuid", Toast.LENGTH_SHORT).show()
-        }
-
         val album: Album? = albumUuid?.let { spatifyViewModel.getAlbum(it) }
         val albumTitleTextView = findViewById<TextView>(R.id.album_title)
         val albumLabel = findViewById<TextView>(R.id.album_label_name)
