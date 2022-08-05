@@ -135,17 +135,17 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Closing drawer.", Toast.LENGTH_SHORT).show()
 
         } else {
-//            AlertDialog.Builder(this)
-//                .setTitle("Is this goodbye?")
-//                .setMessage("Are you sure you wish to close spATIFy?")
-//                .setPositiveButton("Yes") { _, _ ->
-//                    finish()
-//                }
-//                .setNegativeButton("No") {_, _ ->
-//                        Toast.makeText(this, "App not closed", Toast.LENGTH_SHORT).show()
-//                }
-//                .show()
-            super.onBackPressed()
+            AlertDialog.Builder(this)
+                .setTitle("Is this goodbye?")
+                .setMessage("Are you sure you wish to close spATIFy?")
+                .setPositiveButton("Yes") { _, _ ->
+                    super.onBackPressed()
+                    finish()
+                }
+                .setNegativeButton("No") {_, _ ->
+                        Toast.makeText(this, "App not closed", Toast.LENGTH_SHORT).show()
+                }
+                .show()
         }
     }
 
