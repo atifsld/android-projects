@@ -9,8 +9,6 @@ h
 8app/src/main/java/com/atif/spatify/dao/AlbumCreditDao.kt,6\a\6a9bf36396a361a2d3d695c93ec69592b1d0f515
 a
 1app/src/main/java/com/atif/spatify/dao/SongDao.kt,a\5\a58d0afde69b31561bdffe7ad79c055909f34e36
-p
-@app/src/main/java/com/atif/spatify/repository/AlbumRepository.kt,1\9\198e54d3901a8289533ebef4915e87ec0aa2aa30
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 v
@@ -19,10 +17,6 @@ r
 Bapp/src/main/java/com/atif/spatify/view/fragments/SongsFragment.kt,5\5\554861e0cf7bfa457fd5b8c9f91427e60cb545c9
 P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-s
-Capp/src/main/java/com/atif/spatify/view/adapter/AlbumViewAdapter.kt,0\7\079a9289c8183885ca63cdb71200693a3fb7eb9e
-u
-Eapp/src/main/java/com/atif/spatify/view/viewmodel/SpatifyViewModel.kt,f\7\f7b9ac32c246a78d3cfa492979100b421c29c40f
 o
 ?app/src/main/java/com/atif/spatify/repository/SongRepository.kt,0\4\04086b6650f1ce532838171ba3e7f5c1baf2f5bd
 v

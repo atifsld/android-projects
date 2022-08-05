@@ -2,16 +2,21 @@ package com.atif.spatify.view.adapter
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.data.Album
 import com.atif.spatify.view.activity.AlbumDetailActivity
+import com.atif.spatify.view.fragments.AlbumDetailFragment
 import com.squareup.picasso.Picasso
 
 
@@ -45,10 +50,13 @@ class AlbumViewAdapter(var context: Context?) :
         holder.albumYear.text = album.albumYear.toString()
         holder.albumArtIv.setOnClickListener{
             Log.d("ONCLICKALBUM", "ONCLICKALBUM")
-            val intent = Intent(context, AlbumDetailActivity::class.java).apply {
-                putExtra("albumUuid", album.id)
-            }
-            context!!.startActivity(intent)
+            val albumDetailFragment = AlbumDetailFragment()
+            val bundle = Bundle()
+            bundle.putString("albumUuid", album.id)
+            albumDetailFragment.arguments = bundle
+            val fragmentManager: FragmentManager = (context as AppCompatActivity).supportFragmentManager
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.contentLayout, albumDetailFragment).addToBackStack(null).commit()
         }
         Picasso
             .get()
