@@ -62,6 +62,24 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.menualbums -> {
+                    Toast.makeText(this, "Albums", Toast.LENGTH_SHORT).show()
+                    loadAlbumFragment()
+                    this.drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+                R.id.menusongs -> {
+                    Toast.makeText(this, "Songs", Toast.LENGTH_SHORT).show()
+                    loadSongFragment()
+                    this.drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+                R.id.menufavorites -> {
+                    Toast.makeText(this, "Favorites", Toast.LENGTH_SHORT).show()
+                    loadFavoriteFragment()
+                    this.drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
                 else -> {
                     false
                 }

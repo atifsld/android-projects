@@ -17,5 +17,3 @@ o
 ?app/src/main/java/com/atif/spatify/repository/SongRepository.kt,0\4\04086b6650f1ce532838171ba3e7f5c1baf2f5bd
 v
 Fapp/src/main/java/com/atif/spatify/view/fragments/FavoritesFragment.kt,a\c\acbdada607757be6b91a78198d1624da031f15b0
-u
-Eapp/src/main/java/com/atif/spatify/view/activity/AboutPageActivity.kt,6\a\6a21b8cc407d835af14855324b63181ecab712b3

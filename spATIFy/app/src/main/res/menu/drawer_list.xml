@@ -8,4 +8,16 @@
         android:id="@+id/contactus"
         android:icon="@drawable/call"
         android:title="Contact Us" />
+    <item
+        android:id="@+id/menualbums"
+        android:icon="@drawable/albumicon"
+        android:title="Albums" />
+    <item
+        android:id="@+id/menusongs"
+        android:icon="@drawable/songicon"
+        android:title="Songs" />
+    <item
+        android:id="@+id/menufavorites"
+        android:icon="@drawable/favoritenote"
+        android:title="Favorites" />
 </menu>
