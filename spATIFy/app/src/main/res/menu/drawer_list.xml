@@ -7,7 +7,7 @@
     <item
         android:id="@+id/contactus"
         android:icon="@drawable/call"
-        android:title="Contact Us" />
+        android:title="Call Us" />
     <item
         android:id="@+id/menualbums"
         android:icon="@drawable/albumicon"
