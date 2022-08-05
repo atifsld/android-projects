@@ -3,12 +3,220 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AlbumDetailFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.AlbumDetailFragment">
+
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#555555"
+                android:orientation="horizontal"
+                android:paddingTop="15sp">
+
+                <ImageView
+                    android:id="@+id/album_art_iv"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:src="@drawable/kindofblue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/album_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="55sp"
+                        android:background="#555555"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Kind of Blue"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/album_artist"
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp"
+                        android:background="#555555"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Miles Davis"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/album_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="25sp"
+                        android:background="#555555"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="1959"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/album_genius_button"
+                    android:layout_width="15dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Album's Genius button"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/genius" />
+
+                <ImageButton
+                    android:id="@+id/album_spotify_button"
+                    android:layout_width="15dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Album's Spotify button"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/spotify" />
+
+                <ImageButton
+                    android:id="@+id/album_wikipedia_button"
+                    android:layout_width="15dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Album's Wikipedia button"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/wikipedia" />
+
+                <ImageButton
+                    android:id="@+id/album_share_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Album share button"
+                    android:minHeight="48dp"
+                    app:srcCompat="@android:drawable/ic_menu_share" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Description"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/album_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="start|top"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:text="Kind of Blue is a studio album by American jazz trumpeter, composer, and bandleader Miles Davis. It was recorded on March 2 and April 22, 1959, at Columbia's 30th Street Studio in New York City, and released on August 17 of that year by Columbia Records."/>
+
+            <TextView
+                android:id="@+id/track_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Tracklist"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/songs_in_album_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/album_credits_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Credits:"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/album_credits_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/album_label_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Label: "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/album_label_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Columbia Records"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

@@ -14,6 +14,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
+import com.atif.spatify.view.fragments.AlbumDetailFragment
 import com.atif.spatify.view.fragments.AlbumsFragment
 import com.atif.spatify.view.fragments.FavoritesFragment
 import com.atif.spatify.view.fragments.SongsFragment
@@ -79,7 +80,20 @@ class MainActivity : AppCompatActivity() {
             loadFavoriteFragment()
             println("favoritesButton clicked.")
         }
-
+        if(intent.data != null) {
+            val uri = intent.data.toString()
+            val uriPath = uri
+            val  albumUuid = uriPath.replace("https://www.spatify.com/", "")
+            Toast.makeText(this, "UUID in path=$uriPath", Toast.LENGTH_SHORT).show()
+            val albumDetailFragment = AlbumDetailFragment()
+            val bundle = Bundle()
+            bundle.putString("albumUuid", albumUuid)
+            albumDetailFragment.arguments = bundle
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.contentLayout, albumDetailFragment)
+            transaction.commit()
+            return
+        }
         loadAlbumFragment()
     }
 
