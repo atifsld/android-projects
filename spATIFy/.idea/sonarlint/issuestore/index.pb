@@ -5,18 +5,12 @@ f
 6app/src/main/java/com/atif/spatify/data/AlbumCredit.kt,e\3\e3b8697bf89c666b34a12958db0cda07ef4ba10a
 `
 0app/src/main/java/com/atif/spatify/data/Album.kt,d\0\d00dcefec50b3a0710802e4e502d6961fea5ade0
-b
-2app/src/main/java/com/atif/spatify/dao/AlbumDao.kt,5\9\599c3b6b76470eaeca92713d95a6b5401f3a3236
 h
 8app/src/main/java/com/atif/spatify/dao/AlbumCreditDao.kt,6\a\6a9bf36396a361a2d3d695c93ec69592b1d0f515
-_
-/app/src/main/java/com/atif/spatify/data/Song.kt,f\e\fe8e248e94c3b26283d8476d4b0a3bcc9668932c
 a
 1app/src/main/java/com/atif/spatify/dao/SongDao.kt,a\5\a58d0afde69b31561bdffe7ad79c055909f34e36
 p
 @app/src/main/java/com/atif/spatify/repository/AlbumRepository.kt,1\9\198e54d3901a8289533ebef4915e87ec0aa2aa30
-i
-9app/src/main/java/com/atif/spatify/SpatifyRoomDatabase.kt,4\c\4c7620ed63c0ad0b636d8f3dd20dcdee8a4fdc69
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 v
@@ -33,9 +27,5 @@ o
 ?app/src/main/java/com/atif/spatify/repository/SongRepository.kt,0\4\04086b6650f1ce532838171ba3e7f5c1baf2f5bd
 v
 Fapp/src/main/java/com/atif/spatify/view/fragments/FavoritesFragment.kt,a\c\acbdada607757be6b91a78198d1624da031f15b0
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
-r
-Bapp/src/main/java/com/atif/spatify/view/adapter/SongViewAdapter.kt,6\4\6441ee555681b7aa374084d2c179b08e11615eab
 u
 Eapp/src/main/java/com/atif/spatify/view/activity/AboutPageActivity.kt,6\a\6a21b8cc407d835af14855324b63181ecab712b3
