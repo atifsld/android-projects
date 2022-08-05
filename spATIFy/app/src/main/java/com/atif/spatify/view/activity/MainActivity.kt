@@ -36,10 +36,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val albumButton = findViewById<ImageView>(R.id.albumButton)
-        val songButton = findViewById<ImageView>(R.id.songButton)
-        val favoriteButton = findViewById<ImageView>(R.id.favoritesButton)
-
         drawerLayout = findViewById(R.id.drawerLayout)
         actionBarToggle = ActionBarDrawerToggle(this, drawerLayout, 0, 0)
         drawerLayout.addDrawerListener(actionBarToggle)
@@ -86,20 +82,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        albumButton.setOnClickListener {
-           loadAlbumFragment()
-            println("albumButton clicked.")
-        }
-
-        songButton.setOnClickListener {
-            loadSongFragment()
-            println("songButton clicked.")
-        }
-
-        favoriteButton.setOnClickListener {
-            loadFavoriteFragment()
-            println("favoritesButton clicked.")
-        }
         if(intent.data != null) {
             val uri = intent.data.toString()
             val uriPath = uri
