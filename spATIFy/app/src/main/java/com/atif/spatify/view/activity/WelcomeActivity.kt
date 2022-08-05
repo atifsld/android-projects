@@ -17,6 +17,7 @@ class WelcomeActivity : AppCompatActivity() {
             delay(1000)
             val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
