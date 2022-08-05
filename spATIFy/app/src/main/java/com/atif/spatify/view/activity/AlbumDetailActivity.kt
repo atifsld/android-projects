@@ -73,7 +73,7 @@ class AlbumDetailActivity : AppCompatActivity() {
         }
         geniusButton!!.setOnClickListener{
             if(album!!.albumGeniusUrl == null) {
-                Toast.makeText(this, "This album does not have a Genius lyrics page.", Toast.LENGTH_SHORT);
+                Toast.makeText(this, "This album does not have a Genius lyrics page.", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(Intent.ACTION_VIEW).setData(Uri.parse(album!!.albumGeniusUrl))
                 startActivity(intent)
