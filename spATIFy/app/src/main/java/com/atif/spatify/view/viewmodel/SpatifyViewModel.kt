@@ -4,10 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import androidx.room.Query
-import com.atif.spatify.data.Album
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
+import com.atif.spatify.entity.Album
+import com.atif.spatify.entity.AlbumCredit
+import com.atif.spatify.entity.Song
 import com.atif.spatify.repository.AlbumCreditRepository
 import com.atif.spatify.repository.AlbumRepository
 import com.atif.spatify.repository.SongRepository

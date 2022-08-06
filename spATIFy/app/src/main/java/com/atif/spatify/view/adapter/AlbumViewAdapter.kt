@@ -1,7 +1,6 @@
 package com.atif.spatify.view.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -14,8 +13,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
-import com.atif.spatify.data.Album
-import com.atif.spatify.view.activity.AlbumDetailActivity
+import com.atif.spatify.entity.Album
 import com.atif.spatify.view.fragments.AlbumDetailFragment
 import com.squareup.picasso.Picasso
 

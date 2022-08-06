@@ -1,6 +1,5 @@
 package com.atif.spatify.view.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -16,9 +15,6 @@ import com.atif.spatify.view.adapter.AlbumViewAdapter
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 import androidx.fragment.app.viewModels
-import com.atif.spatify.data.Album
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.view.activity.AlbumDetailActivity
 
 /**
  * A simple [Fragment] subclass.

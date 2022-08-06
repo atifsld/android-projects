@@ -1,12 +1,9 @@
 package com.atif.spatify.service
 
-import androidx.fragment.app.viewModels
-import com.atif.spatify.SpatifyApplication
-import com.atif.spatify.data.Album
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
+import com.atif.spatify.entity.Album
+import com.atif.spatify.entity.AlbumCredit
+import com.atif.spatify.entity.Song
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
-import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 
 object SpatifyService {
     private val albums = mutableMapOf<String, Album>()

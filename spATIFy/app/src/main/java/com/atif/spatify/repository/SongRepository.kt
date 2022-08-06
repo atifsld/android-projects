@@ -2,10 +2,8 @@ package com.atif.spatify.repository
 
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
-import androidx.room.Query
 import com.atif.spatify.dao.SongDao
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
+import com.atif.spatify.entity.Song
 
 class SongRepository (private val songDao: SongDao){
 

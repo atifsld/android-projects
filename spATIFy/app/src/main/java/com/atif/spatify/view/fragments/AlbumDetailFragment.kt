@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
-import com.atif.spatify.data.Album
+import com.atif.spatify.entity.Album
 import com.atif.spatify.view.adapter.AlbumCreditViewAdapter
 import com.atif.spatify.view.adapter.SongsInAlbumViewAdapter
 import com.atif.spatify.view.viewmodel.SpatifyViewModel

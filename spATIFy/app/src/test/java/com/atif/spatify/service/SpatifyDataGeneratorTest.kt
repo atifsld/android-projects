@@ -1,8 +1,8 @@
 package com.atif.spatify.service
 
-import com.atif.spatify.data.Album
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
+import com.atif.spatify.entity.Album
+import com.atif.spatify.entity.AlbumCredit
+import com.atif.spatify.entity.Song
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 

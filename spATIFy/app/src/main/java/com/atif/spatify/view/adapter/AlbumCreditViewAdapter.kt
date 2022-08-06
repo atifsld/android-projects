@@ -9,8 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
+import com.atif.spatify.entity.AlbumCredit
 import com.squareup.picasso.Picasso
 
 

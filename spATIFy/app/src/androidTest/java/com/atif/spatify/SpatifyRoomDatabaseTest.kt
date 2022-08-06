@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import com.atif.spatify.dao.AlbumDao
-import com.atif.spatify.data.Album
+import com.atif.spatify.entity.Album
 import com.google.common.truth.Truth.assertThat
 import junit.framework.TestCase
 import kotlinx.coroutines.runBlocking

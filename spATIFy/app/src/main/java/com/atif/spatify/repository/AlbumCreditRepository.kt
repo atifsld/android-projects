@@ -3,8 +3,7 @@ package com.atif.spatify.repository
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import com.atif.spatify.dao.AlbumCreditDao
-import com.atif.spatify.data.Album
-import com.atif.spatify.data.AlbumCredit
+import com.atif.spatify.entity.AlbumCredit
 
 class AlbumCreditRepository (private val albumCreditDao: AlbumCreditDao){
 

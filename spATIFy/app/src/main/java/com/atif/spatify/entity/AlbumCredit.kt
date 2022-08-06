@@ -1,4 +1,4 @@
-package com.atif.spatify.data
+package com.atif.spatify.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

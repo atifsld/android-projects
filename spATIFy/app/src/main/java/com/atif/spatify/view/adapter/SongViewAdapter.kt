@@ -12,8 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
-import com.atif.spatify.data.Album
-import com.atif.spatify.data.Song
+import com.atif.spatify.entity.Song
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.squareup.picasso.Picasso
 

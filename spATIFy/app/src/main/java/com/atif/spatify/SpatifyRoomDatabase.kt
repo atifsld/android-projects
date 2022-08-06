@@ -7,10 +7,9 @@ import androidx.room.RoomDatabase
 import com.atif.spatify.dao.AlbumCreditDao
 import com.atif.spatify.dao.AlbumDao
 import com.atif.spatify.dao.SongDao
-import com.atif.spatify.data.Album
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
-import kotlinx.coroutines.CoroutineScope
+import com.atif.spatify.entity.Album
+import com.atif.spatify.entity.AlbumCredit
+import com.atif.spatify.entity.Song
 
 @Database(
     entities = arrayOf(Album::class, Song::class, AlbumCredit::class),

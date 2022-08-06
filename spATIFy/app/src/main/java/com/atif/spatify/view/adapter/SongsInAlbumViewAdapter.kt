@@ -10,14 +10,10 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
-import com.atif.spatify.SpatifyApplication
-import com.atif.spatify.data.AlbumCredit
-import com.atif.spatify.data.Song
+import com.atif.spatify.entity.Song
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
-import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 
 class SongsInAlbumViewAdapter(var context: Context, val spatifyViewModel: SpatifyViewModel) :
     RecyclerView.Adapter<SongsInAlbumViewAdapter.RecyclerViewHolder>() {
