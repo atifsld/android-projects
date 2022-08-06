@@ -13,7 +13,7 @@ interface AlbumDao {
     fun getAlphabetizedAlbums(): LiveData<List<Album>>
 
     @Query("SELECT * FROM album WHERE id= :id")
-    abstract fun getAlbum(id: String) : Album
+    fun getAlbum(id: String) : Album
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(album: Album)

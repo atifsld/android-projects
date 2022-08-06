@@ -11,11 +11,11 @@ import com.atif.spatify.entity.AlbumCredit
 interface AlbumCreditDao {
 
     @Query("SELECT * FROM albumcredit WHERE id= :id")
-    abstract fun getCredit(id: String) : AlbumCredit
+    fun getCredit(id: String) : AlbumCredit
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(albumCredit: AlbumCredit)
 
     @Query("SELECT * FROM albumcredit WHERE credit_album_id= :id")
-    abstract fun getCreditsForAlbum(id: String) : LiveData<List<AlbumCredit>>
+    fun getCreditsForAlbum(id: String) : LiveData<List<AlbumCredit>>
 }
