@@ -208,6 +208,19 @@ object SpatifyDataGenerator {
         albumList.addAll(
             listOf(
                 Album(
+                    id = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    albumArtists = "The Rolling Stones  ",
+                    albumDescription = "The Stones were better than anybody else at making a slightly sloppy approach work for them rather than against them, and \"Let It Bleed\" could be the best illustration. The amiable, highly hummable blues-rock tune has a jerky, somewhat uneven rhythm slightly suggestive of a tipsy party guest who's imbibed just enough booze to make him less inhibited and more entertaining, but not enough to make him a truly annoying drunk.",
+                    albumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    albumSpotifyUrl = "https://open.spotify.com/album/4l4u9e9jSbotSXNjYfOugy?si=VEJw6xuIRxCLAKG4SEW7jg",
+                    albumGeniusUrl = "https://genius.com/The-rolling-stones-let-it-bleed-lyrics",
+                    albumWikipediaUrl = "https://en.wikipedia.org/wiki/Let_It_Bleed",
+                    albumLabel = "Decca Records",
+                    albumName = "Let It Bleed",
+                    albumTags = "Blues Rock",
+                    albumYear = 1968
+                ),
+                Album(
                     id = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     albumArtists = "The Velvet Underground",
                     albumDescription = "White Light/White Heat contains a distorted, feedback-driven, and roughly recorded sound, which is regarded as influential; it foreshadowed the start of punk rock and the no wave genre. The Social Distortion album White Light, White Heat, White Trash would be named after White Light/White Heat.",
