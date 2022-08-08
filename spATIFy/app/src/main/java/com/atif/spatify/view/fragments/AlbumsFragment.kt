@@ -2,7 +2,6 @@ package com.atif.spatify.view.fragments
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,21 +10,24 @@ import androidx.datastore.preferences.Preferences
 import androidx.datastore.preferences.createDataStore
 import androidx.datastore.preferences.edit
 import androidx.datastore.preferences.preferencesKey
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
+import com.atif.spatify.databinding.FragmentAlbumsBinding
 import com.atif.spatify.service.SpatifyService
 import com.atif.spatify.view.adapter.AlbumViewAdapter
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
-class AlbumsFragment : Fragment() {
+class AlbumsFragment : Fragment(R.layout.fragment_albums) {
     private lateinit var datastore: DataStore<Preferences>
+    private lateinit var binding: FragmentAlbumsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,16 +46,16 @@ class AlbumsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_albums, container, false)
+        return inflater.inflate(R.layout.fragment_albums, container, false)
+    }
 
-        val albumRecyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_albums)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentAlbumsBinding.bind(view)
+        val albumRecyclerView = binding.recyclerViewAlbums
         albumRecyclerView.layoutManager = GridLayoutManager(activity, 2)
-
         val adapter = AlbumViewAdapter(context)
-
         albumRecyclerView.adapter = adapter
-
         spatifyViewModel.allAlbums.observe(viewLifecycleOwner) { albums ->
             albums?.let {
                 adapter.updateList(it)
@@ -61,7 +63,6 @@ class AlbumsFragment : Fragment() {
         }
 
         datastore = requireContext().createDataStore(name = "settings")
-
         lifecycleScope.launch {
             if (readFromDataStore("isPopulated") == "true") {
                 Log.i("TAG", "isDataPopulated: true")
@@ -73,7 +74,6 @@ class AlbumsFragment : Fragment() {
                 saveToDataStore("isPopulated", "true")
             }
         }
-        return view
     }
 
     private suspend fun saveToDataStore(key:String, value: String) {

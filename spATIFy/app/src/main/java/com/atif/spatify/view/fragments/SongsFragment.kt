@@ -10,11 +10,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
+import com.atif.spatify.databinding.FragmentSongsBinding
 import com.atif.spatify.view.adapter.SongViewAdapter
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 
-class SongsFragment : Fragment() {
+class SongsFragment : Fragment(R.layout.fragment_songs) {
+
+    private lateinit var binding:FragmentSongsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +35,13 @@ class SongsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = inflater.inflate(R.layout.fragment_songs, container, false)
-        val songRecyclerView = view!!.findViewById<RecyclerView>(R.id.recycler_view_songs)
+        return inflater.inflate(R.layout.fragment_songs, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentSongsBinding.bind(view)
+        val songRecyclerView = binding.recyclerViewSongs
         songRecyclerView.layoutManager = LinearLayoutManager(activity)
         val adapter = SongViewAdapter(context, spatifyViewModel)
         songRecyclerView.adapter = adapter
@@ -43,6 +51,5 @@ class SongsFragment : Fragment() {
             }
         }
 
-        return view
     }
 }
