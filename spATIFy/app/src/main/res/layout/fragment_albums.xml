@@ -33,6 +33,7 @@
                 android:id="@+id/recycler_view_albums"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
+                android:layoutAnimation="@anim/layout_animatoin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </ScrollView>

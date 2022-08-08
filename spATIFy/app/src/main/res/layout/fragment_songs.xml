@@ -33,6 +33,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_songs"
                 android:layout_width="match_parent"
+                android:layoutAnimation="@anim/layout_animatoin"
                 android:paddingLeft="10sp"
                 android:paddingRight="10sp"
                 android:layout_height="wrap_content">
