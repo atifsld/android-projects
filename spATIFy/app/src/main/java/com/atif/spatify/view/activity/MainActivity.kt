@@ -1,27 +1,22 @@
 package com.atif.spatify.view.activity
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.datastore.DataStore
+import androidx.datastore.preferences.Preferences
+import androidx.datastore.preferences.createDataStore
 import androidx.drawerlayout.widget.DrawerLayout
 import com.atif.spatify.R
-import com.atif.spatify.SpatifyApplication
 import com.atif.spatify.view.fragments.AlbumDetailFragment
 import com.atif.spatify.view.fragments.AlbumsFragment
 import com.atif.spatify.view.fragments.FavoritesFragment
 import com.atif.spatify.view.fragments.SongsFragment
-import com.atif.spatify.view.viewmodel.SpatifyViewModel
-import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 import com.google.android.material.navigation.NavigationView
 
 
@@ -31,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
 
+    private lateinit var dataStore: DataStore<Preferences>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -96,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             transaction.commit()
             return
         }
+        dataStore = createDataStore(name="isPopulated")
         loadAlbumFragment()
     }
 

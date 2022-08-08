@@ -9,6 +9,7 @@ import kotlinx.coroutines.SupervisorJob
 
 class SpatifyApplication : Application() {
 
+
     var dataPopulated = false
 
         get() = field
@@ -17,6 +18,7 @@ class SpatifyApplication : Application() {
         }
 
     val applicationScope = CoroutineScope(SupervisorJob())
+
 
     val spatifyDatabase by lazy { SpatifyRoomDatabase.getDatabase(this) }
     val albumRepository by lazy { AlbumRepository(spatifyDatabase.albumDao()) }
