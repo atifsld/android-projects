@@ -12,12 +12,13 @@ class AboutPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val appDescription = "Spatify was created to be a catalogue of the world's best music - every album listed is curated by celebrated musicologists and reviewers, and is updated on a weekly basis."
         val aboutPage: View = AboutPage(this)
-            .setDescription("Spatify was created to be a catalogue of the world's best music. Every album listed is curated by celebrated musicologists and reviewers, and is updated on a weekly basis.")
+            .setDescription(appDescription)
             .setImage(R.drawable.logosmall)
             .isRTL(false)
             .addItem(Element().setTitle("Version 1.0"))
-            .addGroup("Connect with us")
+            .addGroup("Reach out to me")
             .addEmail("atif.mohd.sld@gmail.com")
             .addTwitter("atifsld")
             .addGitHub("atifsld")
