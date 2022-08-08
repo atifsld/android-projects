@@ -256,6 +256,117 @@ object SpatifyDataGenerator {
         songList.addAll(
             listOf(
                 Song(
+                    id = "64a639fa-ca70-402c-93e8-f9418fbb4c74",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/6H3kDe7CGoWYBabAeVWGiD?si=1f13f383129b4b03",
+                    songDuration = "4:30",
+                    songName = "Gimme Shelter",
+                    songTrackNumber = 1,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "50dd0d93-0cf9-4519-97ca-e68cab21296d",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/4GNEqWXhKEoMyL3k5wF0r7?si=35f829d809f64772",
+                    songDuration = "4:19",
+                    songName = "Love In Vain",
+                    songTrackNumber = 2,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "a4027680-fee2-48e2-8b6e-5955eb762615",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/6zD3VBPn2VNDdmLEg0coPt?si=80185f6fa2264fa2",
+                    songDuration = "3:07",
+                    songName = "Country Honk",
+                    songTrackNumber = 3,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "09762bc8-f31d-4992-ac60-1eccdd7dc9e9",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/31YMV7aMItO8jzyc10iRrS?si=c6fa4e54e6744845",
+                    songDuration = "3:33",
+                    songName = "Live With Me",
+                    songTrackNumber = 4,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "a57aaec2-acae-478a-bcf2-c3fde2a310a0",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/06FcMPcosZg13x2QODDDK6?si=59cdbfd9dfe64101",
+                    songDuration = "5:27",
+                    songName = "Let It Bleed",
+                    songTrackNumber = 5,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "1ddc2318-8f65-4986-8f2a-7f643ccff01f",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/3tIvHt7VaIenprWXrYzgwb?si=e06edbdedcb842cd",
+                    songDuration = "6:52",
+                    songName = "Midnight Rambler",
+                    songTrackNumber = 6,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "ed87ed84-03ed-4903-ba41-5015438003aa",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/2pbHaKsIRuIqjZHCLpyQMv?si=9a4b3b24ae764789",
+                    songDuration = "2:50",
+                    songName = "You Got The Silver",
+                    songTrackNumber = 7,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "f142a2c8-fe99-4e4d-9f1b-3ad9ebeb3292",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/5m6livL7ccIS92wq16n52r?si=1884830c6d7d468f",
+                    songDuration = "4:11",
+                    songName = "Monkey Man",
+                    songTrackNumber = 8,
+                    songIsFavorite = false
+                ),
+                Song(
+                    id = "1bf6f676-5071-4ca5-8609-d194d3442d3c",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/6lFZbCc7pn6Lme1NP7qQqQ?si=f0d9f09fb5df448d",
+                    songDuration = "7:28",
+                    songName = "You Can't Always Get What You Want",
+                    songTrackNumber = 9,
+                    songIsFavorite = false
+                ),
+
+                Song(
+                    id = "b679b24b-f8cd-4c60-b41a-d65aff0c9ae6",
+                    songAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    songArtists = "The Rolling Stones",
+                    songAlbumArtUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
+                    songSpotifyUrl = "https://open.spotify.com/track/0Evhu0dKCkIuEn88Pmb9mj?si=15d43ff31b3d4f70",
+                    songDuration = "2:47",
+                    songName = "White Light/White Heat",
+                    songTrackNumber = 1,
+                    songIsFavorite = false
+                ),
+                Song(
                     id = "667df405-d8b6-484b-b084-9910fefbea5e",
                     songAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     songArtists = "The Velvet Underground",
