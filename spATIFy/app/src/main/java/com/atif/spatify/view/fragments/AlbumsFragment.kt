@@ -14,7 +14,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
 import com.atif.spatify.databinding.FragmentAlbumsBinding
@@ -28,10 +27,6 @@ import kotlinx.coroutines.launch
 class AlbumsFragment : Fragment(R.layout.fragment_albums) {
     private lateinit var datastore: DataStore<Preferences>
     private lateinit var binding: FragmentAlbumsBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     private val spatifyViewModel: SpatifyViewModel by viewModels {
         SpatifyViewModelFactory(

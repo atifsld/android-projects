@@ -1,13 +1,12 @@
 package com.atif.spatify.view.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
 import com.atif.spatify.databinding.FragmentSongsBinding
@@ -18,10 +17,6 @@ import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 class SongsFragment : Fragment(R.layout.fragment_songs) {
 
     private lateinit var binding:FragmentSongsBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     private val spatifyViewModel: SpatifyViewModel by viewModels {
         SpatifyViewModelFactory(

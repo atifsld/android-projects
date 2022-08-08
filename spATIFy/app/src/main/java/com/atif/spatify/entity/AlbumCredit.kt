@@ -14,7 +14,7 @@ data class AlbumCredit (
 {
     override fun toString(): String {
         return "Credit id: $id" + "\n" +
-                "Credit album id: $creditAlbumId"
+                "Credit album id: $creditAlbumId" +
                 "Credit name: $creditName" + "\n" +
                 "Credit contribution: $creditContribution" + "\n" +
                 "Credit image URL: $creditImageUrl"

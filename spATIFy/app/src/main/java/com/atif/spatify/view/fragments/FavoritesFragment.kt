@@ -1,31 +1,23 @@
 package com.atif.spatify.view.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
 import com.atif.spatify.databinding.FragmentFavortiesBinding
-import com.atif.spatify.databinding.FragmentSongsBinding
 import com.atif.spatify.view.adapter.SongViewAdapter
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class FavoritesFragment : Fragment(R.layout.fragment_favorties) {
 
     private lateinit var binding:FragmentFavortiesBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     private val spatifyViewModel: SpatifyViewModel by viewModels {
         SpatifyViewModelFactory(

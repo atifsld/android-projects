@@ -7,8 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.viewModels
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
@@ -22,7 +22,6 @@ import com.squareup.picasso.Picasso
 
 
 class AlbumDetailFragment : Fragment(R.layout.fragment_album_detail) {
-    // TODO: Rename and change types of parameters
     private var albumUuid: String? = null
     private lateinit var binding: FragmentAlbumDetailBinding
     private val spatifyViewModel: SpatifyViewModel by viewModels {
@@ -72,13 +71,13 @@ class AlbumDetailFragment : Fragment(R.layout.fragment_album_detail) {
             if(album!!.albumGeniusUrl == null) {
                 Toast.makeText(context, "This album does not have a Genius lyrics page.", Toast.LENGTH_SHORT).show()
             } else {
-                val intent = Intent(Intent.ACTION_VIEW).setData(Uri.parse(album!!.albumGeniusUrl))
+                val intent = Intent(Intent.ACTION_VIEW).setData(Uri.parse(album.albumGeniusUrl))
                 startActivity(intent)
             }
         }
         shareButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
-            intent.setType("text/plain")
+            intent.type = "text/plain"
             intent.putExtra(Intent.EXTRA_TEXT, album!!.createShareString())
             startActivity(intent)
         }

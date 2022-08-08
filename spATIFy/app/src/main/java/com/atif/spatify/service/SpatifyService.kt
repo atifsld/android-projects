@@ -6,7 +6,6 @@ import com.atif.spatify.entity.Song
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 
 object SpatifyService {
-    private val albums = mutableMapOf<String, Album>()
 
     fun addSongs(spatifyViewModel: SpatifyViewModel) {
         val generatedSongs: List<Song> = SpatifyDataGenerator.getSongs()
