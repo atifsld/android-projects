@@ -13,6 +13,7 @@ import androidx.datastore.preferences.Preferences
 import androidx.datastore.preferences.createDataStore
 import androidx.drawerlayout.widget.DrawerLayout
 import com.atif.spatify.R
+import com.atif.spatify.databinding.ActivityMainBinding
 import com.atif.spatify.view.fragments.AlbumDetailFragment
 import com.atif.spatify.view.fragments.AlbumsFragment
 import com.atif.spatify.view.fragments.FavoritesFragment
@@ -22,6 +23,7 @@ import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
@@ -30,14 +32,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        drawerLayout = findViewById(R.id.drawerLayout)
+        drawerLayout = binding.drawerLayout
         actionBarToggle = ActionBarDrawerToggle(this, drawerLayout, 0, 0)
         drawerLayout.addDrawerListener(actionBarToggle)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         actionBarToggle.syncState()
-        navView = findViewById(R.id.navView)
+        navView = binding.navView
 
 
         navView.setNavigationItemSelectedListener { menuItem ->

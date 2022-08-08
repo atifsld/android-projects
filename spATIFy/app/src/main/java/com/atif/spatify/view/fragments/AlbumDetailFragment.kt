@@ -6,16 +6,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
+import com.atif.spatify.databinding.FragmentAlbumDetailBinding
 import com.atif.spatify.entity.Album
 import com.atif.spatify.view.adapter.AlbumCreditViewAdapter
 import com.atif.spatify.view.adapter.SongsInAlbumViewAdapter
@@ -24,10 +21,10 @@ import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 import com.squareup.picasso.Picasso
 
 
-class AlbumDetailFragment : Fragment() {
+class AlbumDetailFragment : Fragment(R.layout.fragment_album_detail) {
     // TODO: Rename and change types of parameters
     private var albumUuid: String? = null
-
+    private lateinit var binding: FragmentAlbumDetailBinding
     private val spatifyViewModel: SpatifyViewModel by viewModels {
         SpatifyViewModelFactory(
             (context?.applicationContext as SpatifyApplication).albumRepository,
@@ -43,36 +40,35 @@ class AlbumDetailFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_album_detail, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentAlbumDetailBinding.bind(view)
+
         Toast.makeText(context, "albumUuid = ${albumUuid}", Toast.LENGTH_SHORT).show()
         val album: Album? = albumUuid?.let { spatifyViewModel.getAlbum(it) }
-        val albumTitleTextView = view.findViewById<TextView>(R.id.album_title)
-        val albumLabel = view.findViewById<TextView>(R.id.album_label_name)
-        val albumArtistTextView = view.findViewById<TextView>(R.id.album_artist)
-        val albumYearTextView = view.findViewById<TextView>(R.id.album_year)
-        val albumArtImageView = view.findViewById<ImageView>(R.id.album_art_iv)
-        val albumDescription = view.findViewById<TextView>(R.id.album_description)
-        val shareButton = view.findViewById<ImageButton>(R.id.album_share_button)
+        val albumTitleTextView = binding.albumTitle
+        val albumLabel = binding.albumLabelName
+        val albumArtistTextView = binding.albumArtist
+        val albumYearTextView = binding.albumYear
+        val albumArtImageView = binding.albumArtIv
+        val albumDescription = binding.albumDescription
+        val shareButton = binding.albumShareButton
 
-        val spotifyButton = view.findViewById<ImageView>(R.id.album_spotify_button)
-        val wikipediaButton = view.findViewById<ImageView>(R.id.album_wikipedia_button)
-        val geniusButton = view.findViewById<ImageView>(R.id.album_genius_button)
+        val spotifyButton = binding.albumSpotifyButton
+        val wikipediaButton = binding.albumWikipediaButton
+        val geniusButton = binding.albumGeniusButton
 
-        spotifyButton!!.setOnClickListener{
+        spotifyButton.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
                 .setData(Uri.parse(album!!.albumSpotifyUrl))
             startActivity(intent)
         }
-        wikipediaButton!!.setOnClickListener{
+        wikipediaButton.setOnClickListener{
             val intent = Intent(Intent.ACTION_VIEW)
                 .setData(Uri.parse(album!!.albumWikipediaUrl))
             startActivity(intent)
         }
-        geniusButton!!.setOnClickListener{
+        geniusButton.setOnClickListener{
             if(album!!.albumGeniusUrl == null) {
                 Toast.makeText(context, "This album does not have a Genius lyrics page.", Toast.LENGTH_SHORT).show()
             } else {
@@ -97,7 +93,7 @@ class AlbumDetailFragment : Fragment() {
             .into(albumArtImageView)
 
 
-        val songsInAlbumRecyclerView = view.findViewById<RecyclerView>(R.id.songs_in_album_recycler_view)
+        val songsInAlbumRecyclerView = binding.songsInAlbumRecyclerView
         songsInAlbumRecyclerView.layoutManager = LinearLayoutManager(context)
         val songsAdapter = context?.let { SongsInAlbumViewAdapter(it, spatifyViewModel) }
         songsInAlbumRecyclerView.adapter = songsAdapter
@@ -105,7 +101,7 @@ class AlbumDetailFragment : Fragment() {
             songsAdapter?.updateList(songs)
         }
 
-        val albumCreditRecyclerView = view.findViewById<RecyclerView>(R.id.album_credits_recycler_view)
+        val albumCreditRecyclerView = binding.albumCreditsRecyclerView
         albumCreditRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         val adapter = AlbumCreditViewAdapter(context)
         albumCreditRecyclerView.adapter = adapter
@@ -114,6 +110,14 @@ class AlbumDetailFragment : Fragment() {
                 adapter.updateList(it)
             }
         }
-        return view
+
+
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_album_detail, container, false)
     }
 }
