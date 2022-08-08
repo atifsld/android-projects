@@ -46,31 +46,26 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.about -> {
-                    Toast.makeText(this, "About", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, AboutPageActivity::class.java)
                     startActivity(intent)
                     true
                 }
                 R.id.contactus -> {
-                    Toast.makeText(this, "Contact Us", Toast.LENGTH_SHORT).show()
                     val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:+917356015305"))
                     startActivity(intent)
                     true
                 }
                 R.id.menualbums -> {
-                    Toast.makeText(this, "Albums", Toast.LENGTH_SHORT).show()
                     loadAlbumFragment()
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.menusongs -> {
-                    Toast.makeText(this, "Songs", Toast.LENGTH_SHORT).show()
                     loadSongFragment()
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
                 R.id.menufavorites -> {
-                    Toast.makeText(this, "Favorites", Toast.LENGTH_SHORT).show()
                     loadFavoriteFragment()
                     this.drawerLayout.closeDrawer(GravityCompat.START)
                     true
@@ -85,7 +80,6 @@ class MainActivity : AppCompatActivity() {
             val uri = intent.data.toString()
             val uriPath = uri
             val  albumUuid = uriPath.replace("https://www.spatify.com/", "")
-            Toast.makeText(this, "UUID in path=$uriPath", Toast.LENGTH_SHORT).show()
             val albumDetailFragment = AlbumDetailFragment()
             val bundle = Bundle()
             bundle.putString("albumUuid", albumUuid)
@@ -115,7 +109,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
 
-        Toast.makeText(this, "Hamburger clicked. Launching drawer", Toast.LENGTH_SHORT).show()
         drawerLayout.openDrawer(navView)
         return true
     }
@@ -129,10 +122,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        Toast.makeText(this, "Back pressed.", Toast.LENGTH_SHORT).show()
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             this.drawerLayout.closeDrawer(GravityCompat.START)
-            Toast.makeText(this, "Closing drawer.", Toast.LENGTH_SHORT).show()
 
         } else {
 //            AlertDialog.Builder(this)

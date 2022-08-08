@@ -43,7 +43,6 @@ class AlbumDetailFragment : Fragment(R.layout.fragment_album_detail) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentAlbumDetailBinding.bind(view)
 
-        Toast.makeText(context, "albumUuid = ${albumUuid}", Toast.LENGTH_SHORT).show()
         val album: Album? = albumUuid?.let { spatifyViewModel.getAlbum(it) }
         val albumTitleTextView = binding.albumTitle
         val albumLabel = binding.albumLabelName
