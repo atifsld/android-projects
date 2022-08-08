@@ -20,7 +20,7 @@ class AboutPageActivity : AppCompatActivity() {
             .addItem(Element().setTitle("Version 1.0"))
             .addGroup("Reach out to me")
             .addEmail("atif.mohd.sld@gmail.com")
-            .addTwitter("atifsld")
+            .addTwitter("the_hindu")
             .addGitHub("atifsld")
             .create()
 
