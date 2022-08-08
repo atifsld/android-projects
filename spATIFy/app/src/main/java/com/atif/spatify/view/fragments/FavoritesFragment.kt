@@ -10,21 +10,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
+import com.atif.spatify.databinding.FragmentFavortiesBinding
+import com.atif.spatify.databinding.FragmentSongsBinding
 import com.atif.spatify.view.adapter.SongViewAdapter
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [FavortiesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class FavoritesFragment : Fragment() {
+class FavoritesFragment : Fragment(R.layout.fragment_favorties) {
+
+    private lateinit var binding:FragmentFavortiesBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -42,8 +40,14 @@ class FavoritesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_favorties, container, false)
-        val songRecyclerView = view!!.findViewById<RecyclerView>(R.id.recycler_view_songs)
+        return inflater.inflate(R.layout.fragment_favorties, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding = FragmentFavortiesBinding.bind(view)
+        val songRecyclerView = binding.recyclerViewSongs
         songRecyclerView.layoutManager = LinearLayoutManager(activity)
         val adapter = SongViewAdapter(context, spatifyViewModel)
         songRecyclerView.adapter = adapter
@@ -52,6 +56,5 @@ class FavoritesFragment : Fragment() {
                 adapter.updateList(it)
             }
         }
-        return view
     }
 }
