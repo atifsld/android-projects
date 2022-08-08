@@ -10,6 +10,55 @@ object SpatifyDataGenerator {
         albumCreditList.addAll(
             listOf(
                 AlbumCredit(
+                    id = "63cc47d7-aa43-42c7-b6f8-bfc66af4f59b",
+                    creditAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    creditName = "Bill Wyman",
+                    creditContribution = "Bass Guitar",
+                    creditImageUrl = "https://i.discogs.com/L9XH2RwFGkxwPJ2iSIeudHWev6RKx58svhVcB4c-_2g/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjgx/NC0xMzU1NjcwNDkx/LTI3ODcuanBlZw.jpeg"
+                ),
+                AlbumCredit(
+                    id = "064235c2-74ce-4cd1-a164-1b65271babdd",
+                    creditAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    creditName = "Mick Taylor",
+                    creditContribution = "Slide Guitar",
+                    creditImageUrl = "https://i.discogs.com/zLjbAISk1POR4CODXjZbnkaCl-sXfvyMv-tul8LtIG0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU0Njc2/ODQtMTQxMzg5NTMw/OS03NjYwLmpwZWc.jpeg"
+                ),
+                AlbumCredit(
+                    id = "28de8cc3-4a4c-4dd0-ade2-0956f911359f",
+                    creditAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    creditName = "Brian Jones",
+                    creditContribution = "Congos & Auto Harp",
+                    creditImageUrl = "https://i.discogs.com/xDtf3ZMsMJMUeUBNjwNue7FdD_Qxopiys9wm5tBuP58/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwOTI5/MC0xNjIwMDc3MDQ1/LTQ4NjQuanBlZw.jpeg"
+                ),
+                AlbumCredit(
+                    id = "d2b69a76-ab14-4f7b-84d8-9609cae1f3b6",
+                    creditAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    creditName = "Charlie Watts",
+                    creditContribution = "Drums",
+                    creditImageUrl = "https://i.discogs.com/VZVskvSw4kSThD23t4tJtDc6m148exd7FEeovx-lQog/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5OTMy/NS0xNjI5ODI2OTY0/LTkwMjYuanBlZw.jpeg"
+                ),
+                AlbumCredit(
+                    id = "e1474214-1394-497e-8f15-253356c1a3ae",
+                    creditAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    creditName = "Glyn Johns",
+                    creditContribution = "Engineer",
+                    creditImageUrl = "https://i.discogs.com/xbwSirGC6wdmGV4x84GGuN4zSOXh-nDfUxAmoU7dIBU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyMjMw/LTE1NTQ5MDM2NzIt/NjYyNy5qcGVn.jpeg"
+                ),
+                AlbumCredit(
+                    id = "1e67d947-f495-4176-9683-da6d6ba6a64d",
+                    creditAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    creditName = "Mick Jagger & Keith Richards",
+                    creditContribution = "Written-By",
+                    creditImageUrl = "https://i.discogs.com/Gy3ryFjUawYxZBrNSPvmXs3ZYL62V0XFFo-d6iaNZng/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NTU4/MS0xNDYyMjk2MDc1/LTUxNjMuanBlZw.jpeg"
+                ),
+                AlbumCredit(
+                    id = "3530826e-b662-4b52-a8b7-7e9f25188e01",
+                    creditAlbumId = "095b74a7-4092-42e3-b9fc-c79f650ae39c",
+                    creditName = "Jimmy Miller",
+                    creditContribution = "Producer",
+                    creditImageUrl = "https://i.discogs.com/27hEanwNtjymkmRWQMjOpLJHisPAqPsMug3GvrwH8Wo/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MjA3/LTExNTA3MjgxNzEu/anBlZw.jpeg"
+                ),
+                AlbumCredit(
                     id = "d775bdd0-b602-45a0-9056-0f49e5d31b22",
                     creditAlbumId = "5583e514-cf7b-4214-8397-dfd7e10dfb33",
                     creditName = "Andy Warhol",
