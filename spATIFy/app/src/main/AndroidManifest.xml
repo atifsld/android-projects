@@ -17,6 +17,13 @@
         android:theme="@style/Theme.SpATIFy"
         tools:targetApi="31">
         <activity
+            android:name=".view.activity.AboutPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.AlbumDetailActivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".view.activity.WelcomeActivity"
             android:exported="true">
             <intent-filter>

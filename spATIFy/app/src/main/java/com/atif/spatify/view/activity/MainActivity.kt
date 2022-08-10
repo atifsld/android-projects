@@ -12,7 +12,6 @@ import androidx.datastore.DataStore
 import androidx.datastore.preferences.Preferences
 import androidx.datastore.preferences.createDataStore
 import androidx.drawerlayout.widget.DrawerLayout
-import com.atif.spatify.AboutFragment
 import com.atif.spatify.R
 import com.atif.spatify.databinding.ActivityMainBinding
 import com.atif.spatify.view.fragments.AlbumDetailFragment
@@ -47,7 +46,8 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.about -> {
-                    loadAboutFragment()
+                    val intent = Intent(this, AboutPageActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.contactus -> {
@@ -91,13 +91,6 @@ class MainActivity : AppCompatActivity() {
         }
         dataStore = createDataStore(name="isPopulated")
         loadAlbumFragment()
-    }
-
-    private fun loadAboutFragment() {
-        val aboutFragment = AboutFragment()
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.contentLayout, aboutFragment)
-        transaction.commit()
     }
 
     private fun loadFavoriteFragment() {
