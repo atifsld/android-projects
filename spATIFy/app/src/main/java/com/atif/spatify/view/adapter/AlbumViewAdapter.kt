@@ -18,7 +18,7 @@ import com.atif.spatify.view.fragments.AlbumDetailFragment
 import com.squareup.picasso.Picasso
 
 
-class AlbumViewAdapter(var context: Context?) :
+class AlbumViewAdapter(var context: Context?, albumClickInterface: AlbumClickInterface) :
     RecyclerView.Adapter<AlbumViewAdapter.RecyclerViewHolder>() {
 
     private var recyclerDataArrayList = ArrayList<Album>()
@@ -74,4 +74,8 @@ class AlbumViewAdapter(var context: Context?) :
         val albumArtists: TextView = itemView.findViewById(R.id.album_artist)
         val albumYear: TextView = itemView.findViewById(R.id.album_year)
     }
+}
+
+interface AlbumClickInterface {
+    fun onAlbumClick(album: Album)
 }

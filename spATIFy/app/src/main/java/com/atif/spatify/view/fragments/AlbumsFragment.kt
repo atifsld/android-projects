@@ -5,26 +5,31 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.DataStore
 import androidx.datastore.preferences.Preferences
 import androidx.datastore.preferences.createDataStore
 import androidx.datastore.preferences.edit
 import androidx.datastore.preferences.preferencesKey
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.atif.spatify.R
 import com.atif.spatify.SpatifyApplication
 import com.atif.spatify.databinding.FragmentAlbumsBinding
+import com.atif.spatify.entity.Album
 import com.atif.spatify.service.SpatifyService
+import com.atif.spatify.view.adapter.AlbumClickInterface
 import com.atif.spatify.view.adapter.AlbumViewAdapter
 import com.atif.spatify.view.viewmodel.SpatifyViewModel
 import com.atif.spatify.view.viewmodel.SpatifyViewModelFactory
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
-class AlbumsFragment : Fragment(R.layout.fragment_albums) {
+class AlbumsFragment : Fragment(R.layout.fragment_albums), AlbumClickInterface {
     private lateinit var datastore: DataStore<Preferences>
     private lateinit var binding: FragmentAlbumsBinding
 
@@ -49,7 +54,7 @@ class AlbumsFragment : Fragment(R.layout.fragment_albums) {
         binding = FragmentAlbumsBinding.bind(view)
         val albumRecyclerView = binding.recyclerViewAlbums
         albumRecyclerView.layoutManager = GridLayoutManager(activity, 2)
-        val adapter = AlbumViewAdapter(context)
+        val adapter = AlbumViewAdapter(context, this)
         albumRecyclerView.adapter = adapter
         spatifyViewModel.allAlbums.observe(viewLifecycleOwner) { albums ->
             albums?.let {
@@ -82,5 +87,16 @@ class AlbumsFragment : Fragment(R.layout.fragment_albums) {
         val dataStoreKey = preferencesKey<String>(key)
         val preferences = datastore.data.first()
         return preferences[dataStoreKey]
+    }
+
+    override fun onAlbumClick(album: Album) {
+        Log.d("ONCLICKALBUM", "ONCLICKALBUM")
+        val albumDetailFragment = AlbumDetailFragment()
+        val bundle = Bundle()
+        bundle.putString("albumUuid", album.id)
+        albumDetailFragment.arguments = bundle
+        val fragmentManager: FragmentManager = (context as AppCompatActivity).supportFragmentManager
+        val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.contentLayout, albumDetailFragment).addToBackStack(null).commit()
     }
 }
