@@ -3,6 +3,8 @@ package com.atif.spatify.service
 import com.atif.spatify.entity.Album
 import com.atif.spatify.entity.AlbumCredit
 import com.atif.spatify.entity.Song
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 
 object SpatifyDataGenerator {
     fun getAlbumCredits(): List<AlbumCredit> {
@@ -651,6 +653,21 @@ object SpatifyDataGenerator {
             )
         )
         return songList
+    }
+
+    fun getSongsString(): String {
+        val gson = Gson()
+        return gson.toJson(getSongs())
+    }
+
+    fun getAlbumsString(): String {
+        val gson = Gson()
+        return gson.toJson(getSongs())
+    }
+
+    fun getAlbumCreditsString(): String {
+        val gson = Gson()
+        return gson.toJson(getSongs())
     }
 
 }
