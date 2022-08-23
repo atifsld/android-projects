@@ -662,12 +662,12 @@ object SpatifyDataGenerator {
 
     fun getAlbumsString(): String {
         val gson = Gson()
-        return gson.toJson(getSongs())
+        return gson.toJson(getAlbums())
     }
 
     fun getAlbumCreditsString(): String {
         val gson = Gson()
-        return gson.toJson(getSongs())
+        return gson.toJson(getAlbumCredits())
     }
 
 }
