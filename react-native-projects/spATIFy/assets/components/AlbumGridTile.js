@@ -2,18 +2,20 @@ import react from "react";
 import { View, Image, Text, Pressable } from "react-native";
 import { StyleSheet } from "react-native";
 
-function AlbumGridTile(album) {
+function AlbumGridTile({album, onPress}) {
     return (
-        <Pressable android_ripple={{color: '#ccc'}}>
+        <Pressable 
+            android_ripple={{color: '#ccc'}}
+            onPress={onPress}>
             <View style={styles.albumCardView}>
                 <View style={styles.albumImageView}>
                     <Image style = {styles.albumArt}
-                        source={{uri: album.album.albumArtUrl}}/>
+                        source={{uri: album.albumArtUrl}}/>
                 </View>
                 <View style={styles.albumTextView}>
-                    <Text numberOfLines={1} style={styles.albumNameView}>{album.album.albumName}</Text>
-                    <Text numberOfLines={1} style={styles.albumArtistsView}>{album.album.albumArtists}</Text>
-                    <Text numberOfLines={1} style={styles.albumYearView}>{album.album.albumYear}</Text>
+                    <Text numberOfLines={1} style={styles.albumNameView}>{album.albumName}</Text>
+                    <Text numberOfLines={1} style={styles.albumArtistsView}>{album.albumArtists}</Text>
+                    <Text numberOfLines={1} style={styles.albumYearView}>{album.albumYear}</Text>
                 </View>
             </View>
         </Pressable>
