@@ -1,10 +1,9 @@
 import SONGS from "../mockdata/dummy-data";
 import SongListTile from "../components/SongListTile";
-import { View, FlatList, Text } from "react-native";
+import { View, FlatList } from "react-native";
 import { StyleSheet } from "react-native";
 
 function returnSong(itemData) {
-    console.log("itemData: ", itemData.item)
     return <SongListTile song={itemData.item}/>
 }
 
