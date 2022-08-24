@@ -22,10 +22,11 @@ function AlbumGridTile(album) {
 
 const styles = StyleSheet.create({
     albumCardView: {
+        justifyContent: 'center',
         flex: 1,
-        margin: 16,
-        height: 250,
-        width: 160,
+        margin: 8,
+        height: 270,
+        width: 180,
         backgroundColor: "#64FFDA",
         elevation: 8,
         borderRadius: 8,
@@ -35,8 +36,8 @@ const styles = StyleSheet.create({
         shadowRadius: 8
     },
     albumArt: {
-        height: 150,
-        width: 150,
+        height: 170,
+        width: 170,
         padding: 5,
         borderRadius: 6
     },
