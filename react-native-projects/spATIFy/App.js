@@ -4,6 +4,7 @@ import react from 'react';
 import SongsScreen from './assets/screens/SongsScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AlbumsScreen from './assets/screens/AlbumsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +14,8 @@ export default function App() {
       <StatusBar style="auto" />
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="SongsScreen" component={SongsScreen} />
+          {/* <Stack.Screen name="SongsScreen" component={SongsScreen} /> */}
+          <Stack.Screen name="AlbumsScreen" component={AlbumsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

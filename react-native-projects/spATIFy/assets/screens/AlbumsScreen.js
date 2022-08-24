@@ -1,27 +1,28 @@
 import DUMMYDATA from "../mockdata/dummy-data";
-import SongListTile from "../components/SongListTile";
+import AlbumGridTile from "../components/AlbumGridTile";
 import { View, FlatList } from "react-native";
 import { StyleSheet } from "react-native";
 
-function returnSong(itemData) {
-    return <SongListTile song={itemData.item}/>
+function returnAlbum(itemData) {
+    return <AlbumGridTile album={itemData.item}/>
 }
 
-function SongsScreen () {
+function AlbumsScreen () {
     return <View>
         <FlatList
-            data={DUMMYDATA.SONGS}
+            data={DUMMYDATA.ALBUMS}
             keyExtractor={(item) => item.id}
-            renderItem={returnSong}
+            renderItem={returnAlbum}
+            numColumns = {2}
         />
         </View>
 }
 
 const styles = StyleSheet.create({
-    songsScreen: {
+    albumsScreen: {
         padding: 16,
         width: '100%'
     }
 })
 
-export default SongsScreen
+export default AlbumsScreen
