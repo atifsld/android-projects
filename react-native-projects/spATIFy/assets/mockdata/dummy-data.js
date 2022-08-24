@@ -100,18 +100,6 @@ const SONGS = [
         9,
         false
     ),
-
-    new Song(
-        "b679b24b-f8cd-4c60-b41a-d65aff0c9ae6",
-        "095b74a7-4092-42e3-b9fc-c79f650ae39c",
-        "The Rolling Stones",
-        "https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
-        "https://open.spotify.com/track/0Evhu0dKCkIuEn88Pmb9mj?si=15d43ff31b3d4f70",
-        "2:47",
-        "White Light/White Heat",
-        1,
-        false
-    ),
     new Song(
         "667df405-d8b6-484b-b084-9910fefbea5e",
         "5583e514-cf7b-4214-8397-dfd7e10dfb33",
