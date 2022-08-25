@@ -52,6 +52,9 @@ function AlbumDetailScreen({ route }) {
                     data={getCreditsInAlbum(album.id)}
                     keyExtractor={(albumCredit) => albumCredit.id}
                     renderItem = {renderAlbumCredit} />
+                <View style={styles.albumLabelView}>
+                    <Text style={styles.albumLabelText}>{album.albumYear} {album.albumLabel}</Text>
+                </View>
             </View>
         </ScrollView>
     )
@@ -112,6 +115,12 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold'
     },
+    albumLabelText: {
+        paddingTop: 16,
+        paddingBottom: 8,
+        fontSize: 18,
+        fontWeight: 'bold'
+    }
 })
 
 
