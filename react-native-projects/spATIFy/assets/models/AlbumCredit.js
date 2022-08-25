@@ -1,7 +1,7 @@
 class AlbumCredit {
     constructor(
-        id, , 
-        creditAlbumId
+        id,
+        creditAlbumId,
         creditName, 
         creditContribution, 
         creditImageUrl) {
