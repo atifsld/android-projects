@@ -41,7 +41,7 @@ function AlbumDetailScreen({ route }) {
                     <Text style={styles.descriptionText}>{album.albumDescription}</Text>
                 </View>
                 <Text style={styles.tracklistText}>Tracklist</Text>
-                <View>
+                <View style={styles.albumTracklistView}>
                     {getSongsInAlbum(album.id).map((song) => returnSong(song))}
                 </View>
                 <View style={styles.albumCreditsView}>
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
         padding: 8
     },
     albumHeader: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        paddingVertical: 8
     },
     albumHeaderImageView: {
 
@@ -92,16 +93,24 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     descriptionTitleText: {
-        paddingTop: 16,
+        borderTopColor: '#ccc',
+        borderTopWidth: 1,
+        paddingTop: 8,
         paddingBottom: 8,
         fontSize: 24,
         fontWeight: 'bold'
     },
     descriptionText: {
-        fontSize: 14
+        fontSize: 14,
+        paddingVertical: 8
+    },
+    albumTracklistView: {
+        paddingVertical: 8
     },
     tracklistText: {
-        paddingTop: 16,
+        borderTopColor: '#ccc',
+        borderTopWidth: 1,
+        paddingTop: 8,
         paddingBottom: 8,
         fontSize: 24,
         fontWeight: 'bold'
@@ -110,13 +119,15 @@ const styles = StyleSheet.create({
 
     },
     albumCreditsText: {
+        borderTopColor: '#ccc',
+        borderTopWidth: 1,
         paddingTop: 16,
         paddingBottom: 8,
         fontSize: 24,
         fontWeight: 'bold'
     },
     albumLabelText: {
-        paddingTop: 16,
+        paddingTop: 8,
         paddingBottom: 8,
         fontSize: 18,
         fontWeight: 'bold'
