@@ -18,7 +18,7 @@ function AlbumsScreen ({navigation}) {
         )
     }
 
-    return <View>
+    return <View style={styles.albumsScreen}>
         <FlatList
             data={DUMMYDATA.ALBUMS}
             keyExtractor={(item) => item.id}
@@ -30,7 +30,7 @@ function AlbumsScreen ({navigation}) {
 
 const styles = StyleSheet.create({
     albumsScreen: {
-        padding: 16,
+        marginTop: 16,
         width: '100%'
     }
 })

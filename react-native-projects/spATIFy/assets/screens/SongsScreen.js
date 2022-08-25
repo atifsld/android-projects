@@ -19,6 +19,7 @@ function SongsScreen () {
 
 const styles = StyleSheet.create({
     songsScreen: {
+        marginTop: 16,
         padding: 16,
         width: '100%'
     }
