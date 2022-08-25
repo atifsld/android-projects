@@ -31,13 +31,7 @@ export default function App() {
             }}/>
           <Stack.Screen 
             name="AlbumDetailScreen" 
-            component={AlbumDetailScreen} 
-            options={({route, navigation}) => {
-              const albumName = route.params.album.albumName
-              return {
-                title: albumName
-              }
-            }}/>
+            component={AlbumDetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

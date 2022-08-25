@@ -2,9 +2,16 @@ import DUMMYDATA from "../mockdata/dummy-data";
 import { View, ScrollView, Text, Image, StyleSheet, FlatList } from "react-native";
 import SongListTile from "../components/SongListTile";
 import AlbumCreditTile from "../components/AlbumCreditTile";
+import { useLayoutEffect } from "react";
 
-function AlbumDetailScreen({ route }) {
+function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
+
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            title: album.albumName
+        })
+    }, [album, navigation])
 
     function renderAlbumCredit(itemData) {
         return <AlbumCreditTile albumCredit={itemData.item}/>
