@@ -1,9 +1,10 @@
 import Song from '../models/Song'
 import Album from '../models/Album';
+import AlbumCredit from '../models/AlbumCredit';
 
 const DUMMYDATA = {
     "ALBUMCREDITS": [
-        AlbumCredit(
+        new AlbumCredit(
             "63cc47d7-aa43-42c7-b6f8-bfc66af4f59b",
             "095b74a7-4092-42e3-b9fc-c79f650ae39c",
             "Bill Wyman",
