@@ -1,15 +1,15 @@
 class AlbumCredit {
     constructor(
-        id, 
+        id, , 
+        creditAlbumId
         creditName, 
         creditContribution, 
-        creditImageUrl, 
-        creditAlbumId) {
+        creditImageUrl) {
             this.id = id
+            this.creditAlbumId = creditAlbumId
             this.creditName = creditName
             this.creditContribution = creditContribution
             this.creditImageUrl = creditImageUrl
-            this.creditAlbumId = creditAlbumId
     }
 }
 
