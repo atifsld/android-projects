@@ -12,12 +12,33 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <NavigationContainer>
-        <Stack.Navigator>
-          {/* <Stack.Screen name="SongsScreen" component={SongsScreen} /> */}
-          <Stack.Screen name="AlbumsScreen" component={AlbumsScreen} />
-          <Stack.Screen name="AlbumDetailScreen" component={AlbumDetailScreen} />
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: {backgroundColor: '#6200EE'},
+            headerTintColor: 'white'
+          }}
+        >
+          {/* <Stack.Screen name="SongsScreen" component={SongsScreen} options={{
+              title:  'Songs',
+            }}/> */}
+          <Stack.Screen 
+            name="AlbumsScreen" 
+            component={AlbumsScreen} 
+            options={{
+              title:  'Albums',
+            }}/>
+          <Stack.Screen 
+            name="AlbumDetailScreen" 
+            component={AlbumDetailScreen} 
+            options={({route, navigation}) => {
+              const albumName = route.params.album.albumName
+              console.log("NAAME: ", albumName)
+              return {
+                title: albumName
+              }
+            }}/>
         </Stack.Navigator>
       </NavigationContainer>
     </>
