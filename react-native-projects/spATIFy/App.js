@@ -34,7 +34,6 @@ export default function App() {
             component={AlbumDetailScreen} 
             options={({route, navigation}) => {
               const albumName = route.params.album.albumName
-              console.log("NAAME: ", albumName)
               return {
                 title: albumName
               }
