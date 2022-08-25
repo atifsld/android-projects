@@ -1,20 +1,25 @@
 import DUMMYDATA from "../mockdata/dummy-data";
 import { View, ScrollView, Text, Image, StyleSheet, FlatList } from "react-native";
 import SongListTile from "../components/SongListTile";
+import AlbumCreditTile from "../components/AlbumCreditTile";
 
 function AlbumDetailScreen({ route }) {
     const album = route.params.album;
 
-    function returnSong(itemData) {
-        return <SongListTile song={itemData.item}/>
+    function renderAlbumCredit(itemData) {
+        return <AlbumCreditTile albumCredit={itemData.item}/>
     }
 
-    function returnSongAlt(song) {
+    function returnSong(song) {
         return <SongListTile key={song.id} song={song}/>
     }
 
     function getSongsInAlbum(albumId) {
         return DUMMYDATA.SONGS.filter((song) => song.songAlbumId === albumId)
+    }
+
+    function getCreditsInAlbum(albumId) {
+        return DUMMYDATA.ALBUMCREDITS.filter((albumCredit) => albumCredit.creditAlbumId === albumId)
     }
 
     return (
@@ -36,21 +41,17 @@ function AlbumDetailScreen({ route }) {
                     <Text style={styles.descriptionText}>{album.albumDescription}</Text>
                 </View>
                 <Text style={styles.tracklistText}>Tracklist</Text>
-                {/* <FlatList
-                    data={getSongsInAlbum(album.id)}
-                    keyExtractor={(song) => song.id}
-                    renderItem={returnSong}/> */}
                 <View>
-                    {getSongsInAlbum(album.id).map((song) => returnSongAlt(song))}
+                    {getSongsInAlbum(album.id).map((song) => returnSong(song))}
                 </View>
                 <View style={styles.albumCreditsView}>
                     <Text style={styles.albumCreditsText}>Credits</Text>
                 </View>
-                {/* <FlatList
+                <FlatList
                     horizontal={true}
                     data={getCreditsInAlbum(album.id)}
                     keyExtractor={(albumCredit) => albumCredit.id}
-                    renderItem = {renderAlbumCredit} /> */}
+                    renderItem = {renderAlbumCredit} />
             </View>
         </ScrollView>
     )
