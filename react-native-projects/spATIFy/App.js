@@ -4,10 +4,32 @@ import react from 'react';
 import SongsScreen from './assets/screens/SongsScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import AlbumsScreen from './assets/screens/AlbumsScreen';
 import AlbumDetailScreen from './assets/screens/AlbumDetailScreen';
 
+
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
+
+function DrawerNavigator () {
+  return <Drawer.Navigator>
+      <Drawer.Screen 
+        name="AlbumsScreen" 
+        component={AlbumsScreen} 
+        options={{
+          title:  'Albums'
+        }}
+      />
+      <Drawer.Screen 
+          name="SongsScreen" 
+          component={SongsScreen} 
+          options={{
+            title:  'Songs'
+          }}
+      />
+  </Drawer.Navigator>
+}
 
 export default function App() {
   return (
@@ -20,15 +42,13 @@ export default function App() {
             headerTintColor: 'white'
           }}
         >
-          {/* <Stack.Screen name="SongsScreen" component={SongsScreen} options={{
-              title:  'Songs',
-            }}/> */}
           <Stack.Screen 
-            name="AlbumsScreen" 
-            component={AlbumsScreen} 
+            name="DrawerNavigator" 
+            component={DrawerNavigator} 
             options={{
-              title:  'Albums',
-            }}/>
+              headerShown: false
+            }}
+          />
           <Stack.Screen 
             name="AlbumDetailScreen" 
             component={AlbumDetailScreen} />
