@@ -180,7 +180,7 @@ const DUMMYDATA = {
             "https://i.discogs.com/yltaZJsmNzRCpXqtq3dekVIuHjnu_BTh35d5tH1McgU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzNzU1/LTEzOTQzODczNDMt/NDUwMC5qcGVn.jpeg"
         ),
         new AlbumCredit(
-            "3f15c771-01cc-40eb-84dc-2920bdc35269",
+            "8fde5aa6-8028-4a1e-9684-e20e84201bc7",
             "2080f161-c553-408d-9724-9c1e2f1b8c87",
             "Written-By",
             "M. Davis",
@@ -229,7 +229,7 @@ const DUMMYDATA = {
             "https://i.discogs.com/aj45WJx5f5GM39gt5cw_B4Z-xaOkRtwCdFoMm1OAQP0/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNTg1/LTE2MzcxNTQ4MjQt/NjUzOC5qcGVn.jpeg"
         ),
         new AlbumCredit(
-            "0a45bab1-8563-49eb-be85-88aaca1cc079",
+            "8fde5aa6-8028-4a1e-9684-e20e84201bc7",
             "06e00675-980b-4435-be2e-5ec17d942865",
             "Harvey Mason",
             "Drums [Yamaha]",
@@ -242,7 +242,9 @@ const DUMMYDATA = {
             "Conga, Shekere, Tambourine",
             "https://i.discogs.com/moG3RSm2h3SEts8kAcrmEd7pY2wsrTVP9LNaYQJBsHA/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4MTgt/MTUxMTEwNzA1Ni05/NDczLmpwZWc.jpeg"
         )
-    ],
+    ].sort((x, y) => {
+        return ((x.creditName) > (y.creditName)) ? 1: -1
+    }),
     "SONGS": [
         new Song(
             "64a639fa-ca70-402c-93e8-f9418fbb4c74",
@@ -508,7 +510,9 @@ const DUMMYDATA = {
             4,
             false
         )
-    ],
+    ].sort((x, y) => {
+        return ((x.songName) > (y.songName)) ? 1: -1
+    }),
     "ALBUMS": [
         new Album(
             "095b74a7-4092-42e3-b9fc-c79f650ae39c",
@@ -562,7 +566,9 @@ const DUMMYDATA = {
             "Jazz, Jazz-Funk",
             1973
         )
-    ]
+    ].sort((x, y) => {
+        return ((x.albumName) > (y.albumName)) ? 1: -1
+    })
 }
 
 
