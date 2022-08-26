@@ -9,8 +9,8 @@ import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
 
-    function onPress() {
-        console.log("Favorites += ", album.albumName)
+    function onPressShareAlbum() {
+        console.log(album.albumName, " should be shared here.")
     }
 
     useLayoutEffect(() => {
@@ -18,8 +18,8 @@ function AlbumDetailScreen({ route, navigation }) {
             title: album.albumName,
             headerRight: () => {
                 return <IconButton 
-                    onPress={onPress}
-                    name={"star"}
+                    onPress={onPressShareAlbum}
+                    name={"share-social"}
                     size={24}
                     color={"white"}
                 />
