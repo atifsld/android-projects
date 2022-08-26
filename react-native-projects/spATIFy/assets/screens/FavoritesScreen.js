@@ -1,5 +1,4 @@
-import { Text, View } from "react-native"
-import { StyleSheet } from "react-native-web"
+import { Text, View, StyleSheet } from "react-native"
 
 function FavoritesScreen () {
     return (
