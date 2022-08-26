@@ -2,16 +2,30 @@ import DUMMYDATA from "../mockdata/dummy-data";
 import { View, ScrollView, Text, Image, StyleSheet, FlatList } from "react-native";
 import SongListTile from "../components/SongListTile";
 import AlbumCreditTile from "../components/AlbumCreditTile";
+import IconButton from "../components/IconButton";
 import { useLayoutEffect } from "react";
+import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
 
+    function onPress() {
+        console.log("Favorites += ", album.albumName)
+    }
+
     useLayoutEffect(() => {
         navigation.setOptions({
-            title: album.albumName
+            title: album.albumName,
+            headerRight: () => {
+                return <IconButton 
+                    onPress={onPress}
+                    name={"star"}
+                    size={24}
+                    color={"white"}
+                />
+            }
         })
-    }, [album, navigation])
+    }, [album, navigation, onPress])
 
     function renderAlbumCredit(itemData) {
         return <AlbumCreditTile albumCredit={itemData.item}/>
