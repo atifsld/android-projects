@@ -1,16 +1,95 @@
-import {Text, View, StyleSheet} from "react-native"
+import {Text, View, Image, StyleSheet} from "react-native"
+
+
+import { Ionicons, MaterialIcons } from '@expo/vector-icons'
+
 
 function AboutUsScreeen() {
+    const DESCRIPTION_TEXT = "Spatify was created to be a catalogue of the world's best music - every album listed is curated by celebrated musicologists and reviewers and is updated on a weekly basis."
+
     return (
         <View style={styles.aboutUsView}>
-            <Text>About Us Screen</Text>
+            <View style={styles.iconView}>
+                <Image
+                    style = {styles.appIcon}
+                    source={require("../images/logo.png")}
+                />
+            </View>
+            <View style={styles.descriptionView}>
+                <Text style={styles.descriptionText}>{DESCRIPTION_TEXT}</Text>
+            </View>
+            <View style={styles.contactDetailsView}>        
+                <View style={styles.titleView}>
+                    <Text style={styles.titleText}>Reach out to us!</Text>
+                </View>
+                <View style={styles.emailView}>
+                    <MaterialIcons name="email" size={24} color="black" />
+                    <Text style={styles.emailText}>atif.mohd.sld@gmail.com</Text>
+                </View>
+                <View style={styles.phoneView}>
+                    <Ionicons name="phone-portrait-outline" size={24} color="black" />
+                    <Text style={styles.phoneText}>+91 73560 15305</Text>
+                </View>
+                <View style={styles.githubView}>
+                    <Ionicons name="logo-github" size={24} color="black" />
+                    <Text style={styles.githubText}>atifsld</Text>
+                </View>
+            </View>
+            <View style={styles.versionView}>
+                <Text style={styles.versionText}>Version 1.0</Text>
+            </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    aboutUsScreen: {
+    aboutUsView: {
+        flex: 1,
+        padding: 32,
+        justifyContent: 'space-between'
+    },
+    appIcon: {
+        height: 128,
+        width: 128,
+        alignSelf: 'center'
+    },
+    iconView: {
+        paddingTop: 32
+    },
+    descriptionView: {
+    },
+    descriptionText: {
+        fontSize: 16
+    },
+    contactDetailsView: {
 
+    },
+    titleView: {
+        paddingBottom: 12
+    },
+    titleText: {
+        fontSize: 20
+    },
+    emailView: {
+        flexDirection: 'row',
+        paddingVertical: 4
+    },
+    emailText: {
+        
+    },
+    phoneView: {
+        flexDirection: 'row',
+        paddingVertical: 4
+    },
+    githubView: {
+        flexDirection: 'row',
+        paddingVertical: 4
+    },
+    versionView: {
+        justifyContent: 'center'
+    },
+    versionText: {
+        
     }
 })
 

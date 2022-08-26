@@ -16,7 +16,11 @@ const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
 function DrawerNavigator () {
-  return <Drawer.Navigator>
+  return <Drawer.Navigator
+    screenOptions={{
+    headerStyle: {backgroundColor: '#6200EE'},
+    headerTintColor: 'white'
+  }}>
     <Drawer.Screen 
       name="AlbumsScreen" 
       component={AlbumsScreen} 
