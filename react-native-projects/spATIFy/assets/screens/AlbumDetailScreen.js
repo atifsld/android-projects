@@ -5,12 +5,32 @@ import AlbumCreditTile from "../components/AlbumCreditTile";
 import IconButton from "../components/IconButton";
 import { useLayoutEffect } from "react";
 import { Ionicons, MaterialIcons } from '@expo/vector-icons'
+import { Share } from "react-native";
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
 
-    function onPressShareAlbum() {
-        console.log(album.albumName, " should be shared here.")
+    const albumShare = async() => {
+        try {
+            const result = await Share.share({
+                message: "Check out the weekly recommendation " + album.albumName + " by " + album.albumArtists +  " on spATIFy!"
+            })
+            if(result.action === Share.sharedAction) {
+                if(result.activityType) {
+                    console.log("albumShare(): Shared with an activity")
+                } else {
+                    console.log("albumShare(): Shared successfully")
+                }
+            } else if (result.action === Share.dismissedAction) {
+                console.log("albumShare(): Share dismissed")
+            }
+        } catch(error) {
+            alert(error.message)
+        }
+    }
+
+    function onPress() {
+        albumShare()
     }
 
     useLayoutEffect(() => {
@@ -18,7 +38,7 @@ function AlbumDetailScreen({ route, navigation }) {
             title: album.albumName,
             headerRight: () => {
                 return <IconButton 
-                    onPress={onPressShareAlbum}
+                    onPress={onPress}
                     name={"share-social"}
                     size={24}
                     color={"white"}
