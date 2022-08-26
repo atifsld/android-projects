@@ -9,6 +9,7 @@ import SongsScreen from './assets/screens/SongsScreen';
 import AlbumsScreen from './assets/screens/AlbumsScreen';
 import AlbumDetailScreen from './assets/screens/AlbumDetailScreen';
 import FavoritesScreen from './assets/screens/FavoritesScreen';
+import AboutUsScreeen from './assets/screens/AboutUsScreen';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
 const Stack = createNativeStackNavigator();
@@ -43,6 +44,16 @@ function DrawerNavigator () {
         title:  'Favorites',
         drawerIcon:({color, size}) => (
           <MaterialIcons name="favorite" color={color} size={size} />
+        )
+      }}
+    />
+    <Drawer.Screen 
+      name="AboutUsScreen" 
+      component={AboutUsScreeen} 
+      options={{
+        title:  'About Us',
+        drawerIcon:({color, size}) => (
+          <MaterialIcons name="contact-support" color={color} size={size} />
         )
       }}
     />
