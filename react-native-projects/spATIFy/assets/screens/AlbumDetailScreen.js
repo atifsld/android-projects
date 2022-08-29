@@ -1,15 +1,16 @@
 import DUMMYDATA from "../mockdata/dummy-data";
-import { View, ScrollView, Text, Image, StyleSheet, FlatList } from "react-native";
+import { View, ScrollView, Text, Image, StyleSheet, FlatList, Pressable, Linking } from "react-native";
 import SongListTile from "../components/SongListTile";
 import AlbumCreditTile from "../components/AlbumCreditTile";
 import IconButton from "../components/IconButton";
-import { useLayoutEffect } from "react";
-import { Ionicons, MaterialIcons } from '@expo/vector-icons'
+import React, { useEffect, useCallback, useLayoutEffect, useState } from "react";
+import { Ionicons, MaterialIcons, FontAwesome } from '@expo/vector-icons'
 import { Share } from "react-native";
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
-
+    const [link, setLink] = useState('')
+    
     const albumShare = async() => {
         try {
             const result = await Share.share({
@@ -32,6 +33,11 @@ function AlbumDetailScreen({ route, navigation }) {
     function onPress() {
         albumShare()
     }
+
+    useEffect(() => {
+        handlePress()
+      }, [link]
+    );
 
     useLayoutEffect(() => {
         navigation.setOptions({
@@ -63,6 +69,19 @@ function AlbumDetailScreen({ route, navigation }) {
         return DUMMYDATA.ALBUMCREDITS.filter((albumCredit) => albumCredit.creditAlbumId === albumId)
     }
 
+    const handlePress = useCallback(async () => {
+        const supported = await Linking.canOpenURL(link);
+        if (supported) {
+          await Linking.openURL(link);
+        } else {
+          Alert.alert(`Don't know how to open this URL: ${link}`);
+        }
+      }, [link]);
+
+    function navigateLink(newLink) {
+        setLink(newLink)
+    }
+
     return (
         <ScrollView>
             <View style={styles.container}>
@@ -76,6 +95,33 @@ function AlbumDetailScreen({ route, navigation }) {
                         <Text style={styles.albumArtistsText}>{album.albumArtists}</Text>
                         <Text style={styles.albumYearText}>{album.albumYear}</Text>
                     </View>
+                </View>
+                <View style={styles.linksView}>
+                    {album.albumWikipediaUrl !== null && 
+                        <Pressable 
+                            disable={album.albumWikipediaUrl === null}
+                            style={styles.linkPressable} 
+                            onPress={() => setLink(album.albumWikipediaUrl)}>
+                            <FontAwesome name="wikipedia-w" size={30} color="black"/>
+                        </Pressable>
+                    }
+                    {album.albumSpotifyUrl !== null && 
+                        <Pressable 
+                            disable={album.albumSpotifyUrl === null}
+                            style={styles.linkPressable} 
+                            onPress={() => setLink(album.albumSpotifyUrl)}>
+                            <FontAwesome name="spotify" size={30} color="black"/>
+                        </Pressable>
+                    }
+                    {album.albumGeniusUrl !== null && 
+                        <Pressable 
+                            disable={album.albumGeniusUrl === null}
+                            style={styles.linkPressable} 
+                            onPress={() => setLink(album.albumGeniusUrl)}>
+                            <FontAwesome name="font" size={30} color="black"/>
+                        </Pressable>
+                    }
+                
                 </View>
                 <View>    
                     <Text style={styles.descriptionTitleText}>Description</Text>
@@ -110,7 +156,8 @@ const styles = StyleSheet.create({
     },
     albumHeader: {
         flexDirection: 'row',
-        paddingVertical: 8
+        paddingVertical: 8,
+        paddingBottom: 16
     },
     albumHeaderImageView: {
 
@@ -132,6 +179,16 @@ const styles = StyleSheet.create({
     },
     albumYearText: {
         fontSize: 20
+    },
+    linksView: {
+        borderTopColor: "#ccc",
+        borderTopWidth: 1,
+        paddingVertical: 16,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly'
+    },
+    linkPressable: {
+
     },
     descriptionTitleText: {
         borderTopColor: '#ccc',
