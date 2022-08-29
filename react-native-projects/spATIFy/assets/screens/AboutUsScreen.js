@@ -23,15 +23,15 @@ function AboutUsScreeen() {
                     <Text style={styles.titleText}>Reach out to us!</Text>
                 </View>
                 <View style={styles.emailView}>
-                    <MaterialIcons name="email" size={24} color="black" />
+                    <MaterialIcons name="email" size={24} color="white" />
                     <Text style={styles.emailText}>atif.mohd.sld@gmail.com</Text>
                 </View>
                 <View style={styles.phoneView}>
-                    <Ionicons name="phone-portrait-outline" size={24} color="black" />
+                    <Ionicons name="phone-portrait-outline" size={24} color="white" />
                     <Text style={styles.phoneText}>+91 73560 15305</Text>
                 </View>
                 <View style={styles.githubView}>
-                    <Ionicons name="logo-github" size={24} color="black" />
+                    <Ionicons name="logo-github" size={24} color="white" />
                     <Text style={styles.githubText}>atifsld</Text>
                 </View>
             </View>
@@ -46,12 +46,18 @@ const styles = StyleSheet.create({
     aboutUsView: {
         flex: 1,
         padding: 32,
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        backgroundColor: '#03c7b4'
     },
     appIcon: {
         height: 128,
         width: 128,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        elevation: 4,
+        shadowColor: '#02645b',
+        shadowOpacity: 0.25,
+        shadowOffset: {width: 0, height: 2},
+        shadowRadius: 8
     },
     iconView: {
         paddingTop: 32
@@ -59,7 +65,8 @@ const styles = StyleSheet.create({
     descriptionView: {
     },
     descriptionText: {
-        fontSize: 16
+        fontSize: 20,
+        color: "white"
     },
     contactDetailsView: {
 
@@ -68,6 +75,7 @@ const styles = StyleSheet.create({
         paddingBottom: 12
     },
     titleText: {
+        color: "white",
         fontSize: 20
     },
     emailView: {
@@ -75,21 +83,30 @@ const styles = StyleSheet.create({
         paddingVertical: 4
     },
     emailText: {
+        color: "white"
         
     },
     phoneView: {
         flexDirection: 'row',
         paddingVertical: 4
     },
+    phoneText: {
+        color: "white"
+        
+    },
     githubView: {
         flexDirection: 'row',
         paddingVertical: 4
+    },
+    githubText: {
+        color: "white"
+        
     },
     versionView: {
         justifyContent: 'center'
     },
     versionText: {
-        
+        color: "white"
     }
 })
 
