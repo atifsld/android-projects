@@ -1,8 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { View, Image, Text, Pressable } from "react-native";
 import { StyleSheet } from "react-native";
+import { Icon } from "react-native-vector-icons/Icon";
+import IconButton from "./IconButton";
 
 function SongListTile(song) {
+    const [isFavorite, setIsFavorite] = useState(false)
+
+    function onFavorite() {
+        setIsFavorite(isFavorite === false)
+        if(isFavorite) {
+            console.log(song.song.songName, " added to favorites.")
+        } else {
+            console.log(song.song.songName, " removed from favorites.")
+        }
+    }
+
     return (
         <Pressable android_ripple={{color: '#ccc'}}>
             <View style={styles.songCardView}>
@@ -14,6 +27,26 @@ function SongListTile(song) {
                     <Text style={styles.songNameView}>{song.song.songName}</Text>
                     <Text style={styles.songArtistsView}>{song.song.songArtists}</Text>
                     <Text style={styles.songDurationView}>{song.song.songDuration}</Text>
+                </View>
+                <View style={styles.spaceView}></View>
+                <View style={styles.favoriteButtonView}>
+                    {isFavorite &&
+                    <IconButton
+                        name="star"
+                        onPress={onFavorite}
+                        size={28}
+                        color="white"
+                        />
+                    }
+                    {(isFavorite === false) &&
+                    <IconButton
+                        name="star-outline"
+                        onPress={onFavorite}
+                        size={28}
+                        color="white"
+                        />
+                    }
+
                 </View>
             </View>
         </Pressable>
@@ -59,8 +92,14 @@ const styles = StyleSheet.create({
     songDurationView: {
         fontSize: 16,
         color: 'black'
+    },
+    spaceView: {
+        flex: 1
+    },
+    favoriteButtonView: {
+        alignSelf: 'center',
+        paddingHorizontal: 20
     }
-
 })
 
 export default SongListTile;
