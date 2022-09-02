@@ -48,14 +48,17 @@ const styles = StyleSheet.create({
     },
     songNameView: {
         fontSize: 20,
+        color: 'black',
         fontWeight: 'bold'
     },
     songArtistsView: {
         fontSize: 16,
+        color: 'black',
         fontWeight: 'bold'
     },
     songDurationView: {
-        fontSize: 16
+        fontSize: 16,
+        color: 'black'
     }
 
 })

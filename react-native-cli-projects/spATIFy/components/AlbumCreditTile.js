@@ -47,10 +47,12 @@ const styles = StyleSheet.create({
     },
     creditNameText: {
         fontSize: 20,
+        color: 'black',
         fontWeight: 'bold'
     },
     creditContributionText: {
         fontSize: 16,
+        color: 'black',
         fontWeight: 'bold'
     }
 

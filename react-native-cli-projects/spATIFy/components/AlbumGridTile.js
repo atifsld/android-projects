@@ -13,9 +13,9 @@ function AlbumGridTile({album, onPress}) {
                         source={{uri: album.albumArtUrl}}/>
                 </View>
                 <View style={styles.albumTextView}>
-                    <Text numberOfLines={1} style={styles.albumNameView}>{album.albumName}</Text>
-                    <Text numberOfLines={1} style={styles.albumArtistsView}>{album.albumArtists}</Text>
-                    <Text numberOfLines={1} style={styles.albumYearView}>{album.albumYear}</Text>
+                    <Text numberOfLines={1} style={styles.albumNameText}>{album.albumName}</Text>
+                    <Text numberOfLines={1} style={styles.albumArtistsText}>{album.albumArtists}</Text>
+                    <Text numberOfLines={1} style={styles.albumYearText}>{album.albumYear}</Text>
                 </View>
             </View>
         </Pressable>
@@ -50,24 +50,27 @@ const styles = StyleSheet.create({
     albumTextView: {
         padding: 8
     },
-    albumNameView: {
+    albumNameText: {
         paddingHorizontal: 5,
         width: 150,
         fontSize: 20,
+        color: 'black',
         fontWeight: 'bold',
         numberOfLines: 1,
         ellipsizeMode: 'tail'
     },
-    albumArtistsView: {
+    albumArtistsText: {
         paddingHorizontal: 5,
         width: 150,
         fontSize: 16,
+        color: 'black',
         fontWeight: 'bold'
     },
-    albumYearView: {
+    albumYearText: {
         paddingHorizontal: 5,
         width: 150,
         fontSize: 16,
+        color: 'black',
         numberOfLines: 1,
         ellipsizeMode: 'tail'
     }

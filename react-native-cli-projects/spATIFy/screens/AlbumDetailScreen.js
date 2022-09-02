@@ -6,6 +6,7 @@ import IconButton from "../components/IconButton";
 import React, { useEffect, useCallback, useLayoutEffect, useState } from "react";
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Share } from "react-native";
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
@@ -90,7 +91,7 @@ function AlbumDetailScreen({ route, navigation }) {
                         <Image style = {styles.albumArt}
                             source={{uri: album.albumArtUrl}}/>
                     </View>
-                    <View style={styles.albumHeaderText}>
+                    <View style={styles.albumHeaderTextView}>
                         <Text style={styles.albumNameText}>{album.albumName}</Text>
                         <Text style={styles.albumArtistsText}>{album.albumArtists}</Text>
                         <Text style={styles.albumYearText}>{album.albumYear}</Text>
@@ -102,7 +103,7 @@ function AlbumDetailScreen({ route, navigation }) {
                             disable={album.albumWikipediaUrl === null}
                             style={styles.linkPressable} 
                             onPress={() => setLink(album.albumWikipediaUrl)}>
-                            {/* <FontAwesome name="wikipedia-w" size={30} color="black"/> */}
+                            <FontAwesome name="wikipedia-w" size={30} color="black"/>
                         </Pressable>
                     }
                     {album.albumSpotifyUrl !== null && 
@@ -110,7 +111,7 @@ function AlbumDetailScreen({ route, navigation }) {
                             disable={album.albumSpotifyUrl === null}
                             style={styles.linkPressable} 
                             onPress={() => setLink(album.albumSpotifyUrl)}>
-                            {/* <FontAwesome name="spotify" size={30} color="black"/> */}
+                            <FontAwesome name="spotify" size={30} color="black"/>
                         </Pressable>
                     }
                     {album.albumGeniusUrl !== null && 
@@ -118,7 +119,7 @@ function AlbumDetailScreen({ route, navigation }) {
                             disable={album.albumGeniusUrl === null}
                             style={styles.linkPressable} 
                             onPress={() => setLink(album.albumGeniusUrl)}>
-                            {/* <FontAwesome name="font" size={30} color="black"/> */}
+                            <FontAwesome name="font" size={30} color="black"/>
                         </Pressable>
                     }
                 
@@ -162,7 +163,7 @@ const styles = StyleSheet.create({
     albumHeaderImageView: {
 
     },
-    albumHeaderText: {
+    albumHeaderTextView: {
         padding: 16
     },
     albumArt: {
@@ -171,14 +172,17 @@ const styles = StyleSheet.create({
     },
     albumNameText: {
         fontSize: 24,
+        color: 'black',
         fontWeight: 'bold'
     },
     albumArtistsText: {
         fontSize: 22,
+        color: 'black',
         fontWeight: 'bold'
     },
     albumYearText: {
-        fontSize: 20
+        fontSize: 20,
+        color: 'black'
     },
     linksView: {
         borderTopColor: "#ccc",
@@ -196,10 +200,12 @@ const styles = StyleSheet.create({
         paddingTop: 8,
         paddingBottom: 8,
         fontSize: 24,
+        color: 'black',
         fontWeight: 'bold'
     },
     descriptionText: {
         fontSize: 14,
+        color: 'black',
         paddingVertical: 8
     },
     albumTracklistView: {
@@ -211,6 +217,7 @@ const styles = StyleSheet.create({
         paddingTop: 8,
         paddingBottom: 8,
         fontSize: 24,
+        color: 'black',
         fontWeight: 'bold'
     },
     albumCreditsView: {
@@ -222,6 +229,7 @@ const styles = StyleSheet.create({
         paddingTop: 16,
         paddingBottom: 8,
         fontSize: 24,
+        color: 'black',
         fontWeight: 'bold'
     },
     albumLabelText: {
