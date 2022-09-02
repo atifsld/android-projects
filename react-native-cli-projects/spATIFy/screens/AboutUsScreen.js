@@ -1,7 +1,7 @@
 import {Text, View, Image, StyleSheet} from "react-native"
 import React from "react"
 
-// import { Ionicons, MaterialIcons } from '@expo/vector-icons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 
 function AboutUsScreeen() {
@@ -23,15 +23,15 @@ function AboutUsScreeen() {
                     <Text style={styles.titleText}>Reach out to us!</Text>
                 </View>
                 <View style={styles.emailView}>
-                    {/* <MaterialIcons name="email" size={24} color="white" /> */}
+                    <Ionicons name="mail" size={24} color="white" />
                     <Text style={styles.emailText}>atif.mohd.sld@gmail.com</Text>
                 </View>
                 <View style={styles.phoneView}>
-                    {/* <Ionicons name="phone-portrait-outline" size={24} color="white" /> */}
+                    <Ionicons name="phone-portrait-outline" size={24} color="white" />
                     <Text style={styles.phoneText}>+91 73560 15305</Text>
                 </View>
                 <View style={styles.githubView}>
-                    {/* <Ionicons name="logo-github" size={24} color="white" /> */}
+                    <Ionicons name="logo-github" size={24} color="white" />
                     <Text style={styles.githubText}>atifsld</Text>
                 </View>
             </View>

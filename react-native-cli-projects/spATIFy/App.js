@@ -11,7 +11,8 @@ import AlbumsScreen from './screens/AlbumsScreen';
 import AlbumDetailScreen from './screens/AlbumDetailScreen';
 import FavoritesScreen from './screens/FavoritesScreen';
 import AboutUsScreeen from './screens/AboutUsScreen';
-// import { Ionicons, MaterialIcons } from '@expo/vector-icons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import MaterialIcons from 'react-native-vector-icons/Ionicons'
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -28,8 +29,7 @@ function DrawerNavigator () {
       options={{
         title:  'Albums',
         drawerIcon:({color, size}) => (
-          <Text>Ion</Text>
-          // <Ionicons name="albums" color={color} size={size} />
+          <Ionicons name="albums" color={color} size={size} />
         )
       }}
     />
@@ -39,8 +39,7 @@ function DrawerNavigator () {
       options={{
         title:  'Songs',
         drawerIcon:({color, size}) => (
-          <Text>Ion</Text>
-          // <Ionicons name="list" color={color} size={size} />
+          <Ionicons name="list" color={color} size={size} />
         )
       }}
     />
@@ -50,8 +49,7 @@ function DrawerNavigator () {
       options={{
         title:  'Favorites',
         drawerIcon:({color, size}) => (
-          <Text>Ion</Text>
-          // <MaterialIcons name="favorite" color={color} size={size} />
+          <Ionicons name="star" color={color} size={size} />
         )
       }}
     />
@@ -61,8 +59,7 @@ function DrawerNavigator () {
       options={{
         title:  'About Us',
         drawerIcon:({color, size}) => (
-          <Text>Ion</Text>
-          // <MaterialIcons name="contact-support" color={color} size={size} />
+          <Ionicons name="md-information-circle" color={color} size={size} />
         )
       }}
     />

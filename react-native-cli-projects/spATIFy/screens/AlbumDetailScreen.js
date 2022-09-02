@@ -4,7 +4,7 @@ import SongListTile from "../components/SongListTile";
 import AlbumCreditTile from "../components/AlbumCreditTile";
 import IconButton from "../components/IconButton";
 import React, { useEffect, useCallback, useLayoutEffect, useState } from "react";
-// import { Ionicons, MaterialIcons, FontAwesome } from '@expo/vector-icons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Share } from "react-native";
 
 function AlbumDetailScreen({ route, navigation }) {
