@@ -1,112 +1,93 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+// import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import SongsScreen from './screens/SongsScreen';
+import AlbumsScreen from './screens/AlbumsScreen';
+import AlbumDetailScreen from './screens/AlbumDetailScreen';
+import FavoritesScreen from './screens/FavoritesScreen';
+import AboutUsScreeen from './screens/AboutUsScreen';
+// import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
+// const Stack = createNativeStackNavigator();
+// const Drawer = createDrawerNavigator();
+
+// function DrawerNavigator () {
+//   return <Drawer.Navigator
+//     screenOptions={{
+//     headerStyle: {backgroundColor: '#6200EE'},
+//     headerTintColor: 'white'
+//   }}>
+//     <Drawer.Screen 
+//       name="AlbumsScreen" 
+//       component={AlbumsScreen} 
+//       options={{
+//         title:  'Albums',
+//         drawerIcon:({color, size}) => (
+//           <Ionicons name="albums" color={color} size={size} />
+//         )
+//       }}
+//     />
+//     <Drawer.Screen 
+//       name="SongsScreen" 
+//       component={SongsScreen} 
+//       options={{
+//         title:  'Songs',
+//         drawerIcon:({color, size}) => (
+//           <Ionicons name="list" color={color} size={size} />
+//         )
+//       }}
+//     />
+//     <Drawer.Screen 
+//       name="FavoritesScreen" 
+//       component={FavoritesScreen} 
+//       options={{
+//         title:  'Favorites',
+//         drawerIcon:({color, size}) => (
+//           <MaterialIcons name="favorite" color={color} size={size} />
+//         )
+//       }}
+//     />
+//     <Drawer.Screen 
+//       name="AboutUsScreen" 
+//       component={AboutUsScreeen} 
+//       options={{
+//         title:  'About Us',
+//         drawerIcon:({color, size}) => (
+//           <MaterialIcons name="contact-support" color={color} size={size} />
+//         )
+//       }}
+//     />
+//   </Drawer.Navigator>
+// }
+
+export default function App() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
+    <AlbumsScreen/>
+    // <>
+    //   <StatusBar style="light" />
+    //   <NavigationContainer>
+    //     <Stack.Navigator
+    //       screenOptions={{
+    //         headerStyle: {backgroundColor: '#6200EE'},
+    //         headerTintColor: 'white'
+    //       }}
+    //     >
+    //       <Stack.Screen 
+    //         name="DrawerNavigator" 
+    //         component={DrawerNavigator} 
+    //         options={{
+    //           headerShown: false
+    //         }}
+    //       />
+    //       <Stack.Screen 
+    //         name="AlbumDetailScreen" 
+    //         component={AlbumDetailScreen} />
+    //     </Stack.Navigator>
+    //   </NavigationContainer>
+    // </>
   );
-};
-
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
+}
