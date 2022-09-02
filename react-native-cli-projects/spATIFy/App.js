@@ -1,6 +1,5 @@
-// import { StatusBar } from 'expo-status-bar';
 import 'react-native-gesture-handler';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -69,6 +68,9 @@ function DrawerNavigator () {
 export default function App() {
   return (
     <>
+      <StatusBar 
+        backgroundColor="#6200EE"
+        barStyle={"light-content"}/>
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
