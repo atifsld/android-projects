@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flex: 1,
         margin: 8,
-        height: 270,
-        width: 180,
+        height: 260,
+        width: 170,
         backgroundColor: "#03DAC6",
         elevation: 8,
         borderRadius: 8,
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
         shadowRadius: 8
     },
     albumArt: {
-        height: 170,
-        width: 170,
+        height: 160,
+        width: 160,
         padding: 5,
         borderRadius: 6
     },

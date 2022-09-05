@@ -53,7 +53,8 @@ function AlbumsScreen ({navigation}) {
 
 const styles = StyleSheet.create({
     albumsScreen: {
-        marginTop: 16,
+        marginVertical: 16,
+        paddingHorizontal: 8,
         width: '100%'
     }
 })

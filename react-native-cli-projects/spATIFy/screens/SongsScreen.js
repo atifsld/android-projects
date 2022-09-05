@@ -41,7 +41,7 @@ function SongsScreen () {
         dispatch(getSongs())
     }, [])
     
-    return <View>
+    return <View style={styles.songsScreen}>
         <FlatList
             data={songs}
             keyExtractor={(item) => item.id}
@@ -52,8 +52,8 @@ function SongsScreen () {
 
 const styles = StyleSheet.create({
     songsScreen: {
-        marginTop: 16,
-        padding: 16,
+        marginVertical: 16,
+        paddingHorizontal: 8,
         width: '100%'
     }
 })

@@ -36,7 +36,7 @@ function FavoritesScreen () {
         dispatch(getSongs())
     }, [])
     
-    return <View>
+    return <View style={styles.favoritesScreen}>
         <FlatList
             data={favorites}
             keyExtractor={(item) => item.id}
@@ -46,9 +46,9 @@ function FavoritesScreen () {
 }
 
 const styles = StyleSheet.create({
-    songsScreen: {
-        marginTop: 16,
-        padding: 16,
+    favoritesScreen: {
+        marginVertical: 16,
+        paddingHorizontal: 8,
         width: '100%'
     }
 })
