@@ -4,8 +4,10 @@ import SongListTile from "../components/SongListTile";
 import { getSongs, removeFavorite } from "../store/redux/actions";
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
+import IconButton from "../components/IconButton";
 
 function FavoritesScreen () {
+    const NO_FAVORITES_MESSAGE = "Oops, you don't seem to have any favorites. Add songs to your favorites to view them here."
     function returnSong(itemData) {
         return <SongListTile 
             song={itemData.item}
@@ -36,20 +38,41 @@ function FavoritesScreen () {
         dispatch(getSongs())
     }, [])
     
-    return <View style={styles.favoritesScreen}>
-        <FlatList
-            data={favorites}
-            keyExtractor={(item) => item.id}
-            renderItem={returnSong}
-        />
+    return (
+        <View style={styles.favoritesScreen}>
+            {favorites.length > 0 &&
+                <FlatList
+                    data={favorites}
+                    keyExtractor={(item) => item.id}
+                    renderItem={returnSong}
+                />
+            }  
+            {favorites.length <= 0 &&
+                <View style={styles.noFavoritesView}>
+                    <Text style={styles.noFavoritesText}>{NO_FAVORITES_MESSAGE}</Text>
+                </View>
+            }     
         </View>
+    )
 }
 
 const styles = StyleSheet.create({
     favoritesScreen: {
         marginVertical: 16,
         paddingHorizontal: 8,
-        width: '100%'
+        width: '100%',
+        flex: 1
+    },
+    noFavoritesView: {
+        height: 100,
+        flex: 1,
+        paddingTop:'33%',
+        paddingHorizontal: '5%'
+    },
+    noFavoritesText: {
+        color: '#000',
+        fontWeight: '500',
+        textAlign: 'center'
     }
 })
 
