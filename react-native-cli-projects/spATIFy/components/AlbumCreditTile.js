@@ -10,8 +10,8 @@ function AlbumCreditTile({albumCredit}) {
                     source={{uri: albumCredit.creditImageUrl}}/>
             </View>
             <View style={styles.creditTextView}>
-                <Text style={styles.creditNameText}>{albumCredit.creditName}</Text>
-                <Text style={styles.creditContributionText}>{albumCredit.creditContribution}</Text>
+                <Text numberOfLines={1} style={styles.creditNameText}>{albumCredit.creditName}</Text>
+                <Text numberOfLines={1} style={styles.creditContributionText}>{albumCredit.creditContribution}</Text>
             </View>
         </View>
     )

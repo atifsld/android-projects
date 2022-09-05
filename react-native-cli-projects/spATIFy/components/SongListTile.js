@@ -13,9 +13,9 @@ function SongListTile({song, onFavoriteClick, isFavorite}) {
                         source={{uri: song.songAlbumArtUrl}}/>
                 </View>
                 <View style={styles.songTextView}>
-                    <Text style={styles.songNameView}>{song.songName}</Text>
-                    <Text style={styles.songArtistsView}>{song.songArtists}</Text>
-                    <Text style={styles.songDurationView}>{song.songDuration}</Text>
+                    <Text numberOfLines={1} style={styles.songNameText}>{song.songName}</Text>
+                    <Text numberOfLines={1} style={styles.songArtistsText}>{song.songArtists}</Text>
+                    <Text numberOfLines={1} style={styles.songDurationText}>{song.songDuration}</Text>
                 </View>
                 <View style={styles.spaceView}></View>
                 <View style={styles.favoriteButtonView}>
@@ -68,17 +68,25 @@ const styles = StyleSheet.create({
     songTextView: {
         padding: 8
     },
-    songNameView: {
-        fontSize: 20,
+    songNameText: {
+        width: '100%',
+        ellipsizeMode: 'tail',
+        fontSize: 19,
         color: 'black',
         fontWeight: 'bold'
     },
-    songArtistsView: {
+    songArtistsText: {
+        width: '100%',
+        numberOfLines: 1,
+        ellipsizeMode: 'tail',
         fontSize: 16,
         color: 'black',
         fontWeight: 'bold'
     },
-    songDurationView: {
+    songDurationText: {
+        width: '80%',
+        numberOfLines: 1,
+        ellipsizeMode: 'tail',
         fontSize: 16,
         color: 'black'
     },

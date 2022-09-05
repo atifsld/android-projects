@@ -216,6 +216,7 @@ const styles = StyleSheet.create({
     descriptionText: {
         fontSize: 14,
         color: 'black',
+        fontWeight: '500',
         paddingVertical: 8
     },
     albumTracklistView: {
