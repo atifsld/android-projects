@@ -93,9 +93,9 @@ function AlbumDetailScreen({ route, navigation }) {
                             source={{uri: album.albumArtUrl}}/>
                     </View>
                     <View style={styles.albumHeaderTextView}>
-                        <Text style={styles.albumNameText}>{album.albumName}</Text>
-                        <Text style={styles.albumArtistsText}>{album.albumArtists}</Text>
-                        <Text style={styles.albumYearText}>{album.albumYear}</Text>
+                        <Text numberOfLines={1} style={styles.albumNameText}>{album.albumName}</Text>
+                        <Text numberOfLines={1} style={styles.albumArtistsText}>{album.albumArtists}</Text>
+                        <Text numberOfLines={1} style={styles.albumYearText}>{album.albumYear}</Text>
                     </View>
                 </View>
                 <View style={styles.linksView}>
@@ -172,18 +172,27 @@ const styles = StyleSheet.create({
         width: 128
     },
     albumNameText: {
+        width: '85%',
         fontSize: 24,
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        numberOfLines: 1,
+        ellipsizeMode: 'tail'
     },
     albumArtistsText: {
+        width: '84%',
         fontSize: 22,
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        numberOfLines: 1,
+        ellipsizeMode: 'tail'
     },
     albumYearText: {
+        width: '80%',
         fontSize: 20,
-        color: 'black'
+        color: 'black',
+        numberOfLines: 1,
+        ellipsizeMode: 'tail'
     },
     linksView: {
         borderTopColor: "#ccc",
