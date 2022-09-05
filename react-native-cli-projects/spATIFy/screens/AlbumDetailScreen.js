@@ -10,6 +10,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
+    const albumCredits = route.params.albumCredits
     const [link, setLink] = useState('')
     
     const albumShare = async() => {
@@ -64,10 +65,6 @@ function AlbumDetailScreen({ route, navigation }) {
 
     function getSongsInAlbum(albumId) {
         return DUMMYDATA.SONGS.filter((song) => song.songAlbumId === albumId)
-    }
-
-    function getCreditsInAlbum(albumId) {
-        return DUMMYDATA.ALBUMCREDITS.filter((albumCredit) => albumCredit.creditAlbumId === albumId)
     }
 
     const handlePress = useCallback(async () => {
@@ -137,7 +134,7 @@ function AlbumDetailScreen({ route, navigation }) {
                 </View>
                 <FlatList
                     horizontal={true}
-                    data={getCreditsInAlbum(album.id)}
+                    data={albumCredits}
                     keyExtractor={(albumCredit) => albumCredit.id}
                     renderItem = {renderAlbumCredit} />
                 <View style={styles.albumLabelView}>
