@@ -7,6 +7,7 @@ import React, { useEffect, useCallback, useLayoutEffect, useState } from "react"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Share } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import { Alert } from "react-native";
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
@@ -68,12 +69,15 @@ function AlbumDetailScreen({ route, navigation }) {
     }
 
     const handlePress = useCallback(async () => {
+        if(link==='')
+            return
         const supported = await Linking.canOpenURL(link);
         if (supported) {
           await Linking.openURL(link);
         } else {
           Alert.alert(`Don't know how to open this URL: ${link}`);
         }
+        setLink('')
       }, [link]);
 
     function navigateLink(newLink) {
