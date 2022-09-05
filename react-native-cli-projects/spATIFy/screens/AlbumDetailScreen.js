@@ -244,6 +244,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     albumLabelText: {
+        color: 'black',
         paddingTop: 8,
         paddingBottom: 8,
         fontSize: 18,
