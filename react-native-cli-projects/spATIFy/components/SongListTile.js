@@ -1,39 +1,28 @@
 import React, {useState} from "react";
 import { View, Image, Text, Pressable } from "react-native";
 import { StyleSheet } from "react-native";
-import { Icon } from "react-native-vector-icons/Icon";
 import IconButton from "./IconButton";
 
-function SongListTile(song) {
-    const [isFavorite, setIsFavorite] = useState(false)
-
-    function onFavorite() {
-        setIsFavorite(isFavorite === false)
-        if(isFavorite) {
-            console.log(song.song.songName, " added to favorites.")
-        } else {
-            console.log(song.song.songName, " removed from favorites.")
-        }
-    }
+function SongListTile({song, onFavoriteClick, isFavorite}) {
 
     return (
         <Pressable android_ripple={{color: '#ccc'}}>
             <View style={styles.songCardView}>
                 <View style={styles.songImageView}>
                     <Image style = {styles.albumArt}
-                        source={{uri: song.song.songAlbumArtUrl}}/>
+                        source={{uri: song.songAlbumArtUrl}}/>
                 </View>
                 <View style={styles.songTextView}>
-                    <Text style={styles.songNameView}>{song.song.songName}</Text>
-                    <Text style={styles.songArtistsView}>{song.song.songArtists}</Text>
-                    <Text style={styles.songDurationView}>{song.song.songDuration}</Text>
+                    <Text style={styles.songNameView}>{song.songName}</Text>
+                    <Text style={styles.songArtistsView}>{song.songArtists}</Text>
+                    <Text style={styles.songDurationView}>{song.songDuration}</Text>
                 </View>
                 <View style={styles.spaceView}></View>
                 <View style={styles.favoriteButtonView}>
                     {isFavorite &&
                     <IconButton
                         name="star"
-                        onPress={onFavorite}
+                        onPress={onFavoriteClick}
                         size={28}
                         color="white"
                         />
@@ -41,7 +30,7 @@ function SongListTile(song) {
                     {(isFavorite === false) &&
                     <IconButton
                         name="star-outline"
-                        onPress={onFavorite}
+                        onPress={onFavoriteClick}
                         size={28}
                         color="white"
                         />
