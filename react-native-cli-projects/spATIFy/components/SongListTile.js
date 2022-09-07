@@ -17,7 +17,6 @@ function SongListTile({song, onFavoriteClick, isFavorite}) {
                     <Text numberOfLines={1} style={styles.songArtistsText}>{song.songArtists}</Text>
                     <Text numberOfLines={1} style={styles.songDurationText}>{song.songDuration}</Text>
                 </View>
-                <View style={styles.spaceView}></View>
                 <View style={styles.favoriteButtonView}>
                     {isFavorite &&
                     <IconButton
@@ -66,6 +65,7 @@ const styles = StyleSheet.create({
         elevation: 12
     },
     songTextView: {
+        width: 200,
         padding: 8
     },
     songNameText: {
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     songArtistsText: {
-        width: '100%',
+        width: '80%',
         numberOfLines: 1,
         ellipsizeMode: 'tail',
         fontSize: 16,
@@ -89,9 +89,6 @@ const styles = StyleSheet.create({
         ellipsizeMode: 'tail',
         fontSize: 16,
         color: 'black'
-    },
-    spaceView: {
-        flex: 1
     },
     favoriteButtonView: {
         alignSelf: 'center',
