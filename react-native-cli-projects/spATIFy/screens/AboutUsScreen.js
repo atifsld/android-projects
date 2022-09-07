@@ -7,7 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 const TEXT_COLOR = "#0387b4"
 
 function AboutUsScreeen() {
-    const DESCRIPTION_TEXT = "Spatify was created to be a catalogue of the world's best music - every week, a selection of 4 albums is listed from celebrated music critiques and musicologists."
+    const DESCRIPTION_TEXT = "Spatify was created to be a catalogue of the world's best music - every week, a selection of 4 albums is listed by celebrated music critiques and musicologists."
     
     return (
         <View style={styles.aboutUsView}>
