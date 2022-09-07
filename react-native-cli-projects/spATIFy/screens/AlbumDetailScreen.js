@@ -7,6 +7,7 @@ import React, { useEffect, useCallback, useLayoutEffect, useState } from "react"
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Share } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Alert } from "react-native";
 
 function AlbumDetailScreen({ route, navigation }) {
@@ -120,7 +121,7 @@ function AlbumDetailScreen({ route, navigation }) {
                             disable={album.albumGeniusUrl === null}
                             style={styles.linkPressable} 
                             onPress={() => setLink(album.albumGeniusUrl)}>
-                            <FontAwesome name="font" size={30} color="black"/>
+                            <MaterialIcons name="queue-music" size={30} color="black"/>
                         </Pressable>
                     }
                 
