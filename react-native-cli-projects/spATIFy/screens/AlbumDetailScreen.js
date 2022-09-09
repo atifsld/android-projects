@@ -9,11 +9,32 @@ import { Share } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import { Alert } from "react-native";
+import { addFavorite, removeFavorite } from "../store/redux/actions";
+import { useSelector, useDispatch } from "react-redux"
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
     const albumCredits = route.params.albumCredits
     const [link, setLink] = useState('')
+    const dispatch = useDispatch()
+    const songs = useSelector(state => state.songs)
+    const favorites = useSelector(state => state.favoriteSongs)
+    const addToFavorites = song => dispatch(addFavorite(song))
+    const removeFromFavorites = song => dispatch(removeFavorite(song))
+    
+    const handleAddFavorite = song => {
+        addToFavorites(song)
+        console.log("Added " , song.songName, " to favorites.")
+    }
+    
+    const handleRemoveFavorite = song => {
+        removeFromFavorites(song)
+        console.log("Removed ", song.songName, " from favorites.")
+    }
+    
+    const ifInFavorites = song => {
+        return (favorites.filter(item => item.id === song.id).length > 0)
+    }
     
     const albumShare = async() => {
         try {
@@ -42,7 +63,6 @@ function AlbumDetailScreen({ route, navigation }) {
         handlePress()
       }, [link]
     );
-
     useLayoutEffect(() => {
         navigation.setOptions({
             title: album.albumName,
@@ -62,7 +82,13 @@ function AlbumDetailScreen({ route, navigation }) {
     }
 
     function returnSong(song) {
-        return <SongListTile key={song.id} song={song}/>
+        return <SongListTile 
+            key={song.id} 
+            song={song}
+            isFavorite={ifInFavorites(song)}
+            onFavoriteClick={() =>
+                ifInFavorites(song) ? handleRemoveFavorite(song) : handleAddFavorite(song)
+            }  />
     }
 
     function getSongsInAlbum(albumId) {
@@ -154,8 +180,7 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         flex: 1,
-        margin: 8,
-        padding: 8
+        margin: 8
     },
     albumHeader: {
         flexDirection: 'row',
