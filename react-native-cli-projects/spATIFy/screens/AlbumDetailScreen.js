@@ -4,7 +4,6 @@ import SongListTile from "../components/SongListTile";
 import AlbumCreditTile from "../components/AlbumCreditTile";
 import IconButton from "../components/IconButton";
 import React, { useEffect, useCallback, useLayoutEffect, useState } from "react";
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import { Share } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
