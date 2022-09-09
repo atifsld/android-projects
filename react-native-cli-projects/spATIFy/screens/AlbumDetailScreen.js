@@ -184,7 +184,8 @@ const styles = StyleSheet.create({
     albumHeader: {
         flexDirection: 'row',
         paddingVertical: 8,
-        paddingBottom: 16
+        paddingBottom: 16,
+        paddingHorizontal: 8
     },
     albumHeaderImageView: {
 
@@ -197,7 +198,7 @@ const styles = StyleSheet.create({
         width: 128
     },
     albumNameText: {
-        width: '85%',
+        width: 220,
         fontSize: 24,
         color: 'black',
         fontWeight: 'bold',
@@ -205,7 +206,7 @@ const styles = StyleSheet.create({
         ellipsizeMode: 'tail'
     },
     albumArtistsText: {
-        width: '84%',
+        width: 220,
         fontSize: 22,
         color: 'black',
         fontWeight: 'bold',
@@ -213,7 +214,7 @@ const styles = StyleSheet.create({
         ellipsizeMode: 'tail'
     },
     albumYearText: {
-        width: '80%',
+        width: 220,
         fontSize: 20,
         color: 'black',
         numberOfLines: 1,
@@ -236,13 +237,15 @@ const styles = StyleSheet.create({
         paddingBottom: 8,
         fontSize: 24,
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingHorizontal: 8
     },
     descriptionText: {
         fontSize: 14,
         color: 'black',
         fontWeight: '500',
-        paddingVertical: 8
+        paddingVertical: 8,
+        paddingHorizontal: 8
     },
     albumTracklistView: {
         paddingVertical: 8
@@ -254,10 +257,11 @@ const styles = StyleSheet.create({
         paddingBottom: 8,
         fontSize: 24,
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingHorizontal: 8
     },
     albumCreditsView: {
-
+        paddingHorizontal: 8
     },
     albumCreditsText: {
         borderTopColor: '#ccc',
@@ -273,7 +277,8 @@ const styles = StyleSheet.create({
         paddingTop: 8,
         paddingBottom: 8,
         fontSize: 18,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        paddingHorizontal: 8
     }
 })
 
