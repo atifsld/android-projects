@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import { StyleSheet, Text, View, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -11,7 +11,6 @@ import AlbumDetailScreen from './screens/AlbumDetailScreen';
 import FavoritesScreen from './screens/FavoritesScreen';
 import AboutUsScreeen from './screens/AboutUsScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import MaterialIcons from 'react-native-vector-icons/Ionicons'
 import {Provider} from 'react-redux'
 import {store, persistor} from './store/redux/store';
 import { PersistGate } from 'redux-persist/integration/react'
