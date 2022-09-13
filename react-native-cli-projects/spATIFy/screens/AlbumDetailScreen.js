@@ -1,12 +1,10 @@
-import { View, ScrollView, Text, Image, StyleSheet, FlatList, Pressable, Linking } from "react-native";
+import { View, ScrollView, Text, Image, StyleSheet, FlatList, Pressable, Linking, Share, Alert } from "react-native";
 import SongListTile from "../components/SongListTile";
 import AlbumCreditTile from "../components/AlbumCreditTile";
 import IconButton from "../components/IconButton";
 import React, { useEffect, useCallback, useLayoutEffect, useState } from "react";
-import { Share } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import { Alert } from "react-native";
 import { addFavorite, removeFavorite } from "../store/redux/actions";
 import { useSelector, useDispatch } from "react-redux"
 
@@ -104,10 +102,6 @@ function AlbumDetailScreen({ route, navigation }) {
         }
         setLink('')
       }, [link]);
-
-    function navigateLink(newLink) {
-        setLink(newLink)
-    }
 
     return (
         <ScrollView>
