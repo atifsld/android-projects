@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import DUMMYDATA from "../mockdata/dummy-data";
 import SongListTile from "../components/SongListTile";
-import { View, FlatList } from "react-native";
-import { StyleSheet } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 import { getSongs, addFavorite, removeFavorite } from "../store/redux/actions";
 import { useSelector, useDispatch } from "react-redux"
 

@@ -1,10 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Text, View, StyleSheet, FlatList } from "react-native"
 import SongListTile from "../components/SongListTile";
 import { getSongs, removeFavorite } from "../store/redux/actions";
 import { useSelector, useDispatch } from "react-redux"
-import { useEffect } from "react";
-import IconButton from "../components/IconButton";
 
 function FavoritesScreen () {
     const NO_FAVORITES_MESSAGE = "Oops, you don't seem to have any favorites. Add songs to your favorites to view them here."

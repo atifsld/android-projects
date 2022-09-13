@@ -1,11 +1,8 @@
-import DUMMYDATA from "../mockdata/dummy-data";
+import React, { useEffect } from "react";
 import AlbumGridTile from "../components/AlbumGridTile";
-import { View, FlatList } from "react-native";
-import { StyleSheet } from "react-native";
-import React from "react";
+import { View, FlatList, StyleSheet } from "react-native";
 import { getAlbumCredits, getAlbums } from "../store/redux/actions";
 import { useSelector, useDispatch } from "react-redux"
-import { useEffect } from "react";
 
 function AlbumsScreen ({navigation}) {
 
