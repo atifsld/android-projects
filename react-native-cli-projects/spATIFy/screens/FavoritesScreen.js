@@ -20,11 +20,6 @@ function FavoritesScreen () {
     
     const removeFromFavorites = song => dispatch(removeFavorite(song))
     
-    const handleAddFavorite = song => {
-        addToFavorites(song)
-        console.log("Added " , song.songName, " to favorites.")
-    }
-    
     const handleRemoveFavorite = song => {
         removeFromFavorites(song)
         console.log("Removed ", song.songName, " from favorites.")
