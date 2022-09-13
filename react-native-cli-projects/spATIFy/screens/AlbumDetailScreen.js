@@ -1,4 +1,3 @@
-import DUMMYDATA from "../mockdata/dummy-data";
 import { View, ScrollView, Text, Image, StyleSheet, FlatList, Pressable, Linking } from "react-native";
 import SongListTile from "../components/SongListTile";
 import AlbumCreditTile from "../components/AlbumCreditTile";
@@ -13,10 +12,10 @@ import { useSelector, useDispatch } from "react-redux"
 
 function AlbumDetailScreen({ route, navigation }) {
     const album = route.params.album;
-    const albumCredits = route.params.albumCredits
     const [link, setLink] = useState('')
     const dispatch = useDispatch()
     const songs = useSelector(state => state.songs)
+    const albumCredits = useSelector(state => state.albumCredits)
     const favorites = useSelector(state => state.favoriteSongs)
     const addToFavorites = song => dispatch(addFavorite(song))
     const removeFromFavorites = song => dispatch(removeFavorite(song))
@@ -91,7 +90,7 @@ function AlbumDetailScreen({ route, navigation }) {
     }
 
     function getSongsInAlbum(albumId) {
-        return DUMMYDATA.SONGS.filter((song) => song.songAlbumId === albumId)
+        return songs.filter((song) => song.songAlbumId === albumId)
     }
 
     const handlePress = useCallback(async () => {
