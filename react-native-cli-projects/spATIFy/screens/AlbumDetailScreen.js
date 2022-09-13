@@ -59,6 +59,7 @@ function AlbumDetailScreen({ route, navigation }) {
         handlePress()
       }, [link]
     );
+    
     useLayoutEffect(() => {
         navigation.setOptions({
             title: album.albumName,

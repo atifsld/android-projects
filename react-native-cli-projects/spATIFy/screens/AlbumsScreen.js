@@ -5,7 +5,6 @@ import { getAlbumCredits, getAlbums } from "../store/redux/actions";
 import { useSelector, useDispatch } from "react-redux"
 
 function AlbumsScreen ({navigation}) {
-
     const dispatch = useDispatch()
     const albums = useSelector(state => state.albums)
     const albumCredits = useSelector(state => state.albumCredits)

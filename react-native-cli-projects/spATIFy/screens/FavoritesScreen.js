@@ -15,9 +15,7 @@ function FavoritesScreen () {
 
     const dispatch = useDispatch()
     const favorites = useSelector(state => state.favoriteSongs)
-    
     const removeFromFavorites = song => dispatch(removeFavorite(song))
-    
     const handleRemoveFavorite = song => {
         removeFromFavorites(song)
         console.log("Removed ", song.songName, " from favorites.")

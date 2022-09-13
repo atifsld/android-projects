@@ -17,7 +17,6 @@ function SongsScreen () {
     const dispatch = useDispatch()
     const songs = useSelector(state => state.songs)
     const favorites = useSelector(state => state.favoriteSongs)
-    
     const addToFavorites = song => dispatch(addFavorite(song))
     const removeFromFavorites = song => dispatch(removeFavorite(song))
     
