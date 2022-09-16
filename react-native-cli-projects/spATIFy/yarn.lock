@@ -2817,7 +2817,7 @@
   "resolved" "https://registry.npmjs.org/deep-is/-/deep-is-0.1.4.tgz"
   "version" "0.1.4"
 
-"deepmerge@^3.2.0":
+"deepmerge@^3.2.0", "deepmerge@^3.3.0":
   "integrity" "sha512-GRQOafGHwMHpjPx9iCvTgpu9NojZ49q794EEL94JVEw6VaeA8XTUyBKvAkOOjBX9oJNiV6G3P+T+tihFjo2TqA=="
   "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-3.3.0.tgz"
   "version" "3.3.0"
@@ -5393,6 +5393,13 @@
   "version" "0.5.6"
   dependencies:
     "minimist" "^1.2.6"
+
+"mock-async-storage@^2.2.0":
+  "integrity" "sha512-HpMe9KNKxlyiRyOXFBrEOSQ1Idcoz1k5W5J+6C8zYzjasSxFJlrA5wVVjPR4U6zJJtrbuky1c0s1o3whzgghSQ=="
+  "resolved" "https://registry.npmjs.org/mock-async-storage/-/mock-async-storage-2.2.0.tgz"
+  "version" "2.2.0"
+  dependencies:
+    "deepmerge" "^3.3.0"
 
 "ms@2.0.0":
   "integrity" "sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A=="

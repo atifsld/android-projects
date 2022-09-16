@@ -67,32 +67,32 @@ function DrawerNavigator () {
 }
 
 export default function App() {
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <StatusBar 
-          backgroundColor="#6200EE"
-          barStyle={"light-content"}/>
-        <NavigationContainer>
-          <Stack.Navigator
-            screenOptions={{
-              headerStyle: {backgroundColor: '#6200EE'},
-              headerTintColor: 'white'
-            }}
-          >
-            <Stack.Screen 
-              name="DrawerNavigator" 
-              component={DrawerNavigator} 
-              options={{
-                headerShown: false
+  return (   
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <StatusBar 
+            backgroundColor="#6200EE"
+            barStyle={"light-content"}/>
+          <NavigationContainer>
+            <Stack.Navigator
+              screenOptions={{
+                headerStyle: {backgroundColor: '#6200EE'},
+                headerTintColor: 'white'
               }}
-            />
-            <Stack.Screen 
-              name="AlbumDetailScreen" 
-              component={AlbumDetailScreen} />
-          </Stack.Navigator>
-        </NavigationContainer>
-      </PersistGate>
-    </Provider>
+            >
+              <Stack.Screen 
+                name="DrawerNavigator" 
+                component={DrawerNavigator} 
+                options={{
+                  headerShown: false
+                }}
+              />
+              <Stack.Screen 
+                name="AlbumDetailScreen" 
+                component={AlbumDetailScreen} />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </PersistGate>
+      </Provider>
   );
 }
