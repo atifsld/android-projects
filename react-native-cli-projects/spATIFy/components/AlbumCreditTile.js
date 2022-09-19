@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Image, Text } from "react-native";
-import { StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet } from "react-native";
 
 function AlbumCreditTile({albumCredit}) {
     return (
