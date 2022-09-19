@@ -11,9 +11,7 @@ function AlbumsScreen ({navigation}) {
 
     useEffect(() => {
         dispatch(getAlbums())
-    }, [])
-
-    useEffect(() => {
+        dispatch(getSongs())
         dispatch(getAlbumCredits())
     }, [])
 
