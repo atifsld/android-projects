@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Image, Text, Pressable } from "react-native";
-import { StyleSheet } from "react-native";
+import { View, Image, Text, Pressable, StyleSheet } from "react-native";
 
 function AlbumGridTile({album, onPress}) {
     return (
