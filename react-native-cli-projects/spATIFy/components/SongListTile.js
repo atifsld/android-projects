@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import { View, Image, Text, Pressable } from "react-native";
-import { StyleSheet } from "react-native";
+import { View, Image, Text, Pressable, StyleSheet } from "react-native";
 import IconButton from "./IconButton";
 
 function SongListTile({song, onFavoriteClick, isFavorite}) {
