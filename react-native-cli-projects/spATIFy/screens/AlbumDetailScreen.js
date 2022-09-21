@@ -15,17 +15,19 @@ function AlbumDetailScreen({ route, navigation }) {
     const songs = useSelector(state => state.songs)
     const albumCredits = useSelector(state => state.albumCredits)
     const favorites = useSelector(state => state.favoriteSongs)
-    const addToFavorites = song => dispatch(addFavorite(song))
+
     const removeFromFavorites = song => dispatch(removeFavorite(song))
+
+    const handleRemoveFavorite = song => {
+        removeFromFavorites(song)
+        console.log("Removed ", song.songName, " from favorites.")
+    }
+    
+    const addToFavorites = song => dispatch(addFavorite(song))
     
     const handleAddFavorite = song => {
         addToFavorites(song)
         console.log("Added " , song.songName, " to favorites.")
-    }
-    
-    const handleRemoveFavorite = song => {
-        removeFromFavorites(song)
-        console.log("Removed ", song.songName, " from favorites.")
     }
     
     const ifInFavorites = song => {
