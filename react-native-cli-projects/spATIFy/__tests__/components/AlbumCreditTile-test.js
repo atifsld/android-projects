@@ -12,10 +12,10 @@ const sampleAlbumCredit = {
 }
 
 function findCreditDetail (tree, element, expectedValue) {
-    if(element === 'creditName') {
+    if(element == 'creditName') {
         const creditName = tree.children[1].children[0].children[0]
         return (creditName === expectedValue) 
-    } else if (element === 'creditContribution') {
+    } else if (element == 'creditContribution') {
         const creditContribution = tree.children[1].children[1].children[0]
         return (creditContribution === expectedValue)
     } else {
