@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test album grid tile 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#03DAC6",
+        "borderRadius": 8,
+        "elevation": 8,
+        "flex": 1,
+        "height": 260,
+        "justifyContent": "center",
+        "margin": 8,
+        "shadowColor": "black",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.25,
+        "shadowRadius": 8,
+        "width": 170,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "elevation": 12,
+          "padding": 5,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://upload.wikimedia.org/wikipedia/en/5/54/Herbie-Hancock-Head-Hunters.png",
+          }
+        }
+        style={
+          Object {
+            "borderRadius": 6,
+            "height": 160,
+            "padding": 5,
+            "width": 160,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "black",
+            "ellipsizeMode": "tail",
+            "fontSize": 20,
+            "fontWeight": "bold",
+            "numberOfLines": 1,
+            "paddingHorizontal": 5,
+            "width": 150,
+          }
+        }
+      >
+        Head Hunters
+      </Text>
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "paddingHorizontal": 5,
+            "width": 150,
+          }
+        }
+      >
+        Herbie Hancock
+      </Text>
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "black",
+            "ellipsizeMode": "tail",
+            "fontSize": 16,
+            "numberOfLines": 1,
+            "paddingHorizontal": 5,
+            "width": 150,
+          }
+        }
+      >
+        1973
+      </Text>
+    </View>
+  </View>
+</View>
+`;
