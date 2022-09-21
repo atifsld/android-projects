@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test album credit tile 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#64FFDA",
+      "borderRadius": 8,
+      "elevation": 8,
+      "flex": 1,
+      "height": 220,
+      "margin": 8,
+      "shadowColor": "black",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.25,
+      "shadowRadius": 8,
+      "width": 150,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "elevation": 12,
+        "padding": 5,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://i.discogs.com/PkmqjHCGbJZSl6SEgXoi6W1yRGhdEbf9K9Gnugw64hE/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwNDY5/OC0xMzE4NzYxOTM0/LmpwZWc.jpeg",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 6,
+          "height": 140,
+          "width": 140,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "height": 40,
+        "padding": 8,
+      }
+    }
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 20,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Acy R. Lehman
+    </Text>
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 16,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Design [Cover]
+    </Text>
+  </View>
+</View>
+`;
