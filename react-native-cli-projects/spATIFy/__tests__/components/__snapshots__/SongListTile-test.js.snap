@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test song list tile 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#03DAC6",
+        "borderRadius": 8,
+        "elevation": 8,
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 100,
+        "margin": 8,
+        "shadowColor": "black",
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.25,
+        "shadowRadius": 8,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "elevation": 12,
+          "padding": 5,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://ia802703.us.archive.org/26/items/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf/mbid-e7ba3cb7-a074-45ee-870f-3baeb6d3e8bf-12708426541.jpg",
+          }
+        }
+        style={
+          Object {
+            "borderRadius": 6,
+            "height": 90,
+            "width": 90,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "padding": 8,
+          "width": 200,
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "black",
+            "ellipsizeMode": "tail",
+            "fontSize": 19,
+            "fontWeight": "bold",
+            "width": "100%",
+          }
+        }
+      >
+        All Blues
+      </Text>
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "black",
+            "ellipsizeMode": "tail",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "numberOfLines": 1,
+            "width": "80%",
+          }
+        }
+      >
+        Miles Davis
+      </Text>
+      <Text
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "black",
+            "ellipsizeMode": "tail",
+            "fontSize": 16,
+            "numberOfLines": 1,
+            "width": "80%",
+          }
+        }
+      >
+        11:32
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "paddingHorizontal": 20,
+        }
+      }
+    />
+  </View>
+</View>
+`;
