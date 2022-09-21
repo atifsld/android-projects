@@ -15,7 +15,37 @@ const sampleSong = {
     "songIsFavorite": false
 }
 
+function findSongDetail (tree, element, expectedValue) {
+    if(element == 'songName') {
+        const songName = tree.children[0].children[1].children[0].children[0]
+        return (songName === expectedValue) 
+    } else if (element == 'songArtists') {
+        const songArtists = tree.children[0].children[1].children[1].children[0]
+        return (songArtists === expectedValue)
+    } else if (element == 'songDuration') {
+        const songDuration = tree.children[0].children[1].children[2].children[0]
+        return (songDuration === expectedValue)
+    } else {
+        return false;
+    }
+}
+
 test('test song list tile', () => {
     const tree = renderer.create(<SongListTile song={sampleSong} />).toJSON();
     expect(tree).toMatchSnapshot();
+})
+
+test('test song tile has correct name', () => {
+    const tree = renderer.create(<SongListTile song={sampleSong} />).toJSON();
+    expect(findSongDetail(tree, 'songName', 'All Blues')).toBeTruthy()
+})
+
+test('test song tile has correct artists', () => {
+    const tree = renderer.create(<SongListTile song={sampleSong} />).toJSON();
+    expect(findSongDetail(tree, 'songArtists', 'Miles Davis')).toBeTruthy()
+})
+
+test('test song tile has correct duration', () => {
+    const tree = renderer.create(<SongListTile song={sampleSong} />).toJSON();
+    expect(findSongDetail(tree, 'songDuration', '11:32')).toBeTruthy()
 })
