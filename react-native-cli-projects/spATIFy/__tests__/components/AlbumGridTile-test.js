@@ -17,7 +17,38 @@ const sampleAlbum = {
     "albumYear": 1973
 }
 
+function findAlbumDetail (tree, element, expectedValue) {
+    console.warn(tree.children[0].children[1].children[0])
+    if(element == 'albumName') {
+        const albumName = tree.children[0].children[1].children[0].children[0]
+        return (albumName === expectedValue) 
+    } else if (element == 'albumArtists') {
+        const albumArtists = tree.children[0].children[1].children[1].children[0]
+        return (albumArtists === expectedValue)
+    } else if (element == 'albumYear') {
+        const albumYear = tree.children[0].children[1].children[2].children[0]
+        return (albumYear == expectedValue)
+    } else {
+        return false;
+    }
+}
+
 test('test album grid tile', () => {
     const tree = renderer.create(<AlbumGridTile album={sampleAlbum} />).toJSON();
     expect(tree).toMatchSnapshot();
+})
+
+test('test album has the correct name', () => {
+    const tree = renderer.create(<AlbumGridTile album={sampleAlbum} />).toJSON();
+    expect(findAlbumDetail(tree, 'albumName', 'Head Hunters')).toBeTruthy()
+})
+
+test('test album has the correct artists', () => {
+    const tree = renderer.create(<AlbumGridTile album={sampleAlbum} />).toJSON();
+    expect(findAlbumDetail(tree, 'albumArtists', 'Herbie Hancock')).toBeTruthy()
+})
+
+test('test album has the correct year', () => {
+    const tree = renderer.create(<AlbumGridTile album={sampleAlbum} />).toJSON();
+    expect(findAlbumDetail(tree, 'albumYear', 1973)).toBeTruthy()
 })
